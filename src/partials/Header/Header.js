@@ -15,16 +15,16 @@ function Header(props) {
               <Link className="menu-item" to="/">Home</Link>
             </li>
             <li>
-              <Link className="menu-item" to="/about">About</Link>
+              <Link className="menu-item" to="/company">Company</Link>
             </li>
             <li>
-              <Link className="menu-item" to="/games">Games</Link>
+              <Link className="menu-item" to="/partner-up">Partner up</Link>
+            </li>
+            <li>
+              <Link className="menu-item" to="/career">Career</Link>
             </li>
             <li>
               <Link className="menu-item" to="/news">News</Link>
-            </li>
-            <li>
-              <Link className="menu-item" to="/post">Post</Link>
             </li>
           </ul>
         </nav>

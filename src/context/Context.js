@@ -211,7 +211,6 @@ export class Provider extends React.Component {
   }
   getPosts(url) {
     let self = this;
-    console.log(url);
     Axios.get(url)
       .then(response => {
         self.setState(
