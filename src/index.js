@@ -5,19 +5,21 @@ import './index.css';
 import Archive from './templates/Archive';
 import Single from './templates/Single';
 import Notfound from './templates/Notfound';
+import Home from "./templates/Home";
 
 const routes = (   
       <Router>
         <Switch>               
-            <Route exact path="/" component={Archive} />          
+            <Route exact path="/" component={Home} />
+            <Route path="/news/" component={Archive} />
             <Route path="/page/:slug" component={Single} />    
             <Route path="/post/:slug" component={Single} /> 
             <Route path="/category/:catid" component={Archive} /> 
-            <Route path="/search/:term" component={Archive} />                               
-            <Redirect exact from='/post/' to='/' /> 
+            <Route path="/search/:term" component={Archive} />
+            <Redirect exact from='/post/' to='/' />
             <Redirect exact from='/page/' to='/' />
-            <Redirect exact from='/search/' to='/' />        
-            <Route component={Notfound} /> 
+            <Redirect exact from='/search/' to='/' />
+            <Route component={Notfound} />
         </Switch>
       </Router> 
   )

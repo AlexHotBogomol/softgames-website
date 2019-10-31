@@ -1,18 +1,18 @@
-import React from 'react';
-import Head from '../partials/Head';
-import Foot from '../partials/Foot';
+import React from "react";
+import Header from "../partials/Header/Header";
+import Footer from "../partials/Footer";
 
 class NotFound extends React.Component {
   render() {
     return (
       <div className="notfound">
-        <Head></Head>
+        <Header></Header>
         <div className="content-area">
-        <h1>Not Found</h1>
+          <h1>Not Found</h1>
         </div>
-        <Foot></Foot>
+        <Footer></Footer>
       </div>
-    )
+    );
   }
 }
-export default NotFound
+export default NotFound;

@@ -1,7 +1,7 @@
 import React from 'react';
-import Head from '../partials/Head';
+import Header from '../partials/Header/Header';
 import TheLoop from '../partials/TheLoop';
-import Foot from '../partials/Foot';
+import Footer from '../partials/Footer';
 import {Provider} from '../context/Context'
 import CommentList from '../partials/CommentList';
 import CommentForm from '../partials/CommentForm';
@@ -19,13 +19,13 @@ const Single = (props) => {
   return (
     <Provider router={props} >
     <div className="Post">
-      <Head></Head>
+      <Header></Header>
       <div className="content-area">
       <TheLoop></TheLoop>
       </div>
       {comments}
       {commentsForm}
-      <Foot></Foot>
+      <Footer></Footer>
     </div>
     </Provider>
   )    
