@@ -1,14 +1,15 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
 
-import Header from "../partials/Header/Header";
-import { Provider } from "../context/Context";
-import Footer from "../partials/Footer";
 import Slider from "react-slick";
 import sliderImg from "../assets/images/sliderImg.jpg";
 import Button from "../partials/Button/Button";
 import JoyStick from "../assets/icons/joyStick";
 import Loader from "react-loader-spinner";
+import Header from "../partials/Header/Header";
+import {BrowserRouter as Router} from "react-router-dom";
+import Footer from "../partials/Footer";
+
 
 class Home extends Component {
   constructor(props) {
@@ -45,8 +46,9 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
+    axios.defaults.baseURL = '/wp-json/wp/v2';
     axios
-      .get("/wp-json/wp/v2/pages")
+      .get("/pages/")
       .then(result => {
         this.setState({
           loading: false,
@@ -58,43 +60,42 @@ class Home extends Component {
 
   render() {
     return (
-      <Fragment>
-      {
-        this.state.loading ?
+      <div id="content">
+        {this.state.loading ? (
           <Loader
             type="Puff"
-            color="#00BFFF"
+            color="#F5842D"
             height={100}
             width={100}
             timeout={3000}
-          /> :
+            className="Loader"
+          />
+        ) : (
           <Fragment>
-            <Provider router={this.props}>
-              <Header currentUrl={this.props.match.url}/>
-              <div className="container--fluid">
-                <Slider className="slider slider1" {...this.sliderSettings}>
-                  {this.slides1.map((slide, index) => {
-                    return (
-                      <div className="slider1-slide" key={index}>
-                        <img src={slide.img}/>
-                        <div className="slider1-content">
-                          <Button color="primaryInverse" withIcon>
-                            <JoyStick/>
-                            Click to play
-                          </Button>
-                          <h2 className="slider1-title">{slide.title}</h2>
-                        </div>
+            <Header/>
+            <div className="container--fluid">
+              <Slider className="slider slider1" {...this.sliderSettings}>
+                {this.slides1.map((slide, index) => {
+                  return (
+                    <div className="slider1-slide" key={index}>
+                      <img src={slide.img} />
+                      <div className="slider1-content">
+                        <Button color="primaryInverse" withIcon>
+                          <JoyStick />
+                          Click to play
+                        </Button>
+                        <h2 className="slider1-title">{slide.title}</h2>
                       </div>
-                    );
-                  })}
-                </Slider>
-              </div>
-              <p>{this.state.pages[0].id}</p>
-              <Footer/>
-            </Provider>
+                    </div>
+                  );
+                })}
+              </Slider>
+            </div>
+            <p>{this.state.pages[0].id}</p>
+            <Footer/>
           </Fragment>
-      }
-      </Fragment>
+        )}
+      </div>
     );
   }
 }

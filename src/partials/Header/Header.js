@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './Header.css';
 import Logo from '../Logo/Logo';
-import WithConsumer from "../../context/WithConsumer";
 
 function Header(props) {
   return (
@@ -32,4 +31,4 @@ function Header(props) {
     </header>
   );
 }
-export default WithConsumer(Header);
+export default Header;
