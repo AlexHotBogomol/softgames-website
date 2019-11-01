@@ -1,118 +1,78 @@
-<?php 
-//change base permalinks to match react router
-add_action('init','barebones_change_base_permalinks');
-function barebones_change_base_permalinks() {    
-    global $wp_rewrite;
-    $wp_rewrite->permalink_structure = 'post/%pagename%/';
-    $wp_rewrite->page_structure = 'page/%pagename%/';    
-    $wp_rewrite->flush_rules();    
-} 
+<?php
 
-//adds a custom route for search
-//https://benrobertson.io/wordpress/wordpress-custom-search-endpoint
+if ( ! function_exists( 'softgames_setup' ) ) :
+    /**
+     * Sets up theme defaults and registers support for various WordPress features.
+     *
+     * Note that this function is hooked into the after_setup_theme hook, which
+     * runs before the init hook. The init hook is too late for some features, such
+     * as indicating support for post thumbnails.
+     */
+    function softgames_setup() {
+        /*
+         * Make theme available for translation.
+         * Translations can be filed in the /languages/ directory.
+         * If you're building a theme based on softgames, use a find and replace
+         * to change 'softgames' to the name of your theme in all the template files.
+         */
+        load_theme_textdomain( 'softgames', get_template_directory() . '/languages' );
 
-function barebones_register_search_route() {
-   
-    register_rest_route('wp/v2', '/search', [
-        'methods' => WP_REST_Server::READABLE,
-        'callback' => 'barebones_ajax_search',
-        'args' => barebones_get_search_args()
-    ]);
-}
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
 
-add_action( 'rest_api_init', 'barebones_register_search_route');
+        /*
+         * Let WordPress manage the document title.
+         * By adding theme support, we declare that this theme does not use a
+         * hard-coded <title> tag in the document head, and expect WordPress to
+         * provide it for us.
+         */
+        add_theme_support( 'title-tag' );
 
-function barebones_ajax_search( $request ) {
-    $posts = [];
-    $results = [];
-    // check for a search term
- 
-    if( isset($request['s'])) :
-        // get posts 
+        /*
+         * Enable support for Post Thumbnails on posts and pages.
+         *
+         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+         */
+        add_theme_support( 'post-thumbnails' );
 
-        $args = [
-            'post_type' => array( 'post', 'page'), 
-            's' => $request['s'], 
-            'posts_per_page' => 10, 
-            'paged' => $request['page']
-        ];
-        $query = new WP_Query( $args );
-        $posts = $query->posts;
+        // This theme uses wp_nav_menu() in one location.
+        register_nav_menus( array(
+            'header_menu' => 'Header Menu',
+            'footer_menu' => 'Footer Menu',
+        ) );
 
-        $total = $query->found_posts;
-        $totalPages = $query->max_num_pages;
+        /*
+         * Switch default core markup for search form, comment form, and comments
+         * to output valid HTML5.
+         */
+        add_theme_support( 'html5', array(
+            'search-form',
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-        foreach($posts as $post):  
-           
-            $item = [
-                'id' => $post->ID,
-                'author_name' => get_the_author_meta('display_name', $post->post_author),                
-                'slug' => $post->post_name,
-                'type' => $post->post_type,
-                'title' => array(
-                    'rendered' => $post->post_title
-                ),
-                'content' => array(
-                    'rendered' => $post->post_content
-                ),
-                'excerpt' => array(
-                    'rendered' => $post->post_excerpt
-                ),
-            ];
+        // Set up the WordPress core custom background feature.
+        add_theme_support( 'custom-background', apply_filters( 'softgames_custom_background_args', array(
+            'default-color' => 'ffffff',
+            'default-image' => '',
+        ) ) );
 
-            $categories = get_the_category($post->ID);
-                     
-            if(!empty($categories[0])){  
-                $catArr = array();
-                $catArr[] = $categories[0]->term_id;
-                $item['category_name'] = $categories[0]->name; 
-                $item['categories'] = $catArr;              
-            }           
+        // Add theme support for selective refresh for widgets.
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
-            $results[] = $item;
-        endforeach; 
-
-    endif;
-
-    // if( empty($results) ) :
-    //     return new WP_Error( 'front_end_ajax_search', 'No results');
-    // endif;
-
-    $response = new WP_REST_Response( $results );
-    $response->header( 'X-WP-Total', $total);
-    $response->header( 'X-WP-TotalPages', $totalPages );
-
-    return $response;     
-}
-
-function barebones_get_search_args() {
-
-    $args = [];
-    $args['s'] = [
-       'description' => esc_html__( 'The search term.', 'barebones_' ),
-       'type'        => 'string',
-   ]; 
-
-   return $args;
-}
-
-function barebones_allow_anonymous_comments() {
-    return true;
-}
-add_filter('rest_allow_anonymous_comments','barebones_allow_anonymous_comments');
-
-function barebones_add_to_post_api (){
-    register_rest_field( 'post', 'author_name', array(
-        'get_callback' => function( $post ) {
-            return get_the_author_meta('display_name', $post['author']);
-        }
-    ));
-    register_rest_field( 'post', 'category_name', array(
-        'get_callback' => function( $post ) {
-            $categories = get_the_category($post['id']);
-            return $categories[0]->name; 
-        }
-    ));
-}
-add_action( 'rest_api_init', 'barebones_add_to_post_api');
-   
+        /**
+         * Add support for core custom logo.
+         *
+         * @link https://codex.wordpress.org/Theme_Logo
+         */
+        add_theme_support( 'custom-logo', array(
+            'height'      => 250,
+            'width'       => 250,
+            'flex-width'  => true,
+            'flex-height' => true,
+        ) );
+    }
+endif;
+add_action( 'after_setup_theme', 'softgames_setup' );

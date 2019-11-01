@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
 import './index.css';
 
-import Header from "./partials/Header/Header";
-import Footer from "./partials/Footer";
-
 import Notfound from './templates/Notfound';
 import Home from "./templates/Home";
 

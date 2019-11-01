@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
-import axios from "axios";
+import WpApiService from "../services/WpApiService";
+import axios from 'axios';
 
 import Slider from "react-slick";
 import sliderImg from "../assets/images/sliderImg.jpg";
@@ -7,7 +8,6 @@ import Button from "../partials/Button/Button";
 import JoyStick from "../assets/icons/joyStick";
 import Loader from "react-loader-spinner";
 import Header from "../partials/Header/Header";
-import {BrowserRouter as Router} from "react-router-dom";
 import Footer from "../partials/Footer";
 
 
@@ -17,8 +17,11 @@ class Home extends Component {
 
     this.state = {
       loading: true,
-      pages: []
+      pages: [],
+      posts: [],
     };
+
+    this.wpApiService = new WpApiService();
 
     this.sliderSettings = {
       dots: true,
@@ -46,19 +49,18 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    axios.defaults.baseURL = '/wp-json/wp/v2';
-    axios
-      .get("/pages/")
-      .then(result => {
+    axios.all([this.wpApiService.getAllPages(), this.wpApiService.getAllPosts()])
+      .then(axios.spread( ({data: pages}, {data: posts}) => {
         this.setState({
           loading: false,
-          pages: result.data
+          pages,
+          posts
         });
-      })
-      .catch(error => console.log(error));
+      }));
   };
 
   render() {
+    console.log(this.state);
     return (
       <div id="content">
         {this.state.loading ? (
@@ -67,7 +69,7 @@ class Home extends Component {
             color="#F5842D"
             height={100}
             width={100}
-            timeout={3000}
+            timeout={0}
             className="Loader"
           />
         ) : (
@@ -91,7 +93,6 @@ class Home extends Component {
                 })}
               </Slider>
             </div>
-            <p>{this.state.pages[0].id}</p>
             <Footer/>
           </Fragment>
         )}
