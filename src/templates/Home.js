@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
-import axios from 'axios';
+import axios from "axios";
 
 import Slider from "react-slick";
 import sliderImg from "../assets/images/sliderImg.jpg";
@@ -10,15 +10,14 @@ import Loader from "react-loader-spinner";
 import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer";
 
-
 class Home extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       loading: true,
-      pages: [],
-      posts: [],
+      homepageData: {},
+      posts: []
     };
 
     this.wpApiService = new WpApiService();
@@ -49,14 +48,17 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    axios.all([this.wpApiService.getAllPages(), this.wpApiService.getAllPosts()])
-      .then(axios.spread( ({data: pages}, {data: posts}) => {
-        this.setState({
-          loading: false,
-          pages,
-          posts
-        });
-      }));
+    axios
+      .all([this.wpApiService.getPageBySlug("home"), this.wpApiService.getLatestPosts()])
+      .then(
+        axios.spread(({ data: homepageData }, { data: posts }) => {
+          this.setState({
+            loading: false,
+            homepageData,
+            posts
+          });
+        })
+      );
   };
 
   render() {
@@ -74,7 +76,7 @@ class Home extends Component {
           />
         ) : (
           <Fragment>
-            <Header/>
+            <Header />
             <div className="container--fluid">
               <Slider className="slider slider1" {...this.sliderSettings}>
                 {this.slides1.map((slide, index) => {
@@ -93,7 +95,8 @@ class Home extends Component {
                 })}
               </Slider>
             </div>
-            <Footer/>
+            <p>{this.state.homepageData.acf.slider1.slides[0].title}</p>
+            <Footer />
           </Fragment>
         )}
       </div>

@@ -1,0 +1,70 @@
+@import '../../variables';
+
+.header {
+  height: $header-height;
+  position: sticky;
+  top: 0;
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    border-bottom: 1px solid $grey-light-color;
+  }
+  nav {
+    list-style: none;
+    display: flex;
+    max-width: 100%;
+    box-sizing: border-box;
+    flex-flow: row wrap;
+    ul {
+      display: flex;
+      max-width: 100%;
+      box-sizing: border-box;
+      flex-flow: row wrap;
+      li {
+        padding: 0;
+        box-sizing: border-box;
+        flex-shrink: 0;
+        margin-right: 25px;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+        a {
+          color: $black-color;
+          text-decoration: none;
+          height: $header-height;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 4px solid transparent;
+          box-sizing: border-box;
+          padding: 4px 20px 0;
+          transition: 0.2s;
+          &:focus {
+            outline: none;
+            background-color: $grey-light-color;
+            border-color: $brand-color1;
+            text-decoration: none;
+            transition: 0.2s;
+          }
+          &:hover {
+            outline: none;
+            background-color: $grey-light-color;
+            transition: background-color 0.2s;
+            cursor: pointer;
+          }
+        }
+        &.selected{
+          a {
+            border-color: $brand-color1;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,29 +1,15 @@
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
-:root{
-  --brand-color1: #F5842D;
-  --brand-color2: #15495D;
-  --white-color: #ffffff;
-  --grey-light-color: #eeeeee;
-  --grey-medium-color: #C3C3C3;
-  --grey-color: #757575;
-  --black-color: #333333;
-  --link-color: #1E7698;
-  --error-color: #EA4335;
-  --success-color: #36C53C;
 
-  --primary-font: 'Roboto', sans-serif;
-  --heading-font: 'Poppins', sans-serif;
+@import "variables";
 
-  --header-height: 72px;
-}
 html, body{
   min-width: 320px;
   overflow-x: hidden;
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-size: 16px;
   line-height: 1.75;
   font-weight: 400;
-  color: var(--black-color);
+  color: $black-color;
 }
 img{
   max-width: 100%;
@@ -41,7 +27,7 @@ img{
   margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6{
-  font-family: var(--heading-font);
+  font-family: $heading-font;
   margin: 0;
 }
 h1{
@@ -75,30 +61,30 @@ h6{
   font-size: 16px;
 }
 .link{
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-size: 16px;
   line-height: 1.5;
   text-decoration: underline;
-  color: var(--link-color);
+  color: $link-color;
   font-weight: 400;
 }
 .label{
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 400;
 }
 ::placeholder{
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-style: italic;
   font-size: 16px;
   line-height: 1.5;
 }
 ::selection{
-  background-color: rgba(var(--brand-color1), 0.5);
+  background-color: rgba($brand-color1, 0.5);
 }
 .caption{
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
@@ -107,21 +93,21 @@ h6{
   list-style: none;
   margin: 0;
   padding: 0;
-}
-.menu-item{
-  font-family: var(--primary-font);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-.menu-item--footer{
-  line-height: 1.5;
-  text-transform: none;
+  &-item{
+    font-family: $primary-font;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    &--footer{
+      line-height: 1.5;
+      text-transform: none;
+    }
+  }
 }
 
-/*slider*/
+/*SLIDER 1*/
 
 .slider1-slide{
   position: relative;
@@ -133,41 +119,44 @@ h6{
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  .slider1-title{
+    color: $white-color;
+    padding-top: 25px;
+  }
 
-}
-.slider1-content .slider1-title{
-  color: var(--white-color);
-  padding-top: 25px;
+
 }
 .slick-dots{
   bottom: 35px;
-}
-.slick-dots li{
-  width: auto;
-  height: auto;
-}
-.slick-dots li button{
-  width: auto;
-  height: auto;
-  padding: 0;
-}
-.slick-dots li button:before{
-  content: '';
-  width: 16px;
-  height: 8px;
-  display: block;
-  background-color: #ffffff;
-  color: #ffffff;
-  border-radius: 4px;
-  transition: 0.2s ease-in-out;
-  position: static;
-}
-.slick-dots li.slick-active button:before{
-  opacity: 1;
-  width: 40px;
+  li{
+    width: auto;
+    height: auto;
+    button{
+      width: auto;
+      height: auto;
+      padding: 0;
+      &:before{
+        content: '';
+        width: 16px;
+        height: 8px;
+        display: block;
+        background-color: $white-color;
+        color: $white-color;
+        border-radius: 4px;
+        transition: 0.2s ease-in-out;
+        position: static;
+      }
+    }
+    &.slick-active{
+      button:before{
+        opacity: 1;
+        width: 40px;
+      }
+    }
+  }
 }
 
-/*Loader*/
+/*LOADER*/
 .Loader{
   position: fixed;
   top: 0;

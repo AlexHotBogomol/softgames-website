@@ -1,4 +1,4 @@
-Barebones is a starter theme for WordPress running ReactJS. It is designed to get you up to speed in writing JS single page applications and WordPress' REST api. A complete tutorial on how this theme is built can be found [here](http://michaelsoriano.com/wordpress-theme-react-part-1-setup/). 
+softgamesbones is a starter theme for WordPress running ReactJS. It is designed to get you up to speed in writing JS single page applications and WordPress' REST api. A complete tutorial on how this theme is built can be found [here](http://michaelsoriano.com/wordpress-theme-react-part-1-setup/). 
 
 By core WordPress functionality I mean the following:
 

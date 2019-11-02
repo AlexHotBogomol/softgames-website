@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
-import './index.css';
+import './index.scss';
 
 import Notfound from './templates/Notfound';
 import Home from "./templates/Home";

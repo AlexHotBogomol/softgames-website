@@ -6,6 +6,10 @@ export default class wpApiService {
   getAllPosts = () => {
     return axios.get(`/posts/`);
   };
+  getLatestPosts = (option = {orderby: "date", order: "ASC", per_page: 5}) => {
+    const {orderby, order, per_page} = option;
+    return axios.get(`/posts/?orderby=${orderby}&order=${order}&per_page=${per_page}`);
+  };
   getPostById = id => {
     return axios.get(`/post/${id}`);
   };
