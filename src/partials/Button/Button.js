@@ -1,16 +1,15 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './Button.scss';
 
-const Button = ({color, children, withIcon}) => {
+const Button = ({color, children, withIcon, to = "/"}) => {
   const classes = [
     'btn',
     'btn--' + color,
     withIcon ? 'btn--withIcon' : null
   ]
   return (
-    <button className={classes.join(" ")}>
-      {children}
-    </button>
+    <Link to={to} className={classes.join(" ")}>{children}</Link>
   )
 }
 

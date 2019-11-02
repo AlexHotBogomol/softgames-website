@@ -30,21 +30,6 @@ class Home extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
-
-    this.slides1 = [
-      {
-        img: sliderImg,
-        title: "Solitaire Story"
-      },
-      {
-        img: sliderImg,
-        title: "Solitaire Story2"
-      },
-      {
-        img: sliderImg,
-        title: "Solitaire Story3"
-      }
-    ];
   }
 
   componentDidMount = () => {
@@ -63,6 +48,7 @@ class Home extends Component {
 
   render() {
     console.log(this.state);
+    const {homepageData, posts, pages} = this.state;
     return (
       <div id="content">
         {this.state.loading ? (
@@ -79,12 +65,28 @@ class Home extends Component {
             <Header />
             <div className="container--fluid">
               <Slider className="slider slider1" {...this.sliderSettings}>
-                {this.slides1.map((slide, index) => {
+                {homepageData.acf.slider1.slides.map((slide, index) => {
                   return (
                     <div className="slider1-slide" key={index}>
-                      <img src={slide.img} />
+                      <img src={slide.image.url} />
                       <div className="slider1-content">
-                        <Button color="primaryInverse" withIcon>
+                        <Button to={slide.button_link} color="primaryInverse" withIcon>
+                          <JoyStick />
+                          {slide.button_text}
+                        </Button>
+                        <h2 className="slider1-title">{slide.title}</h2>
+                      </div>
+                    </div>
+                  );
+                })}
+              </Slider>
+              <Slider className="slider slider1" {...this.sliderSettings}>
+                {homepageData.acf.slider1.slides.map((slide, index) => {
+                  return (
+                    <div className="slider1-slide" key={index}>
+                      <img src={slide.image.url} />
+                      <div className="slider1-content">
+                        <Button to="/news/" color="primaryInverse" withIcon>
                           <JoyStick />
                           Click to play
                         </Button>
@@ -95,7 +97,6 @@ class Home extends Component {
                 })}
               </Slider>
             </div>
-            <p>{this.state.homepageData.acf.slider1.slides[0].title}</p>
             <Footer />
           </Fragment>
         )}
