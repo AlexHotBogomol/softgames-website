@@ -13,3 +13,19 @@ $primary-font: 'Roboto', sans-serif;
 $heading-font: 'Poppins', sans-serif;
 
 $header-height: 72px;
+
+//grid
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1260px,
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px,
+);

@@ -6,8 +6,14 @@ export default class wpApiService {
   getAllPosts = () => {
     return axios.get(`/posts/`);
   };
-  getLatestPosts = (option = {orderby: "date", order: "ASC", per_page: 5}) => {
-    const {orderby, order, per_page} = option;
+  getLatestPosts = (customOptions) => {
+    const defaultOptions = {
+      orderby: "date",
+      order: "ASC",
+      per_page: 5
+    };
+    const options = Object.assign(defaultOptions, customOptions);
+    const {orderby, order, per_page} = options;
     return axios.get(`/posts/?orderby=${orderby}&order=${order}&per_page=${per_page}`);
   };
   getPostById = id => {
@@ -28,8 +34,15 @@ export default class wpApiService {
   getMenuBySlug = menuSlug => {
     return axios.get(`/menus/${menuSlug}`);
   };
-  getCustomPostCollection = postType => {
-    return axios.get(`/${postType}/`);
+  getCustomPostCollection = (postType, customOptions) => {
+    const defaultOptions = {
+      orderby: "date",
+      order: "ASC",
+      per_page: 5
+    };
+    const options = Object.assign(defaultOptions, customOptions);
+    const {orderby, order, per_page} = options;
+    return axios.get(`/${postType}/?orderby=${orderby}&order=${order}&per_page=${per_page}`);
   };
   getCustomPostById = (postType, id) => {
     return axios.get(`/${postType}/${id}/`);

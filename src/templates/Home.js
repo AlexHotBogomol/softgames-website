@@ -1,13 +1,18 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 
-import Slider from "react-slick";
-import sliderImg from "../assets/images/sliderImg.jpg";
-import Button from "../partials/Button/Button";
-import JoyStick from "../assets/icons/joyStick";
 import Loader from "react-loader-spinner";
+import Slider from "react-slick";
+
+import JoyStick from "../assets/icons/joyStick";
+import ArrowDown from "../assets/icons/ArrowDown";
+import character from "../assets/images/character.png";
+
 import Header from "../partials/Header/Header";
+import GameCard from "../partials/GameCard/GameCard";
 import Footer from "../partials/Footer";
 
 class Home extends Component {
@@ -17,13 +22,17 @@ class Home extends Component {
     this.state = {
       loading: true,
       homepageData: {},
-      posts: []
+      posts: [],
+      games: [],
+
     };
 
     this.wpApiService = new WpApiService();
 
     this.sliderSettings = {
       dots: true,
+      arrows: true,
+      fade: true,
       infinite: true,
       speed: 500,
       lazyLoad: true,
@@ -34,13 +43,22 @@ class Home extends Component {
 
   componentDidMount = () => {
     axios
-      .all([this.wpApiService.getPageBySlug("home"), this.wpApiService.getLatestPosts()])
+      .all([
+        this.wpApiService.getPageBySlug("home"),
+        this.wpApiService.getLatestPosts({
+          per_page: 2
+        }),
+        this.wpApiService.getCustomPostCollection("game", {
+          per_page: 3
+        }),
+      ])
       .then(
-        axios.spread(({ data: homepageData }, { data: posts }) => {
+        axios.spread(({ data: homepageData }, { data: posts }, {data: games}) => {
           this.setState({
             loading: false,
             homepageData,
-            posts
+            posts,
+            games,
           });
         })
       );
@@ -48,7 +66,7 @@ class Home extends Component {
 
   render() {
     console.log(this.state);
-    const {homepageData, posts, pages} = this.state;
+    const { homepageData, posts, pages } = this.state;
     return (
       <div id="content">
         {this.state.loading ? (
@@ -63,33 +81,20 @@ class Home extends Component {
         ) : (
           <Fragment>
             <Header />
-            <div className="container--fluid">
+            <div className="container--fullWidth">
               <Slider className="slider slider1" {...this.sliderSettings}>
                 {homepageData.acf.slider1.slides.map((slide, index) => {
                   return (
                     <div className="slider1-slide" key={index}>
-                      <img src={slide.image.url} />
+                      <img src={slide.image.url} alt={slide.image.alt} />
                       <div className="slider1-content">
-                        <Button to={slide.button_link} color="primaryInverse" withIcon>
+                        <a
+                          href={slide.button_link}
+                          className="btn btn--primaryInverse btn--withIcon"
+                        >
                           <JoyStick />
                           {slide.button_text}
-                        </Button>
-                        <h2 className="slider1-title">{slide.title}</h2>
-                      </div>
-                    </div>
-                  );
-                })}
-              </Slider>
-              <Slider className="slider slider1" {...this.sliderSettings}>
-                {homepageData.acf.slider1.slides.map((slide, index) => {
-                  return (
-                    <div className="slider1-slide" key={index}>
-                      <img src={slide.image.url} />
-                      <div className="slider1-content">
-                        <Button to="/news/" color="primaryInverse" withIcon>
-                          <JoyStick />
-                          Click to play
-                        </Button>
+                        </a>
                         <h2 className="slider1-title">{slide.title}</h2>
                       </div>
                     </div>
@@ -97,6 +102,70 @@ class Home extends Component {
                 })}
               </Slider>
             </div>
+            <ArrowDown className="arrowDown" />
+            <div className="slider2-wrapper">
+              <div className="container">
+                <Slider className="slider slider2" {...this.sliderSettings}>
+                  {homepageData.acf.slider2.slides.map((slide, index) => {
+                    return (
+                      <div className="slider2-slide" key={index}>
+                        <div className="slider2-content">
+                          <div className="slider2-left">
+                            <Link
+                              to={slide.category_link}
+                              className="link slider2-category"
+                            >
+                              {slide.category_name}
+                            </Link>
+                            <h2
+                              dangerouslySetInnerHTML={{
+                                __html: slide.heading
+                              }}
+                              className="h2--big"
+                            />
+                            <p>{slide.description}</p>
+                            <button className="btn btn--primary">
+                              {slide.button_text}
+                            </button>
+                          </div>
+                          <div className="slider2-right">
+                            <img src={slide.image.url} alt={slide.image.alt} />
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </Slider>
+              </div>
+            </div>
+            <div className="featuredGames">
+              <div className="container">
+                <img className="featuredGames-character" src={character} alt="Character"/>
+                <div className="row">
+                  <div className="col-12">
+                    <h2 className="featuredGames-heading">Featured Games</h2>
+                  </div>
+                </div>
+                <div className="row featuredGames-gameList">
+                  <div className="col-lg-3"></div>
+                  {this.state.games.map((game, index) => {
+                    return (
+                      <div className="col-lg-3" key={index}>
+                        <GameCard url={game.acf.game_link} img={game.media.large} title={game.title} description={game.content} limit={50}/>
+                      </div>
+                  )})}
+                </div>
+                <div className="row">
+                  <Link
+                    to="/games/"
+                    className="btn btn--primaryInverse mx-auto"
+                  >
+                    All Games
+                  </Link>
+                </div>
+              </div>
+            </div>
+
             <Footer />
           </Fragment>
         )}
