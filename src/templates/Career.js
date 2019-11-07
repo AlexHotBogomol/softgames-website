@@ -5,7 +5,7 @@ import Loader from "react-loader-spinner";
 import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
 
-class Notfound extends Component {
+class Career extends Component {
   constructor(props) {
     super(props);
 
@@ -57,7 +57,7 @@ class Notfound extends Component {
         ) : (
           <Fragment>
             <Header menuItems={headerMenuItems}/>
-            NotFound
+            Career
             <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>
         )}
@@ -66,4 +66,4 @@ class Notfound extends Component {
   }
 }
 
-export default Notfound;
+export default Career;

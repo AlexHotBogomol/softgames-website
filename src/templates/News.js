@@ -5,12 +5,13 @@ import Loader from "react-loader-spinner";
 import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
 
-class Notfound extends Component {
+class News extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       loading: true,
+      newsPageData: {},
       acfOptions: {},
       headerMenuItems: []
     };
@@ -21,17 +22,20 @@ class Notfound extends Component {
   componentDidMount = () => {
     axios
       .all([
+        this.wpApiService.getPageBySlug("news"),
         this.wpApiService.getAcfOptions(),
         this.wpApiService.getMenuBySlug("header-menu")
       ])
       .then(
         axios.spread(
           (
+            {data: newsPageData},
             {data: acfOptions},
             {data: headerMenuItems},
           ) => {
             this.setState({
               loading: false,
+              newsPageData,
               acfOptions,
               headerMenuItems,
             });
@@ -41,7 +45,7 @@ class Notfound extends Component {
   };
 
   render() {
-    const {loading, acfOptions, headerMenuItems} = this.state;
+    const {loading, newsPageData, acfOptions, headerMenuItems} = this.state;
     console.log(this.state);
     return (
       <div id="content">
@@ -57,7 +61,7 @@ class Notfound extends Component {
         ) : (
           <Fragment>
             <Header menuItems={headerMenuItems}/>
-            NotFound
+            NEWS
             <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>
         )}
@@ -66,4 +70,4 @@ class Notfound extends Component {
   }
 }
 
-export default Notfound;
+export default News;

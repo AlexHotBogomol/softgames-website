@@ -30,7 +30,7 @@ const Header = ({menuItems, currentUrl}) => {
                     {item.children.map((subitem)=>{
                       return(
                         <li key={subitem.ID} className="submenu-item">
-                          <Link className="submenu-link" to={subitem.slug}>{subitem.title}</Link>
+                          <Link className="submenu-link" to={`/${subitem.slug}/`}>{subitem.title}</Link>
                         </li>
                       )
                     })}
@@ -40,7 +40,7 @@ const Header = ({menuItems, currentUrl}) => {
               }else{
                 return (
                   <li key={item.ID} className="menu-item">
-                    <Link className="menu-link" to={item.slug}>{item.title}</Link>
+                    <Link className="menu-link" to={`/${item.slug}/`}>{item.title}</Link>
                   </li>
                 )
               }
