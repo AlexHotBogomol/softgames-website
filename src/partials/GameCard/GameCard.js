@@ -1,14 +1,18 @@
 import React from 'react';
 import './GameCard.scss';
+import JoyStick from "../../assets/icons/JoyStick";
 
 const GameCard = ({url, img, title, description, limit}) => {
 
   const short_description = description.replace(/(<([^>]+)>)/ig,"").slice(0, limit) + "...";
 
   return (
-    <a href={url} className="gameCard">
+    <div className="gameCard">
       <div className="gameCard-img">
         <img src={img} alt={title}/>
+        <div className="gameCard-overlay">
+          <a href={url} className="btn btn--primaryInverse btn--withIcon"><JoyStick/>click to play</a>
+        </div>
       </div>
       <div className="gameCard-content">
         <h4 className="gameCard-title" dangerouslySetInnerHTML={{
@@ -18,7 +22,7 @@ const GameCard = ({url, img, title, description, limit}) => {
           __html: short_description
         }} />
       </div>
-    </a>
+    </div>
   )
 }
 

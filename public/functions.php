@@ -76,3 +76,9 @@ if ( ! function_exists( 'softgames_setup' ) ) :
     }
 endif;
 add_action( 'after_setup_theme', 'softgames_setup' );
+
+if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+
+}

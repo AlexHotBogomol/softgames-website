@@ -9,7 +9,7 @@ export default class wpApiService {
   getLatestPosts = (customOptions) => {
     const defaultOptions = {
       orderby: "date",
-      order: "ASC",
+      order: "DESC",
       per_page: 5
     };
     const options = Object.assign(defaultOptions, customOptions);
@@ -37,7 +37,7 @@ export default class wpApiService {
   getCustomPostCollection = (postType, customOptions) => {
     const defaultOptions = {
       orderby: "date",
-      order: "ASC",
+      order: "DESC",
       per_page: 5
     };
     const options = Object.assign(defaultOptions, customOptions);

@@ -7,13 +7,16 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import Slider from "react-slick";
 
-import JoyStick from "../assets/icons/joyStick";
+import JoyStick from "../assets/icons/JoyStick";
 import ArrowDown from "../assets/icons/ArrowDown";
 import character from "../assets/images/character.png";
 
 import Header from "../partials/Header/Header";
 import GameCard from "../partials/GameCard/GameCard";
-import Footer from "../partials/Footer";
+import PositionCard from "../partials/PositionCard/PositionCard";
+import PostCard from "../partials/PostCard/PostCard";
+import Footer from "../partials/Footer/Footer";
+import SocialBlock from "../partials/SocialBlock/SocialBlock";
 
 class Home extends Component {
   constructor(props) {
@@ -24,7 +27,9 @@ class Home extends Component {
       homepageData: {},
       posts: [],
       games: [],
-
+      positions: [],
+      acfOptions: {},
+      headerMenuItems: [],
     };
 
     this.wpApiService = new WpApiService();
@@ -51,25 +56,42 @@ class Home extends Component {
         this.wpApiService.getCustomPostCollection("game", {
           per_page: 3
         }),
+        this.wpApiService.getCustomPostCollection("position", {
+          per_page: 0
+        }),
+        this.wpApiService.getAcfOptions(),
+        this.wpApiService.getMenuBySlug('header-menu'),
       ])
       .then(
-        axios.spread(({ data: homepageData }, { data: posts }, {data: games}) => {
-          this.setState({
-            loading: false,
-            homepageData,
-            posts,
-            games,
-          });
-        })
+        axios.spread(
+          (
+            { data: homepageData },
+            { data: posts },
+            { data: games },
+            { data: positions },
+            { data: acfOptions },
+            { data: headerMenuItems }
+          ) => {
+            this.setState({
+              loading: false,
+              homepageData,
+              posts,
+              games,
+              positions,
+              acfOptions,
+              headerMenuItems
+            });
+          }
+        )
       );
   };
 
   render() {
     console.log(this.state);
-    const { homepageData, posts, pages } = this.state;
+    const {loading, homepageData, games, positions, posts, acfOptions, headerMenuItems } = this.state;
     return (
       <div id="content">
-        {this.state.loading ? (
+        {loading ? (
           <Loader
             type="Puff"
             color="#F5842D"
@@ -80,7 +102,7 @@ class Home extends Component {
           />
         ) : (
           <Fragment>
-            <Header />
+            <Header menuItems={headerMenuItems}/>
             <div className="container--fullWidth">
               <Slider className="slider slider1" {...this.sliderSettings}>
                 {homepageData.acf.slider1.slides.map((slide, index) => {
@@ -105,7 +127,10 @@ class Home extends Component {
             <ArrowDown className="arrowDown" />
             <div className="slider2-wrapper">
               <div className="container">
-                <Slider className="slider slider2" {...this.sliderSettings}>
+                <Slider
+                  className="slider slider2 withGrid"
+                  {...this.sliderSettings}
+                >
                   {homepageData.acf.slider2.slides.map((slide, index) => {
                     return (
                       <div className="slider2-slide" key={index}>
@@ -138,9 +163,13 @@ class Home extends Component {
                 </Slider>
               </div>
             </div>
-            <div className="featuredGames">
+            <section className="featuredGames">
               <div className="container">
-                <img className="featuredGames-character" src={character} alt="Character"/>
+                <img
+                  className="featuredGames-character"
+                  src={character}
+                  alt="Character"
+                />
                 <div className="row">
                   <div className="col-12">
                     <h2 className="featuredGames-heading">Featured Games</h2>
@@ -148,12 +177,19 @@ class Home extends Component {
                 </div>
                 <div className="row featuredGames-gameList">
                   <div className="col-lg-3"></div>
-                  {this.state.games.map((game, index) => {
+                  {games.map(game => {
                     return (
-                      <div className="col-lg-3" key={index}>
-                        <GameCard url={game.acf.game_link} img={game.media.large} title={game.title} description={game.content} limit={50}/>
+                      <div className="col-lg-3" key={game.id}>
+                        <GameCard
+                          url={game.acf.game_link}
+                          img={game.media.large}
+                          title={game.title}
+                          description={game.content}
+                          limit={50}
+                        />
                       </div>
-                  )})}
+                    );
+                  })}
                 </div>
                 <div className="row">
                   <Link
@@ -164,9 +200,68 @@ class Home extends Component {
                   </Link>
                 </div>
               </div>
-            </div>
-
-            <Footer />
+            </section>
+            <section className="latestPositions">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <h2 className="latestPositions-heading withGrid">
+                      Open Positions
+                    </h2>
+                  </div>
+                </div>
+                <div className="row latestPositions-list">
+                  {positions.slice(0, 6).map(position => {
+                    return (
+                      <div className="col-lg-4" key={position.id}>
+                        <PositionCard
+                          title={position.title}
+                          terms={position.terms}
+                          slug={position.slug}
+                        />
+                      </div>
+                    );
+                  })}
+                </div>
+                <div className="row">
+                  <Link to="/positions/" className="btn btn--primary mx-auto">
+                    All open positions
+                  </Link>
+                </div>
+              </div>
+            </section>
+            <section className="latestNews">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <h2 className="latestNews-heading">Press</h2>
+                  </div>
+                </div>
+                <div className="row latestNews-list">
+                  {posts.map(post => {
+                    return (
+                      <div className="col-lg-4" key={post.id}>
+                        <PostCard
+                          title={post.title}
+                          img={post.media.large}
+                          slug={post.slug}
+                          date={post.date}
+                        />
+                      </div>
+                    );
+                  })}
+                  <div className="col-lg-4">
+                    <SocialBlock socialLinks={acfOptions.socials}/>
+                  </div>
+                </div>
+                <div className="row">
+                  <Link to="/posts/" className="btn btn--primary mx-auto">
+                    All news & events
+                  </Link>
+                </div>
+              </div>
+            </section>
+            <Footer joinUsOptions={acfOptions.join_us}/>
           </Fragment>
         )}
       </div>

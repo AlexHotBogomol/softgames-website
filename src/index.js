@@ -5,11 +5,13 @@ import './index.scss';
 
 import Notfound from './templates/Notfound';
 import Home from "./templates/Home";
+import Games from "./templates/Games";
 
 const routes = (   
       <Router>
         <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/games/" component={Games} />
             <Redirect exact from='/post/' to='/' />
             <Redirect exact from='/page/' to='/' />
             <Redirect exact from='/search/' to='/' />
