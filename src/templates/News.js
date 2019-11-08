@@ -4,7 +4,7 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
-import PostCard from "../partials/PostCard/PostCard";
+import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 
 class News extends Component {
@@ -14,7 +14,7 @@ class News extends Component {
     this.state = {
       loading: true,
       newsPageData: {},
-      posts: [],
+      news: [],
       acfOptions: {},
       headerMenuItems: []
     };
@@ -36,14 +36,14 @@ class News extends Component {
         axios.spread(
           (
             {data: newsPageData},
-            {data: posts},
+            {data: news},
             {data: acfOptions},
             {data: headerMenuItems},
           ) => {
             this.setState({
               loading: false,
               newsPageData,
-              posts,
+              news,
               acfOptions,
               headerMenuItems,
             });
@@ -53,7 +53,7 @@ class News extends Component {
   };
 
   render() {
-    const {loading, newsPageData, posts, acfOptions, headerMenuItems} = this.state;
+    const {loading, newsPageData, news, acfOptions, headerMenuItems} = this.state;
     console.log(this.state);
     return (
       <div id="content">
@@ -84,15 +84,15 @@ class News extends Component {
                 <div className="row">
                   <div className="col-lg-8">
                     <div className="row">
-                      {posts.map((post)=>{
+                      {news.map((news)=>{
                         return(
-                          <div className="col-md-6" key={post.id}>
-                            <PostCard
-                              id={post.id}
-                              title={post.title}
-                              img={post.media.large}
-                              slug={post.slug}
-                              date={post.date}
+                          <div className="col-md-6" key={news.id}>
+                            <NewsCard
+                              id={news.id}
+                              title={news.title}
+                              img={news.media.large}
+                              slug={news.slug}
+                              date={news.date}
                             />
                           </div>
                         )

@@ -13,7 +13,7 @@ import Career from "./templates/Career";
 import Advertisers from "./templates/Advertisers";
 import Publishers from "./templates/Publishers";
 import Developers from "./templates/Developers";
-import SinglePost from "./templates/SinglePost";
+import SingleNews from "./templates/SingleNews";
 
 const history = createBrowserHistory();
 
@@ -28,7 +28,7 @@ const routes = (
             <Route exact path="/advertisers/" component={Advertisers} />
             <Route exact path="/publishers/" component={Publishers} />
             <Route exact path="/developers/" component={Developers} />
-            <Route exact path="/blog/:slug" component={SinglePost} />
+            <Route exact path="/blog/:slug" component={SingleNews} />
             <Redirect from='/post/' to='/' />
             <Redirect exact from='/page/' to='/' />
             <Redirect exact from='/search/' to='/' />

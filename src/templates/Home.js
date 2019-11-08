@@ -14,7 +14,7 @@ import character from "../assets/images/character.png";
 import Header from "../partials/Header/Header";
 import GameCard from "../partials/GameCard/GameCard";
 import PositionCard from "../partials/PositionCard/PositionCard";
-import PostCard from "../partials/PostCard/PostCard";
+import NewsCard from "../partials/NewsCard/NewsCard";
 import Footer from "../partials/Footer/Footer";
 import SocialBlock from "../partials/SocialBlock/SocialBlock";
 
@@ -25,7 +25,7 @@ class Home extends Component {
     this.state = {
       loading: true,
       homepageData: {},
-      posts: [],
+      latestNews: [],
       games: [],
       positions: [],
       acfOptions: {},
@@ -66,7 +66,7 @@ class Home extends Component {
         axios.spread(
           (
             { data: homepageData },
-            { data: posts },
+            { data: latestNews },
             { data: games },
             { data: positions },
             { data: acfOptions },
@@ -75,7 +75,7 @@ class Home extends Component {
             this.setState({
               loading: false,
               homepageData,
-              posts,
+              latestNews,
               games,
               positions,
               acfOptions,
@@ -88,7 +88,7 @@ class Home extends Component {
 
   render() {
     console.log(this.state);
-    const {loading, homepageData, games, positions, posts, acfOptions, headerMenuItems } = this.state;
+    const {loading, homepageData, games, positions, latestNews, acfOptions, headerMenuItems } = this.state;
     return (
       <div id="content">
         {loading ? (
@@ -240,14 +240,14 @@ class Home extends Component {
                 <div className="row latestNews-list">
                   <div className="col-lg-8">
                     <div className="row">
-                      {posts.map(post => {
+                      {latestNews.map((news) => {
                         return (
-                          <div className="col-md-6" key={post.id}>
-                            <PostCard
-                              title={post.title}
-                              img={post.media.large}
-                              slug={post.slug}
-                              date={post.date}
+                          <div className="col-md-6" key={news.id}>
+                            <NewsCard
+                              title={news.title}
+                              img={news.media.large}
+                              slug={news.slug}
+                              date={news.date}
                             />
                           </div>
                         );
@@ -259,7 +259,7 @@ class Home extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <Link to="/posts/" className="btn btn--primary mx-auto">
+                  <Link to="/news/" className="btn btn--primary mx-auto">
                     All news & events
                   </Link>
                 </div>
