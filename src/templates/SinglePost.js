@@ -4,46 +4,37 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
-import PostCard from "../partials/PostCard/PostCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 
-class News extends Component {
+class SinglePost extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       loading: true,
-      newsPageData: {},
-      posts: [],
       acfOptions: {},
       headerMenuItems: []
     };
 
     this.wpApiService = new WpApiService();
+
+    this.slug = this.props.match.params.slug;
   }
 
   componentDidMount = () => {
     axios
       .all([
-        this.wpApiService.getPageBySlug("news"),
-        this.wpApiService.getCustomPostCollection("blog", {
-          per_page: 14
-        }),
         this.wpApiService.getAcfOptions(),
         this.wpApiService.getMenuBySlug("header-menu"),
       ])
       .then(
         axios.spread(
           (
-            {data: newsPageData},
-            {data: posts},
             {data: acfOptions},
             {data: headerMenuItems},
           ) => {
             this.setState({
               loading: false,
-              newsPageData,
-              posts,
               acfOptions,
               headerMenuItems,
             });
@@ -53,7 +44,7 @@ class News extends Component {
   };
 
   render() {
-    const {loading, newsPageData, posts, acfOptions, headerMenuItems} = this.state;
+    const {loading, acfOptions, headerMenuItems} = this.state;
     console.log(this.state);
     return (
       <div id="content">
@@ -69,35 +60,16 @@ class News extends Component {
         ) : (
           <Fragment>
             <Header menuItems={headerMenuItems}/>
-            <section className="news">
+            <section className="singlePost">
               <div className="container">
                 <div className="row">
                   <div className="col-12">
-                    <div className="breadcrumb">Home/ News</div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-lg-9 mx-auto">
-                    <h1 className="news-heading">Press & Events</h1>
+                    <div className="breadcrumb">Home/ News/ {this.slug}</div>
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-lg-8">
-                    <div className="row">
-                      {posts.map((post)=>{
-                        return(
-                          <div className="col-md-6" key={post.id}>
-                            <PostCard
-                              id={post.id}
-                              title={post.title}
-                              img={post.media.large}
-                              slug={post.slug}
-                              date={post.date}
-                            />
-                          </div>
-                        )
-                      })}
-                    </div>
+                    SinglePost
                   </div>
                   <div className="col-lg-4">
                     <Sidebar/>
@@ -113,4 +85,4 @@ class News extends Component {
   }
 }
 
-export default News;
+export default SinglePost;

@@ -631,3 +631,14 @@ h6{
     }
   }
 }
+
+.news{
+  &-heading{
+    text-align: center;
+    color: $brand-color2;
+    padding-bottom: 55px;
+  }
+  .postCard{
+    margin-bottom: 30px;
+  }
+}

@@ -50,7 +50,7 @@ class Home extends Component {
     axios
       .all([
         this.wpApiService.getPageBySlug("home"),
-        this.wpApiService.getLatestPosts({
+        this.wpApiService.getCustomPostCollection("blog", {
           per_page: 2
         }),
         this.wpApiService.getCustomPostCollection("game", {
@@ -238,18 +238,22 @@ class Home extends Component {
                   </div>
                 </div>
                 <div className="row latestNews-list">
-                  {posts.map(post => {
-                    return (
-                      <div className="col-lg-4" key={post.id}>
-                        <PostCard
-                          title={post.title}
-                          img={post.media.large}
-                          slug={post.slug}
-                          date={post.date}
-                        />
-                      </div>
-                    );
-                  })}
+                  <div className="col-lg-8">
+                    <div className="row">
+                      {posts.map(post => {
+                        return (
+                          <div className="col-md-6" key={post.id}>
+                            <PostCard
+                              title={post.title}
+                              img={post.media.large}
+                              slug={post.slug}
+                              date={post.date}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
                   <div className="col-lg-4">
                     <SocialBlock socialLinks={acfOptions.socials}/>
                   </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import './Header.scss';
 import Logo from '../Logo/Logo';
 import ArrowDownSmall from "../../assets/icons/ArrowDownSmall";
@@ -40,7 +40,7 @@ const Header = ({menuItems, currentUrl}) => {
               }else{
                 return (
                   <li key={item.ID} className="menu-item">
-                    <Link className="menu-link" to={`/${item.slug}/`}>{item.title}</Link>
+                    <NavLink activeClassName="selected" className="menu-link" to={`/${item.slug}/`}>{item.title}</NavLink>
                   </li>
                 )
               }

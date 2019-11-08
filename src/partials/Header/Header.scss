@@ -40,11 +40,6 @@
       &:last-of-type {
         margin-right: 0;
       }
-      &.selected{
-        .menu-link {
-          border-color: $brand-color1;
-        }
-      }
     }
     .menu-dropdown{
       svg{
@@ -79,6 +74,9 @@
         background-color: $grey-light-color;
         transition: background-color 0.2s;
         cursor: pointer;
+      }
+      &.selected{
+        border-color: $brand-color1;
       }
     }
     .submenu{
