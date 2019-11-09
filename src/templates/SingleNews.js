@@ -40,14 +40,12 @@ class SingleNews extends Component {
         .then(
           axios.spread(
             (
-              // {data: postData},
               {data: latestNews},
               {data: acfOptions},
               {data: headerMenuItems},
             ) => {
               this.setState({
                 loading: false,
-                // postData,
                 latestNews,
                 acfOptions,
                 headerMenuItems,
@@ -56,6 +54,28 @@ class SingleNews extends Component {
           )
         );
     });
+  };
+
+  componentDidUpdate = (prevProps) => {
+    if(prevProps.match.params.slug !== this.props.match.params.slug){
+      this.setState({
+        loading: true
+      });
+      this.wpApiService.getCustomPostBySlug('blog', this.props.match.params.slug).then(({data: postData}) => {
+        this.setState({
+          postData
+        });
+        this.wpApiService.getCustomPostCollection("blog", {
+          per_page: 2,
+          exclude: this.state.postData.id
+        }).then(({data: latestNews}) => {
+          this.setState({
+            loading: false,
+            latestNews
+          });
+        })
+      })
+    }
   };
 
   render() {
