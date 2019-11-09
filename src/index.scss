@@ -352,8 +352,8 @@ h6{
     -webkit-font-smoothing: subpixel-antialiased;
   }
   &--withIcon{
-    justify-content: space-between;
-  }
+     justify-content: space-between;
+   }
   &--primary{
     background-color: $brand-color1;
     color: $white-color;
