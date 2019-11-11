@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
-import { createBrowserHistory } from "history";
 import './index.scss';
 
 import Notfound from './templates/Notfound';
@@ -14,11 +13,12 @@ import Advertisers from "./templates/Advertisers";
 import Publishers from "./templates/Publishers";
 import Developers from "./templates/Developers";
 import SingleNews from "./templates/SingleNews";
+import Header from "./partials/Header/Header";
 
-const history = createBrowserHistory();
 
-const routes = (   
-      <Router history={history}>
+const routes = (
+      <Router>
+        <Header/>
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/games/" component={Games} />

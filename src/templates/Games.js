@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
 import GameCard2 from "../partials/GameCard/GameCard2";
 
@@ -15,7 +14,6 @@ class Games extends Component {
       gamesPageData: {},
       games: [],
       acfOptions: {},
-      headerMenuItems: []
     };
 
     this.wpApiService = new WpApiService();
@@ -29,7 +27,6 @@ class Games extends Component {
           per_page: 14
         }),
         this.wpApiService.getAcfOptions(),
-        this.wpApiService.getMenuBySlug("header-menu")
       ])
       .then(
         axios.spread(
@@ -37,14 +34,12 @@ class Games extends Component {
             { data: gamesPageData },
             { data: games },
             { data: acfOptions },
-            { data: headerMenuItems },
           ) => {
             this.setState({
               loading: false,
               gamesPageData,
               games,
               acfOptions,
-              headerMenuItems,
             });
           }
         )
@@ -52,7 +47,7 @@ class Games extends Component {
   };
 
   render() {
-    const { loading, gamesPageData, games, acfOptions, headerMenuItems } = this.state;
+    const { loading, gamesPageData, games, acfOptions} = this.state;
     console.log(this.state);
     return (
       <div id="content">
@@ -67,7 +62,6 @@ class Games extends Component {
           />
         ) : (
           <Fragment>
-            <Header menuItems={headerMenuItems} />
             <section className="games">
               <div className="container">
                 <div className="row">

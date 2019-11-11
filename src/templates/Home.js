@@ -11,7 +11,6 @@ import JoyStick from "../assets/icons/JoyStick";
 import ArrowDown from "../assets/icons/ArrowDown";
 import character from "../assets/images/character.png";
 
-import Header from "../partials/Header/Header";
 import GameCard from "../partials/GameCard/GameCard";
 import PositionCard from "../partials/PositionCard/PositionCard";
 import NewsCard from "../partials/NewsCard/NewsCard";
@@ -29,7 +28,6 @@ class Home extends Component {
       games: [],
       positions: [],
       acfOptions: {},
-      headerMenuItems: [],
     };
 
     this.wpApiService = new WpApiService();
@@ -60,7 +58,6 @@ class Home extends Component {
           per_page: 0
         }),
         this.wpApiService.getAcfOptions(),
-        this.wpApiService.getMenuBySlug('header-menu'),
       ])
       .then(
         axios.spread(
@@ -70,7 +67,6 @@ class Home extends Component {
             { data: games },
             { data: positions },
             { data: acfOptions },
-            { data: headerMenuItems }
           ) => {
             this.setState({
               loading: false,
@@ -79,7 +75,6 @@ class Home extends Component {
               games,
               positions,
               acfOptions,
-              headerMenuItems
             });
           }
         )
@@ -88,7 +83,7 @@ class Home extends Component {
 
   render() {
     console.log(this.state);
-    const {loading, homepageData, games, positions, latestNews, acfOptions, headerMenuItems } = this.state;
+    const {loading, homepageData, games, positions, latestNews, acfOptions} = this.state;
     return (
       <div id="content">
         {loading ? (
@@ -102,7 +97,6 @@ class Home extends Component {
           />
         ) : (
           <Fragment>
-            <Header menuItems={headerMenuItems}/>
             <div className="container--fullWidth">
               <Slider className="slider slider1" {...this.sliderSettings}>
                 {homepageData.acf.slider1.slides.map((slide, index) => {

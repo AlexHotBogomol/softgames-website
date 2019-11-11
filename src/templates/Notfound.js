@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
 
 class Notfound extends Component {
@@ -12,7 +11,6 @@ class Notfound extends Component {
     this.state = {
       loading: true,
       acfOptions: {},
-      headerMenuItems: []
     };
 
     this.wpApiService = new WpApiService();
@@ -22,18 +20,15 @@ class Notfound extends Component {
     axios
       .all([
         this.wpApiService.getAcfOptions(),
-        this.wpApiService.getMenuBySlug("header-menu")
       ])
       .then(
         axios.spread(
           (
             {data: acfOptions},
-            {data: headerMenuItems},
           ) => {
             this.setState({
               loading: false,
               acfOptions,
-              headerMenuItems,
             });
           }
         )
@@ -41,8 +36,7 @@ class Notfound extends Component {
   };
 
   render() {
-    const {loading, acfOptions, headerMenuItems} = this.state;
-    console.log(this.state);
+    const {loading, acfOptions} = this.state;
     return (
       <div id="content">
         {loading ? (
@@ -56,7 +50,6 @@ class Notfound extends Component {
           />
         ) : (
           <Fragment>
-            <Header menuItems={headerMenuItems}/>
             NotFound
             <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>

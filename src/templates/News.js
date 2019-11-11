@@ -3,7 +3,6 @@ import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
 import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
@@ -20,7 +19,6 @@ class News extends Component {
       currentPage: 1,
       newsPerPage: 14,
       acfOptions: {},
-      headerMenuItems: [],
     };
 
     this.wpApiService = new WpApiService();
@@ -34,7 +32,6 @@ class News extends Component {
           per_page: 100,
         }),
         this.wpApiService.getAcfOptions(),
-        this.wpApiService.getMenuBySlug("header-menu"),
       ])
       .then(
         axios.spread(
@@ -42,14 +39,12 @@ class News extends Component {
             {data: newsPageData},
             {data: news},
             {data: acfOptions},
-            {data: headerMenuItems},
           ) => {
             this.setState({
               loading: false,
               newsPageData,
               news,
               acfOptions,
-              headerMenuItems,
             });
           }
         )
@@ -73,13 +68,11 @@ class News extends Component {
   }
 
   render() {
-    const {loading, newsPageData, news, acfOptions, headerMenuItems, currentPage, newsPerPage, tags} = this.state;
+    const {loading, newsPageData, news, acfOptions, currentPage, newsPerPage, tags} = this.state;
 
     const indexOfLastNews = currentPage * newsPerPage;
     const indexOfFirstNews = indexOfLastNews - newsPerPage;
     const currentNews = news.slice(indexOfFirstNews, indexOfLastNews);
-
-    console.log(this.state);
 
     return (
       <div id="content">
@@ -94,7 +87,6 @@ class News extends Component {
           />
         ) : (
           <Fragment>
-            <Header menuItems={headerMenuItems}/>
             <section className="news">
               <div className="container">
                 <div className="row">

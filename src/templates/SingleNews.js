@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import Header from "../partials/Header/Header";
 import Footer from "../partials/Footer/Footer";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import NewsCard from "../partials/NewsCard/NewsCard";
@@ -17,7 +16,6 @@ class SingleNews extends Component {
       postData: {},
       latestNews: [],
       acfOptions: {},
-      headerMenuItems: []
     };
 
     this.wpApiService = new WpApiService();
@@ -35,20 +33,17 @@ class SingleNews extends Component {
             exclude: this.state.postData.id
           }),
           this.wpApiService.getAcfOptions(),
-          this.wpApiService.getMenuBySlug("header-menu"),
         ])
         .then(
           axios.spread(
             (
               {data: latestNews},
               {data: acfOptions},
-              {data: headerMenuItems},
             ) => {
               this.setState({
                 loading: false,
                 latestNews,
                 acfOptions,
-                headerMenuItems,
               });
             }
           )
@@ -79,7 +74,7 @@ class SingleNews extends Component {
   };
 
   render() {
-    const {loading, postData, latestNews, acfOptions, headerMenuItems} = this.state;
+    const {loading, postData, latestNews, acfOptions} = this.state;
     return (
       <div id="content">
         {loading ? (
@@ -93,7 +88,6 @@ class SingleNews extends Component {
           />
         ) : (
           <Fragment>
-            <Header menuItems={headerMenuItems}/>
             <article className="singleNews">
               <div className="container">
                 <div className="row">
