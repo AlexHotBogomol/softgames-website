@@ -14,6 +14,7 @@ import Publishers from "./templates/Publishers";
 import Developers from "./templates/Developers";
 import SingleNews from "./templates/SingleNews";
 import Header from "./partials/Header/Header";
+import Footer from "./partials/Footer/Footer";
 
 
 const routes = (
@@ -34,6 +35,7 @@ const routes = (
             <Redirect exact from='/search/' to='/' />
             <Route component={Notfound} />
         </Switch>
+        <Footer/>
       </Router>
   )
 

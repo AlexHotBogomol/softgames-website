@@ -127,6 +127,12 @@ h6{
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
 //withGrid
 .withGrid{
   position: relative;
@@ -459,10 +465,11 @@ label{
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255 ,0.75);
+  background: rgba(255, 255, 255, 1);
 }
 
 //ARROWDOWN

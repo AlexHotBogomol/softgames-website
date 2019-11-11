@@ -2,7 +2,6 @@ import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import Footer from "../partials/Footer/Footer";
 import GameCard2 from "../partials/GameCard/GameCard2";
 
 class Games extends Component {
@@ -13,7 +12,6 @@ class Games extends Component {
       loading: true,
       gamesPageData: {},
       games: [],
-      acfOptions: {},
     };
 
     this.wpApiService = new WpApiService();
@@ -26,20 +24,17 @@ class Games extends Component {
         this.wpApiService.getCustomPostCollection("game", {
           per_page: 14
         }),
-        this.wpApiService.getAcfOptions(),
       ])
       .then(
         axios.spread(
           (
             { data: gamesPageData },
             { data: games },
-            { data: acfOptions },
           ) => {
             this.setState({
               loading: false,
               gamesPageData,
               games,
-              acfOptions,
             });
           }
         )
@@ -47,8 +42,8 @@ class Games extends Component {
   };
 
   render() {
-    const { loading, gamesPageData, games, acfOptions} = this.state;
-    console.log(this.state);
+    const { loading, gamesPageData, games} = this.state;
+
     return (
       <div id="content">
         {loading ? (
@@ -136,7 +131,6 @@ class Games extends Component {
                 </div>
               </div>
             </section>
-            <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>
         )}
       </div>

@@ -15,7 +15,6 @@ class SingleNews extends Component {
       loading: true,
       postData: {},
       latestNews: [],
-      acfOptions: {},
     };
 
     this.wpApiService = new WpApiService();
@@ -32,18 +31,15 @@ class SingleNews extends Component {
             per_page: 2,
             exclude: this.state.postData.id
           }),
-          this.wpApiService.getAcfOptions(),
         ])
         .then(
           axios.spread(
             (
               {data: latestNews},
-              {data: acfOptions},
             ) => {
               this.setState({
                 loading: false,
                 latestNews,
-                acfOptions,
               });
             }
           )
@@ -74,7 +70,7 @@ class SingleNews extends Component {
   };
 
   render() {
-    const {loading, postData, latestNews, acfOptions} = this.state;
+    const {loading, postData, latestNews} = this.state;
     return (
       <div id="content">
         {loading ? (
@@ -141,7 +137,6 @@ class SingleNews extends Component {
                 </div>
               </div>
             </article>
-            <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>
         )}
       </div>

@@ -14,7 +14,6 @@ import character from "../assets/images/character.png";
 import GameCard from "../partials/GameCard/GameCard";
 import PositionCard from "../partials/PositionCard/PositionCard";
 import NewsCard from "../partials/NewsCard/NewsCard";
-import Footer from "../partials/Footer/Footer";
 import SocialBlock from "../partials/SocialBlock/SocialBlock";
 
 class Home extends Component {
@@ -259,7 +258,6 @@ class Home extends Component {
                 </div>
               </div>
             </section>
-            <Footer joinUsOptions={acfOptions.join_us}/>
           </Fragment>
         )}
       </div>

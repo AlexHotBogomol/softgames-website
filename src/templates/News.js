@@ -3,7 +3,6 @@ import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Footer from "../partials/Footer/Footer";
 import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import Pagination from "../partials/Pagination/Pagination";
@@ -18,7 +17,6 @@ class News extends Component {
       news: [],
       currentPage: 1,
       newsPerPage: 14,
-      acfOptions: {},
     };
 
     this.wpApiService = new WpApiService();
@@ -31,20 +29,17 @@ class News extends Component {
         this.wpApiService.getCustomPostCollection("blog", {
           per_page: 100,
         }),
-        this.wpApiService.getAcfOptions(),
       ])
       .then(
         axios.spread(
           (
             {data: newsPageData},
             {data: news},
-            {data: acfOptions},
           ) => {
             this.setState({
               loading: false,
               newsPageData,
               news,
-              acfOptions,
             });
           }
         )
@@ -68,7 +63,7 @@ class News extends Component {
   }
 
   render() {
-    const {loading, newsPageData, news, acfOptions, currentPage, newsPerPage, tags} = this.state;
+    const {loading, newsPageData, news, currentPage, newsPerPage, tags} = this.state;
 
     const indexOfLastNews = currentPage * newsPerPage;
     const indexOfFirstNews = indexOfLastNews - newsPerPage;
@@ -141,7 +136,6 @@ class News extends Component {
                 </div>
               </div>
             </section>
-            <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>
         )}
       </div>

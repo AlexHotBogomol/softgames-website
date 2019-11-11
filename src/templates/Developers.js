@@ -2,42 +2,24 @@ import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import Footer from "../partials/Footer/Footer";
 
 class Developers extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      loading: true,
-      acfOptions: {},
+      loading: false,
     };
 
     this.wpApiService = new WpApiService();
   }
 
   componentDidMount = () => {
-    axios
-      .all([
-        this.wpApiService.getAcfOptions(),
-      ])
-      .then(
-        axios.spread(
-          (
-            {data: acfOptions},
-          ) => {
-            this.setState({
-              loading: false,
-              acfOptions,
-            });
-          }
-        )
-      );
+
   };
 
   render() {
-    const {loading, acfOptions} = this.state;
-    console.log(this.state);
+    const {loading} = this.state;
     return (
       <div id="content">
         {loading ? (
@@ -52,7 +34,6 @@ class Developers extends Component {
         ) : (
           <Fragment>
             Developers
-            <Footer joinUsOptions={acfOptions.join_us} />
           </Fragment>
         )}
       </div>

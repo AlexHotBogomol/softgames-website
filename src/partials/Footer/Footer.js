@@ -1,39 +1,60 @@
-import React, {Fragment} from 'react';
-import {Link} from 'react-router-dom';
-import './Footer.scss';
+import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+import WpApiService from "../../services/WpApiService";
+import "./Footer.scss";
 
-const Footer = ({joinUsOptions}) => {
-  const styles = {
-    backgroundImage: `url(${joinUsOptions.image.url})`,
+class Footer extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      acfOptions: {}
+    };
+
+    this.wpApiService = new WpApiService();
+  }
+
+  componentDidMount = () => {
+    this.wpApiService.getAcfOptions().then(({ data: acfOptions }) => {
+      this.setState({
+        acfOptions
+      });
+    });
   };
-  return (
-    <Fragment>
-      <section className="joinUs" style={styles}>
-        <div className="container">
-          <div className="row">
-            <div className="col-auto mx-auto">
-              <h2 className="joinUs-title">
-                {joinUsOptions.title}
-              </h2>
-              <div className="joinUs-separator">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-              <Link to={joinUsOptions.button_internal_link} className="btn btn--secondaryInverse">
-                {joinUsOptions.button_text}
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-      <footer className="footer">
-        <div className="container">
-          Footer
-        </div>
-      </footer>
-    </Fragment>
-  )
-};
 
-export default Footer
+  render() {
+    const { join_us: joinUsOptions } = this.state.acfOptions;
+
+    return (
+      <footer className="footer">
+        {joinUsOptions ? (
+          <section
+            className="joinUs"
+            style={{ backgroundImage: `url(${joinUsOptions.image.url})` }}
+          >
+            <div className="container">
+              <div className="row">
+                <div className="col-auto mx-auto">
+                  <h2 className="joinUs-title">{joinUsOptions.title}</h2>
+                  <div className="joinUs-separator">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <Link
+                    to={joinUsOptions.button_internal_link}
+                    className="btn btn--secondaryInverse"
+                  >
+                    {joinUsOptions.button_text}
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+        ) : null}
+      </footer>
+    );
+  }
+}
+
+export default Footer;
