@@ -2,10 +2,10 @@ import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
-import Footer from "../partials/Footer/Footer";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import NewsCard from "../partials/NewsCard/NewsCard";
 import {Link} from "react-router-dom";
+import Helper from "../services/Helper";
 
 class SingleNews extends Component {
   constructor(props) {
@@ -18,6 +18,7 @@ class SingleNews extends Component {
     };
 
     this.wpApiService = new WpApiService();
+    this.helper = new Helper();
   }
 
   componentDidMount = () => {
@@ -71,6 +72,7 @@ class SingleNews extends Component {
 
   render() {
     const {loading, postData, latestNews} = this.state;
+    console.log(this.state);
     return (
       <div id="content">
         {loading ? (
@@ -95,11 +97,30 @@ class SingleNews extends Component {
                   <div className="col-lg-8">
                     <div className="singleNews-imgWrapper">
                       <img src={postData.media.large} alt={postData.title}/>
+                        {postData.terms.length ? (
+                          <ul className="tags-list tags-list--singlePage">
+                            {postData.terms.map((tag) => {
+                              return (
+                                <li key={tag.term_id}>
+                                  <Link to={`/news/${tag.slug}`}>{tag.name}</Link>
+                                </li>
+                              )
+                            })}
+                          </ul>
+                        ) : null}
                     </div>
+                    <p className="singleNews-date">
+                      Published on {this.helper.formatDate(postData.date)}
+                    </p>
                     <h2 className="singleNews-title">{postData.title}</h2>
                     <div className="singleNews-content" dangerouslySetInnerHTML={{
-                      __html: postData.content
+                      __html: this.helper.deleteEmptyPTags(postData.content)
                     }}/>
+                    <div className="singleNews-shareBtns">
+                      <a href="https://www.facebook.com/sharer/sharer.php?u=http://softgames.ein-des-ein.com/blog/softgames-releases-mahjong-story-on-facebook-instant-games-15" target="_blank">
+                        Share on Facebook
+                      </a>
+                    </div>
                     <section className="otherArticles">
                         <div className="row">
                           <div className="col-12">

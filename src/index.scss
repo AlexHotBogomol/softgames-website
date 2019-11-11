@@ -465,7 +465,7 @@ label{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 150;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -721,6 +721,7 @@ label{
   }
 }
 .singleNews{
+  padding-bottom: 200px;
   &-imgWrapper{
     height: 288px;
     border-radius: 2px;
@@ -732,7 +733,7 @@ label{
       display: block;
       object-fit: cover;
     }
-    &:after{
+    &:before{
       content: "";
       position: absolute;
       top: 0;
@@ -741,6 +742,9 @@ label{
       bottom: 0;
       background: linear-gradient(180deg, rgba(21, 73, 93, 0) 50%, #15495D 100%);
     }
+  }
+  &-date{
+    margin-bottom: 20px;
   }
   &-title{
     padding-bottom: 50px;
@@ -759,6 +763,18 @@ label{
       padding-bottom: 20px;
       img{
         margin-top: 30px;
+        &.alignleft{
+          margin-top: 0;
+          margin-right: 20px;
+          margin-bottom: 20px;
+          float: left;
+        }
+        &.alignright{
+          margin-top: 0;
+          margin-left: 20px;
+          margin-bottom: 20px;
+          float: right;
+        }
       }
     }
     blockquote{
@@ -772,6 +788,39 @@ label{
       line-height: 1.5;
       p{
         padding-bottom: 0;
+      }
+    }
+    ul{
+      list-style: none;
+      padding: 0 0 0 1em;
+      margin-bottom: 70px;
+      li::before {
+        content: "\2022";
+        color: $brand-color1;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        text-align: center;
+        margin-left: -1em;
+        margin-right: 0.5em;
+      }
+    }
+    ol{
+      list-style: none;
+      padding: 0 0 0 1em;
+      margin-bottom: 70px;
+      counter-reset: li;
+      li{
+        counter-increment: li
+      }
+      li::before{
+        content: counter(li) ". ";
+        color: $brand-color1;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        margin-right: 0.5em;
+        text-align: right;
       }
     }
   }
@@ -812,4 +861,42 @@ label{
 /* slide exit */
 .fade-exit {
   display: none;
+}
+
+//TAGS
+.tags{
+  &-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li{
+      display: inline-block;
+      width: auto;
+      margin-right: 6px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    a{
+      display: block;
+      padding: 5px 10px;
+      border: 1px solid $grey-medium-color;
+      border-radius: 2px;
+      transition: 0.2s;
+      &:hover{
+        border-color: $brand-color2;
+        background-color: $brand-color2;
+        color: $white-color;
+      }
+    }
+    &--singlePage{
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      text-align: right;
+      a{
+        border-color: $white-color;
+        color: $white-color;
+      }
+    }
+  }
 }

@@ -24,6 +24,7 @@ const routes = (
             <Route exact path="/" component={Home} />
             <Route exact path="/games/" component={Games} />
             <Route exact path="/news/" component={News} />
+            <Route exact path="/news/:tag" component={News} />
             <Route exact path="/company/" component={Company} />
             <Route exact path="/career/" component={Career} />
             <Route exact path="/advertisers/" component={Advertisers} />

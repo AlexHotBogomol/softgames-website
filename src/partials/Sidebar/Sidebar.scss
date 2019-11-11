@@ -30,32 +30,6 @@
     padding-bottom: 5px;
   }
 }
-.tags{
-  &-list{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    li{
-      display: inline-block;
-      width: auto;
-      margin-right: 6px;
-      margin-bottom: 10px;
-      cursor: pointer;
-    }
-    a{
-      display: block;
-      padding: 5px 10px;
-      border: 1px solid $grey-medium-color;
-      border-radius: 2px;
-      transition: 0.2s;
-      &:hover{
-        border-color: $brand-color2;
-        background-color: $brand-color2;
-        color: $white-color;
-      }
-    }
-  }
-}
 .pressKit{
   &-description{
     padding-bottom: 15px;
