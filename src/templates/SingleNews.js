@@ -6,6 +6,7 @@ import Sidebar from "../partials/Sidebar/Sidebar";
 import NewsCard from "../partials/NewsCard/NewsCard";
 import {Link} from "react-router-dom";
 import Helper from "../services/Helper";
+import Breadcrumb from "../partials/Breadcrumb";
 
 class SingleNews extends Component {
   constructor(props) {
@@ -90,7 +91,13 @@ class SingleNews extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-12">
-                    <div className="breadcrumb">Home/ News/ {postData.title}</div>
+                    <Breadcrumb
+                      items={[
+                        { name: "Home", slug: "/" },
+                        { name: "News", slug: "/news/" },
+                        { name: postData.title, slug: `/blog/${postData.slug}`}
+                      ]}
+                    />
                   </div>
                 </div>
                 <div className="row">

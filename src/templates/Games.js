@@ -3,6 +3,7 @@ import WpApiService from "../services/WpApiService";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import GameCard2 from "../partials/GameCard/GameCard2";
+import Breadcrumb from '../partials/Breadcrumb';
 
 class Games extends Component {
   constructor(props) {
@@ -61,7 +62,12 @@ class Games extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-12">
-                    <div className="breadcrumb">Home/ Games</div>
+                    <Breadcrumb
+                      items={[
+                        { name: "Home", slug: "/" },
+                        { name: "Games", slug: "/games/" },
+                      ]}
+                    />
                   </div>
                 </div>
                 <div className="row">

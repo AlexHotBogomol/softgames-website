@@ -1,10 +1,11 @@
 import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
 import Loader from "react-loader-spinner";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import Pagination from "../partials/Pagination/Pagination";
+import Breadcrumb from "../partials/Breadcrumb";
 
 class News extends Component {
   constructor(props) {
@@ -16,56 +17,72 @@ class News extends Component {
       news: [],
       filteredNews: [],
       currentPage: 1,
-      newsPerPage: 14,
+      newsPerPage: 14
     };
 
     this.wpApiService = new WpApiService();
   }
 
   componentDidMount = () => {
-    this.wpApiService.getPageBySlug("news").then(({data: newsPageData}) => {
-      this.wpApiService.getCustomPostCollection("blog", {
-        per_page: 100,
-      }).then(({data: news}) => {
-        this.setState({
-          loading: false,
-          newsPageData,
-          news,
-          filteredNews: this.props.match.params.tag ? this.filterNewsByTag(news, this.props.match.params.tag) : news,
+    this.wpApiService.getPageBySlug("news").then(({ data: newsPageData }) => {
+      this.wpApiService
+        .getCustomPostCollection("blog", {
+          per_page: 100
+        })
+        .then(({ data: news }) => {
+          this.setState({
+            loading: false,
+            newsPageData,
+            news,
+            filteredNews: this.props.match.params.tag
+              ? this.filterNewsByTag(news, this.props.match.params.tag)
+              : news
+          });
         });
-      })
-    })
+    });
   };
 
   filterNewsByTag = (news, tag) => {
-    return news.filter((newsItem) => {
-      if(newsItem.terms && newsItem.terms.some((term) => {
-        return term.slug === tag
-      })){
-        return newsItem
+    return news.filter(newsItem => {
+      if (
+        newsItem.terms &&
+        newsItem.terms.some(term => {
+          return term.slug === tag;
+        })
+      ) {
+        return newsItem;
       }
     });
   };
 
-  paginate = (pageNumber) => {
+  paginate = pageNumber => {
+    window.scroll({ top: 0, left: 0, behavior: "smooth" });
     this.setState({
       currentPage: pageNumber
     });
-    window.scroll({top: 0, left: 0, behavior: 'smooth' })
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if(prevProps.match.params.tag !== this.props.match.params.tag){
+    if (prevProps.match.params.tag !== this.props.match.params.tag) {
+      window.scroll({ top: 0, left: 0, behavior: "smooth" });
       this.setState({
-        filteredNews: this.props.match.params.tag ? this.filterNewsByTag(prevState.news, this.props.match.params.tag) : prevState.news,
-        currentPage: 1,
+        filteredNews: this.props.match.params.tag
+          ? this.filterNewsByTag(prevState.news, this.props.match.params.tag)
+          : prevState.news,
+        currentPage: 1
       });
-      window.scroll({top: 0, left: 0, behavior: 'smooth' })
     }
   }
 
   render() {
-    const {loading, newsPageData, filteredNews, currentPage, newsPerPage, tags} = this.state;
+    const {
+      loading,
+      newsPageData,
+      filteredNews,
+      currentPage,
+      newsPerPage,
+      tags
+    } = this.state;
 
     const indexOfLastNews = currentPage * newsPerPage;
     const indexOfFirstNews = indexOfLastNews - newsPerPage;
@@ -88,7 +105,12 @@ class News extends Component {
               <div className="container">
                 <div className="row">
                   <div className="col-12">
-                    <div className="breadcrumb">Home/ News</div>
+                    <Breadcrumb
+                      items={[
+                        { name: "Home", slug: "/" },
+                        { name: "News", slug: "/news/" },
+                      ]}
+                    />
                   </div>
                 </div>
                 <div className="row">
@@ -98,14 +120,19 @@ class News extends Component {
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <Pagination postsPerPage={newsPerPage} totalPosts={filteredNews.length} paginate={this.paginate} currentPage={currentPage}/>
+                    <Pagination
+                      postsPerPage={newsPerPage}
+                      totalPosts={filteredNews.length}
+                      paginate={this.paginate}
+                      currentPage={currentPage}
+                    />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-lg-8">
                     <TransitionGroup className="row news-list">
-                      {currentNews.map((news)=>{
-                        return(
+                      {currentNews.map(news => {
+                        return (
                           <CSSTransition
                             appear={true}
                             key={news.id}
@@ -123,17 +150,22 @@ class News extends Component {
                               />
                             </div>
                           </CSSTransition>
-                        )
+                        );
                       })}
                     </TransitionGroup>
                     <div className="row">
                       <div className="col-12">
-                        <Pagination postsPerPage={newsPerPage} totalPosts={filteredNews.length} paginate={this.paginate} currentPage={currentPage}/>
+                        <Pagination
+                          postsPerPage={newsPerPage}
+                          totalPosts={filteredNews.length}
+                          paginate={this.paginate}
+                          currentPage={currentPage}
+                        />
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-4">
-                    <Sidebar tags={tags} onTagClick={this.onTagClick}/>
+                    <Sidebar tags={tags} onTagClick={this.onTagClick} />
                   </div>
                 </div>
               </div>
@@ -141,7 +173,7 @@ class News extends Component {
           </Fragment>
         )}
       </div>
-    )
+    );
   }
 }
 
