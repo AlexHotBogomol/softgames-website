@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
-import axios from "axios";
 import Loader from "react-loader-spinner";
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import NewsCard from "../partials/NewsCard/NewsCard";
@@ -15,6 +14,7 @@ class News extends Component {
       loading: true,
       newsPageData: {},
       news: [],
+      filteredNews: [],
       currentPage: 1,
       newsPerPage: 14,
     };
@@ -23,51 +23,53 @@ class News extends Component {
   }
 
   componentDidMount = () => {
-    axios
-      .all([
-        this.wpApiService.getPageBySlug("news"),
-        this.wpApiService.getCustomPostCollection("blog", {
-          per_page: 100,
-        }),
-      ])
-      .then(
-        axios.spread(
-          (
-            {data: newsPageData},
-            {data: news},
-          ) => {
-            this.setState({
-              loading: false,
-              newsPageData,
-              news,
-            });
-          }
-        )
-      );
+    this.wpApiService.getPageBySlug("news").then(({data: newsPageData}) => {
+      this.wpApiService.getCustomPostCollection("blog", {
+        per_page: 100,
+      }).then(({data: news}) => {
+        this.setState({
+          loading: false,
+          newsPageData,
+          news,
+          filteredNews: this.props.match.params.tag ? this.filterNewsByTag(news, this.props.match.params.tag) : news,
+        });
+      })
+    })
+  };
+
+  filterNewsByTag = (news, tag) => {
+    return news.filter((newsItem) => {
+      if(newsItem.terms && newsItem.terms.some((term) => {
+        return term.slug === tag
+      })){
+        return newsItem
+      }
+    });
   };
 
   paginate = (pageNumber) => {
     this.setState({
       currentPage: pageNumber
     });
-  };
-
-  onTagClick = (slug) => {
-    console.log(slug);
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
   };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
-    if(prevState.currentPage !== this.state.currentPage){
+    if(prevProps.match.params.tag !== this.props.match.params.tag){
+      this.setState({
+        filteredNews: this.props.match.params.tag ? this.filterNewsByTag(prevState.news, this.props.match.params.tag) : prevState.news,
+        currentPage: 1,
+      });
       window.scroll({top: 0, left: 0, behavior: 'smooth' })
     }
   }
 
   render() {
-    const {loading, newsPageData, news, currentPage, newsPerPage, tags} = this.state;
+    const {loading, newsPageData, filteredNews, currentPage, newsPerPage, tags} = this.state;
 
     const indexOfLastNews = currentPage * newsPerPage;
     const indexOfFirstNews = indexOfLastNews - newsPerPage;
-    const currentNews = news.slice(indexOfFirstNews, indexOfLastNews);
+    const currentNews = filteredNews.slice(indexOfFirstNews, indexOfLastNews);
 
     return (
       <div id="content">
@@ -96,7 +98,7 @@ class News extends Component {
                 </div>
                 <div className="row">
                   <div className="col-12">
-                    <Pagination postsPerPage={newsPerPage} totalPosts={news.length} paginate={this.paginate} currentPage={currentPage}/>
+                    <Pagination postsPerPage={newsPerPage} totalPosts={filteredNews.length} paginate={this.paginate} currentPage={currentPage}/>
                   </div>
                 </div>
                 <div className="row">
@@ -126,7 +128,7 @@ class News extends Component {
                     </TransitionGroup>
                     <div className="row">
                       <div className="col-12">
-                        <Pagination postsPerPage={newsPerPage} totalPosts={news.length} paginate={this.paginate} currentPage={currentPage}/>
+                        <Pagination postsPerPage={newsPerPage} totalPosts={filteredNews.length} paginate={this.paginate} currentPage={currentPage}/>
                       </div>
                     </div>
                   </div>

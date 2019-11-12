@@ -18,7 +18,7 @@ class Sidebar extends Component{
   }
 
   componentDidMount = () => {
-    this.wpApiService.getAllTags().then((res) => {
+    this.wpApiService.getAllTags('news_tag').then((res) => {
       this.setState({
         tags: res.data
       })

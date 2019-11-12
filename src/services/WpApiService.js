@@ -67,7 +67,7 @@ export default class wpApiService {
   getAcfOptionByField = field => {
     return axios.get(`${this._braBase}/options/acf/${field}`);
   };
-  getAllTags = () => {
-    return axios.get(`${this._base}/tags?per_page=100`);
+  getAllTags = (tagType) => {
+    return axios.get(`${this._base}/${tagType}?per_page=100`);
   };
 }

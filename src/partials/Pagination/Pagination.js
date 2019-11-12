@@ -10,7 +10,7 @@ const Pagination = ({currentPage, totalPosts, postsPerPage, paginate}) => {
     pages.push(i);
   }
 
-  const beforePage = () => {
+  const beforePage = (currentPage) => {
     if(currentPage > 1){
       return (
         <li className="pagination-item">
@@ -25,7 +25,7 @@ const Pagination = ({currentPage, totalPosts, postsPerPage, paginate}) => {
     }
   };
 
-  const nextPage = () => {
+  const nextPage = (currentPage) => {
     if(currentPage < pages.length){
       return (
         <li className="pagination-item">
@@ -40,25 +40,31 @@ const Pagination = ({currentPage, totalPosts, postsPerPage, paginate}) => {
     }
   };
 
+  const renderPageList = (currentPage, pages) => {
+    if(pages.length > 1){
+      return pages.map(number => {
+        const classes = [
+          'pagination-link',
+          (currentPage === number) ? 'pagination-link--current' : null,
+        ];
+        return(
+          <li className="pagination-item" key={number}>
+            <a href="!#" onClick={(event) => {
+              event.preventDefault();
+              paginate(number);
+            }} className={classes.join(" ")}>{number}</a>
+          </li>
+        )
+      })
+    }
+  };
+
   return (
     <nav className="pagination">
       <ul className="pagination-list">
-        {beforePage()}
-        {pages.map(number => {
-          const classes = [
-            'pagination-link',
-            (currentPage === number) ? 'pagination-link--current' : null,
-          ];
-          return(
-            <li className="pagination-item" key={number}>
-              <a href="!#" onClick={(event) => {
-                event.preventDefault();
-                paginate(number);
-              }} className={classes.join(" ")}>{number}</a>
-            </li>
-            )
-        })}
-        {nextPage()}
+        {beforePage(currentPage)}
+        {renderPageList(currentPage, pages)}
+        {nextPage(currentPage)}
       </ul>
     </nav>
   )
