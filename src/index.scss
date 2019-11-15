@@ -955,6 +955,25 @@ label{
   .slick-next {
     right: -21px;
   }
+  .slick-track {
+    display: flex;
+  }
+  .slick-track .slick-slide {
+    display: flex;
+    height: auto;
+    &>div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &-slide{
+    width: auto !important;
+  }
+  .slick-slide img{
+    display: inline-block;
+  }
   .slick-dots{
     display: flex;
     flex-direction: row;
@@ -987,6 +1006,7 @@ label{
     }
   }
 }
+
 
 
 .aboutUsBlock{
@@ -1090,6 +1110,7 @@ label{
 
 .openPositions{
   padding-top: 70px;
+  padding-bottom: 50px;
   &-heading{
     padding-bottom: 65px;
     text-align: center;
@@ -1135,5 +1156,47 @@ label{
   .filterbar-select-department-container{
     max-width: 250px;
     width: 100%;
+  }
+}
+
+.employerCard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 25px;
+  padding-bottom: 60px;
+  &-imgWrapper{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: $white-color;
+    border-radius: 2px;
+    width: 270px;
+    min-width: 270px;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+  }
+  &-text{
+    margin-top: 20px;
+  }
+}
+.culture{
+  padding-top: 50px;
+  &-heading{
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  &-slider{
+    .slick-list{
+      margin-bottom: 30px;
+    }
+    .slick-prev {
+      left: -101px;
+    }
+    .slick-next {
+      right: -101px;
+    }
   }
 }

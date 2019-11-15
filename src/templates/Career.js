@@ -9,6 +9,9 @@ import Select from "react-select";
 import DropdownIndicator from "../partials/DropdownIndicator";
 import Helper from "../services/Helper";
 import PositionCard from "../partials/PositionCard/PositionCard";
+import Stars from "../assets/icons/Stars";
+import GlassDoor from "../assets/icons/GlassDoor";
+import Slider from "react-slick";
 
 class Career extends Component {
   constructor(props) {
@@ -198,6 +201,21 @@ class Career extends Component {
               </section>
             ) : null}
             <ArrowDown className="arrowDown" />
+            <div className="container">
+              <div className="row">
+                <div className="col-lg-7 offset-lg-3">
+                  <div className="employerCard">
+                    <div className="employerCard-imgWrapper">
+                      <GlassDoor/>
+                    </div>
+                    <div className="employerCard-content">
+                      <Stars/>
+                      <h5 className="employerCard-text">SOFTGAMES is a superstar employer according to Glassdoor</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="openPositions">
               <div className="container">
                 <div className="row">
@@ -251,13 +269,58 @@ class Career extends Component {
                     </div>
                   )}
                 </div>
-                {/*<div className="row">*/}
-                {/*  <button className="btn btn--primary loadMorePositions mx-auto">*/}
-                {/*    Load more*/}
-                {/*  </button>*/}
-                {/*</div>*/}
+                <div className="row">
+                  <button className="btn btn--primary loadMorePositions mx-auto">
+                    Load more
+                  </button>
+                </div>
               </div>
             </div>
+            <section className="culture">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+                    <h2 className="culture-heading">Culture & Values</h2>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-lg-10 mx-auto">
+                    {pageData.acf && pageData.acf.culture_gallery ? (
+                      <Slider
+                        className="slider slider3 culture-slider"
+                        customPaging={function(i) {
+                          return (
+                            <a>
+                              <img
+                                src={pageData.acf.culture_gallery[i].url}
+                                alt={pageData.acf.culture_gallery[i].alt}
+                              />
+                            </a>
+                          );
+                        }}
+                        dots={true}
+                        dotsClass="slick-dots slick-thumb"
+                        infinite={true}
+                        speed={500}
+                        slidesToShow={1}
+                        slidesToScroll={1}
+                      >
+                        {pageData.acf.culture_gallery.map(
+                          (slide, index) => {
+                            return (
+                              <div className="slider3-slide" key={index}>
+                                <img src={slide.url} alt={slide.alt} />
+                                <p></p>
+                              </div>
+                            );
+                          }
+                        )}
+                      </Slider>
+                    ) : null}
+                  </div>
+                </div>
+              </div>
+            </section>
             {pageData.acf &&
             pageData.acf.add_about_us_block &&
             pageData.acf.add_about_us_block.length ? (
