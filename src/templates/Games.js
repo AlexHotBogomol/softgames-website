@@ -4,6 +4,8 @@ import axios from "axios";
 import Loader from "react-loader-spinner";
 import GameCard2 from "../partials/GameCard/GameCard2";
 import Breadcrumb from '../partials/Breadcrumb';
+import AboutUsBlock from "../partials/AboutUsBlock";
+import SeoBlock from "../partials/SeoBlock";
 
 class Games extends Component {
   constructor(props) {
@@ -137,6 +139,22 @@ class Games extends Component {
                 </div>
               </div>
             </section>
+            {gamesPageData.acf && gamesPageData.acf.add_about_us_block && gamesPageData.acf.add_about_us_block.length ? (
+              <AboutUsBlock
+                heading={gamesPageData.acf.about_us_block.heading}
+                image={gamesPageData.acf.about_us_block.image}
+                content={gamesPageData.acf.about_us_block.content}
+                withButton={!!gamesPageData.acf.about_us_block.add_contact_us_button.length}
+              />
+            ) : null}
+            {gamesPageData.acf && gamesPageData.acf.add_seo_block && gamesPageData.acf.add_seo_block.length ? (
+              <SeoBlock
+                heading={gamesPageData.acf.seo_block.heading}
+                image={gamesPageData.acf.seo_block.image}
+                content={gamesPageData.acf.seo_block.content}
+                withButton={!!gamesPageData.acf.seo_block.add_contact_us_button.length}
+              />
+            ) : null}
           </Fragment>
         )}
       </div>

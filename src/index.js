@@ -15,6 +15,7 @@ import Developers from "./templates/Developers";
 import SingleNews from "./templates/SingleNews";
 import Header from "./partials/Header/Header";
 import Footer from "./partials/Footer/Footer";
+import HotPanel from "./partials/HotPanel/HotPanel";
 
 
 const routes = (
@@ -36,6 +37,7 @@ const routes = (
             <Redirect exact from='/search/' to='/' />
             <Route component={Notfound} />
         </Switch>
+        <HotPanel/>
         <Footer/>
       </Router>
   )

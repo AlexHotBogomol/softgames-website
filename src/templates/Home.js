@@ -53,9 +53,7 @@ class Home extends Component {
         this.wpApiService.getCustomPostCollection("game", {
           per_page: 3
         }),
-        this.wpApiService.getCustomPostCollection("position", {
-          per_page: 0
-        }),
+        this.wpApiService.getAllPositions(),
         this.wpApiService.getAcfOptions(),
       ])
       .then(
@@ -64,7 +62,7 @@ class Home extends Component {
             { data: homepageData },
             { data: latestNews },
             { data: games },
-            { data: positions },
+            {data: {offers: positions}},
             { data: acfOptions },
           ) => {
             this.setState({
@@ -209,15 +207,16 @@ class Home extends Component {
                       <div className="col-lg-4" key={position.id}>
                         <PositionCard
                           title={position.title}
-                          terms={position.terms}
-                          slug={position.slug}
+                          department={position.department}
+                          location={position.location}
+                          url={position.careers_url}
                         />
                       </div>
                     );
                   })}
                 </div>
                 <div className="row">
-                  <Link to="/positions/" className="btn btn--primary mx-auto">
+                  <Link to="/career/" className="btn btn--primary mx-auto">
                     All open positions
                   </Link>
                 </div>

@@ -6,6 +6,8 @@ import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import Pagination from "../partials/Pagination/Pagination";
 import Breadcrumb from "../partials/Breadcrumb";
+import AboutUsBlock from "../partials/AboutUsBlock";
+import SeoBlock from "../partials/SeoBlock";
 
 class News extends Component {
   constructor(props) {
@@ -13,7 +15,7 @@ class News extends Component {
 
     this.state = {
       loading: true,
-      newsPageData: {},
+      pageData: {},
       news: [],
       filteredNews: [],
       currentPage: 1,
@@ -24,7 +26,7 @@ class News extends Component {
   }
 
   componentDidMount = () => {
-    this.wpApiService.getPageBySlug("news").then(({ data: newsPageData }) => {
+    this.wpApiService.getPageBySlug("news").then(({ data: pageData }) => {
       this.wpApiService
         .getCustomPostCollection("blog", {
           per_page: 100
@@ -32,7 +34,7 @@ class News extends Component {
         .then(({ data: news }) => {
           this.setState({
             loading: false,
-            newsPageData,
+            pageData,
             news,
             filteredNews: this.props.match.params.tag
               ? this.filterNewsByTag(news, this.props.match.params.tag)
@@ -77,7 +79,7 @@ class News extends Component {
   render() {
     const {
       loading,
-      newsPageData,
+      pageData,
       filteredNews,
       currentPage,
       newsPerPage,
@@ -118,7 +120,7 @@ class News extends Component {
                     <h1 className="news-heading">Press & Events</h1>
                   </div>
                 </div>
-                <div className="row">
+                <div className="row mb-4">
                   <div className="col-12">
                     <Pagination
                       postsPerPage={newsPerPage}
@@ -165,11 +167,27 @@ class News extends Component {
                     </div>
                   </div>
                   <div className="col-lg-4">
-                    <Sidebar tags={tags} onTagClick={this.onTagClick} />
+                    <Sidebar />
                   </div>
                 </div>
               </div>
             </section>
+            {pageData.acf && pageData.acf.add_about_us_block && pageData.acf.add_about_us_block.length ? (
+              <AboutUsBlock
+                heading={pageData.acf.about_us_block.heading}
+                image={pageData.acf.about_us_block.image}
+                content={pageData.acf.about_us_block.content}
+                withButton={!!pageData.acf.about_us_block.add_contact_us_button.length}
+              />
+            ) : null}
+            {pageData.acf && pageData.acf.add_seo_block && pageData.acf.add_seo_block.length ? (
+              <SeoBlock
+                heading={pageData.acf.seo_block.heading}
+                image={pageData.acf.seo_block.image}
+                content={pageData.acf.seo_block.content}
+                withButton={!!pageData.acf.seo_block.add_contact_us_button.length}
+              />
+            ) : null}
           </Fragment>
         )}
       </div>

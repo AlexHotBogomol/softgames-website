@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default class wpApiService {
-  constructor(){
+  constructor() {
     this._base = "/wp-json/wp/v2";
     this._braBase = "/wp-json/better-rest-endpoints/v1";
   }
@@ -9,15 +9,17 @@ export default class wpApiService {
   getAllPosts = () => {
     return axios.get(`/posts/`);
   };
-  getLatestPosts = (customOptions) => {
+  getLatestPosts = customOptions => {
     const defaultOptions = {
       orderby: "date",
       order: "DESC",
       per_page: 5
     };
     const options = Object.assign(defaultOptions, customOptions);
-    const {orderby, order, per_page} = options;
-    return axios.get(`${this._braBase}/posts/?orderby=${orderby}&order=${order}&per_page=${per_page}`);
+    const { orderby, order, per_page } = options;
+    return axios.get(
+      `${this._braBase}/posts/?orderby=${orderby}&order=${order}&per_page=${per_page}`
+    );
   };
   getPostById = id => {
     return axios.get(`${this._braBase}/post/${id}`);
@@ -44,10 +46,24 @@ export default class wpApiService {
       per_page: 5,
       exclude: 0,
       page: 1,
+      acf: true,
+      content: true,
+      media: true
     };
     const options = Object.assign(defaultOptions, customOptions);
-    const {orderby, order, exclude, per_page, page} = options;
-    return axios.get(`${this._braBase}/${postType}/?orderby=${orderby}&order=${order}&per_page=${per_page}&exclude=${exclude}&page=${page}`);
+    const {
+      orderby,
+      order,
+      exclude,
+      per_page,
+      page,
+      acf,
+      content,
+      media
+    } = options;
+    return axios.get(
+      `${this._braBase}/${postType}/?orderby=${orderby}&order=${order}&per_page=${per_page}&exclude=${exclude}&page=${page}&acf=${acf}&content=${content}&media=${media}`
+    );
   };
   getCustomPostById = (postType, id) => {
     return axios.get(`${this._braBase}/${postType}/${id}/`);
@@ -67,7 +83,10 @@ export default class wpApiService {
   getAcfOptionByField = field => {
     return axios.get(`${this._braBase}/options/acf/${field}`);
   };
-  getAllTags = (tagType) => {
+  getAllTags = tagType => {
     return axios.get(`${this._base}/${tagType}?per_page=100`);
   };
+  getAllPositions = () => {
+    return axios.get('https://softgames.recruitee.com/api/offers/');
+  }
 }
