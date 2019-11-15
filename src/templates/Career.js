@@ -12,6 +12,18 @@ import PositionCard from "../partials/PositionCard/PositionCard";
 import Stars from "../assets/icons/Stars";
 import GlassDoor from "../assets/icons/GlassDoor";
 import Slider from "react-slick";
+import Visa from "../assets/icons/benefits/Visa";
+import Relocation from "../assets/icons/benefits/Relocation";
+import Languages from "../assets/icons/benefits/Languages";
+import FurtherTraining from "../assets/icons/benefits/FurtherTraining";
+import FlexibleWorkingHours from "../assets/icons/benefits/FlexibleWorkingHours";
+import HomeOffice from "../assets/icons/benefits/HomeOffice";
+import TeamSpirit from "../assets/icons/benefits/TeamSpirit";
+import Equipment from "../assets/icons/benefits/Equipment";
+import Food from "../assets/icons/benefits/Food";
+import Parties from "../assets/icons/benefits/Parties";
+import TeamEvents from "../assets/icons/benefits/TeamEvents";
+import Studio from "../assets/icons/benefits/Studio";
 
 class Career extends Component {
   constructor(props) {
@@ -317,6 +329,140 @@ class Career extends Component {
                         )}
                       </Slider>
                     ) : null}
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="employeeStories">
+              <div className="container">
+                <div className="row">
+                  <div className="col-12">
+
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section className="benefits">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-8 mx-auto">
+                    <h2 className="benefits-heading">
+                      Benefits
+                    </h2>
+                    <p className="benefits-subheading">
+                      Working and living in Germany has many advantages as e.g. a high job security, great work-life balance and one of the best universal health care systems in the world!
+                    </p>
+                    <p>Further our Berlin team benefits from:</p>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="col-12">
+                    <ul className="benefits-list">
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Visa/>
+                        </div>
+                        <h5 className="benefits-title">Visa</h5>
+                        <p className="benefits-description">
+                          Our visa assistance service guides you through the whole process and helps with tips and tricks to get the approvals and your visa as fast as possible.
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Relocation/>
+                        </div>
+                        <h5 className="benefits-title">Relocation</h5>
+                        <p className="benefits-description">
+                          We support your move to Berlin with e.g. flat hunting, paper work like local registration, setting up bank accounts etc.
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Languages/>
+                        </div>
+                        <h5 className="benefits-title">Language classes</h5>
+                        <p className="benefits-description">
+                          We pay your German lessons so you can order food auf Deutsch very fast and go right up to perfecting your business vocabulary.
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <FurtherTraining/>
+                        </div>
+                        <h5 className="benefits-title">Further training</h5>
+                        <p className="benefits-description">
+                          A personal learning budget to spend on learning and development, including books, workshops, etc.
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <FlexibleWorkingHours/>
+                        </div>
+                        <h5 className="benefits-title">Flexible working hours</h5>
+                        <p className="benefits-description">
+                          Productive hours differ individually. That’s why you're welcome to show up in the office whenever you're ready for it.
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <HomeOffice/>
+                        </div>
+                        <h5 className="benefits-title">Home office</h5>
+                        <p className="benefits-description">
+                          Need to watch the kids or wait for a handicraftsman? No problem - we also offer the opportunity for home office.
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <TeamSpirit/>
+                        </div>
+                        <h5 className="benefits-title">Team spirit</h5>
+                        <p className="benefits-description">
+                          Beyond our amazing parties and company events, the team further organizes activities themselves such as playing soccer together, a cooking group, a Japanese learning group, and much more.                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Equipment/>
+                        </div>
+                        <h5 className="benefits-title">Equipment</h5>
+                        <p className="benefits-description">
+                          Choose between the latest MacBooks or Windows Laptops at your choice. Furthermore our office features the latest projectors, cameras, testing devices, monitors -  you name it.                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Food/>
+                        </div>
+                        <h5 className="benefits-title">Fresh fruits, snacks and drinks</h5>
+                        <p className="benefits-description">
+                          Enjoy fresh fruits, free coffee and a fully stocked fridge with cold Water, Juices, Coke, Club Mate, Beer etc. For the sweet-toothed we have snacks, chocolate and chips of course                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Parties/>
+                        </div>
+                        <h5 className="benefits-title">Epic company parties</h5>
+                        <p className="benefits-description">
+                          Regular company parties to celebrate, including Carnival, Summer Party, Oktoberfest, Christmas Party
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <TeamEvents/>
+                        </div>
+                        <h5 className="benefits-title">Team events</h5>
+                        <p className="benefits-description">
+                          We have regular Casual Fridays, Board Game Nights, Pub Quizzes, Team lunches, Company breakfasts and much more …
+                        </p>
+                      </li>
+                      <li className="benefits-item">
+                        <div className="benefits-icon">
+                          <Studio/>
+                        </div>
+                        <h5 className="benefits-title">Studio</h5>
+                        <p className="benefits-description">
+                          A super modern office with state of the art tech, based in the center of Berlin, quickly to reach from all destinations thanks to the excellent public transport connections.                        </p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
