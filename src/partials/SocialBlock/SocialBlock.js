@@ -5,7 +5,7 @@ import Google from "./Socials/Google";
 import Linkedin from "./Socials/Linkedin";
 import './SocialBlock.scss';
 
-const SocialBlock = ({socialLinks}) => {
+const SocialBlock = (props) => {
   return (
     <div className="socialBlock">
       <h3 className="socialBlock-title">
@@ -16,16 +16,16 @@ const SocialBlock = ({socialLinks}) => {
       </h5>
       <ul className="socialBlock-list">
         <li>
-          <Facebook url={socialLinks.facebook_link} />
+          <Facebook/>
         </li>
         <li>
-          <Twitter url={socialLinks.twitter_link} />
+          <Twitter/>
         </li>
         <li>
-          <Google url={socialLinks.google_plus_link} />
+          <Google/>
         </li>
         <li>
-          <Linkedin url={socialLinks.linkedin_link} />
+          <Linkedin/>
         </li>
       </ul>
     </div>

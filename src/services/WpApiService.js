@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default class wpApiService {
   constructor() {
-    this._domain = "http://softgame/";
+    this._domain = "http://softgames.ein-des-ein.com/";
     this._base = `${this._domain}wp-json/wp/v2`;
     this._braBase = `${this._domain}/wp-json/better-rest-endpoints/v1`;
   }

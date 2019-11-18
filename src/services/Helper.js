@@ -6,17 +6,7 @@ class Helper {
       .toString()
       .slice(2, 4)}`;
   };
-  deleteEmptyPTags = (string) => {
-    return string.replace(/\<p\>&nbsp\;\<\/p\>/gi, "");
-  };
-  transformTagToSelectValue = (tagsArray) => {
-    return tagsArray.map((tag) => {
-      return {
-        value: tag.slug,
-        label: tag.name
-      }
-    })
-  };
+  deleteEmptyPTags = (string) => string.replace(/<p>&nbsp;<\/p>/gi, "");
   getFilteredPostsByTerm = (posts, term, value, defaultValue) => {
     return posts.filter(postItem => {
       if(value === defaultValue && !postItem[term]){

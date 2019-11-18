@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Facebook = ({url, className}) => {
+const Facebook = ({className}) => {
   return (
-    <a href={url} target="_blank" className={className}>
+    <a href={'https://www.google.com'} target="_blank" rel="noopener noreferrer" className={className}>
       <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0)">
           <rect x="0.375" y="0.7052" width="40.8828" height="40.8828" rx="20.4414" fill="#4267B2"/>

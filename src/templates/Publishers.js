@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import WpApiService from "../services/WpApiService";
-import axios from "axios";
 import Loader from "react-loader-spinner";
 import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";

@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Helper from "../services/Helper";
 import Breadcrumb from "../partials/Breadcrumb";
 import Slider from "react-slick";
-import SEO from "../partials/SEO";
+// import SEO from "../partials/SEO";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -17,7 +17,7 @@ import FacebookShareIcon from "../assets/icons/FacebookShareIcon";
 import LinkedinShareIcon from "../assets/icons/LinkedinShareIcon";
 import TwitterShareIcon from "../assets/icons/TwitterShareIcon";
 import GooglePlusShareIcon from "../assets/icons/GooglePlusShareIcon";
-import JoyStick from "../assets/icons/JoyStick";
+// import JoyStick from "../assets/icons/JoyStick";
 import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 
