@@ -1,0 +1,41 @@
+@import '../../variables';
+
+.joinUs{
+  background-color: $brand-color2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 125px 0;
+  color: $white-color;
+  text-align: center;
+  position: relative;
+  &-title{
+    padding-bottom: 90px;
+  }
+  &-separator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 60px;
+    span{
+      display: block;
+      width: 13px;
+      height: 13px;
+      background-color: $white-color;
+      margin: 0 8px;
+      border-radius: 50%;
+    }
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($black-color, 0.5);
+  }
+}
+.footer{
+  background-color: $brand-color2;
+}

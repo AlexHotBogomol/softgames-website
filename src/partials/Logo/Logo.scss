@@ -1,0 +1,28 @@
+@import '../../variables';
+.logo{
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  &-img{
+    display: block;
+    .logo-letter{
+      fill: $white-color;
+      transition: fill 0.3s;
+    }
+    .logo-bg{
+      fill: $brand-color1;
+      transition: fill 0.3s;
+    }
+  }
+  &:focus{
+    outline: none;
+  }
+  &:hover .logo-img {
+    .logo-letter{
+      fill: $brand-color1;
+    }
+    .logo-bg{
+      fill: $white-color;
+    }
+  }
+}
