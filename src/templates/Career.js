@@ -16,6 +16,7 @@ import GlassDoor from "../assets/icons/GlassDoor";
 import seoImg from "../assets/images/seoImg.jpg";
 import cultureImg from "../assets/images/cultureImage.jpg";
 import employeePhoto from "../assets/images/emplPhoto.png";
+import FAQ from "../partials/FAQ/FAQ";
 
 const cultureSlides = [
   {
@@ -53,6 +54,45 @@ const employeeStories = [
     employeeName: "Claudia Winkel",
     employeeDepartment: "Finance",
     employeePhoto: employeePhoto
+  }
+];
+
+const offices = [
+  {
+    location: "Berlin, Germany",
+    department: "HQ, Game Development",
+    slides: [
+      {
+        image: cultureImg,
+        caption: "Softgames"
+      },
+      {
+        image: cultureImg,
+        caption: "Softgames"
+      },
+      {
+        image: cultureImg,
+        caption: "Softgames"
+      }
+    ]
+  },
+  {
+    location: "Toronto, Canada",
+    department: "Game Development",
+    slides: [
+      {
+        image: cultureImg,
+        caption: "Softgames"
+      },
+      {
+        image: cultureImg,
+        caption: "Softgames"
+      },
+      {
+        image: cultureImg,
+        caption: "Softgames"
+      }
+    ]
   }
 ];
 
@@ -104,37 +144,37 @@ const Career = props => {
   const didMountRef = useRef(false);
 
   useEffect(() => {
-      didMountRef.current = true;
-      wpApiService.getAllPositions().then(({ data: { offers: positions } }) => {
-        const locations = [],
-          departments = [];
-        positions.forEach(position => {
-          if (
-            !locations.some(loc => {
-              return loc.value === position.location;
-            })
-          ) {
-            locations.push({
-              value: position.location || "Other Location",
-              label: position.location || "Other Location"
-            });
-          }
-          if (
-            !departments.some(depart => {
-              return depart.value === position.department;
-            })
-          ) {
-            departments.push({
-              value: position.department || "Other Department",
-              label: position.department || "Other Department"
-            });
-          }
-        });
-        setPositions(positions);
-        setFilteredPositions(positions);
-        setLocations(locations);
-        setDepartments(departments);
+    didMountRef.current = true;
+    wpApiService.getAllPositions().then(({ data: { offers: positions } }) => {
+      const locations = [],
+        departments = [];
+      positions.forEach(position => {
+        if (
+          !locations.some(loc => {
+            return loc.value === position.location;
+          })
+        ) {
+          locations.push({
+            value: position.location || "Other Location",
+            label: position.location || "Other Location"
+          });
+        }
+        if (
+          !departments.some(depart => {
+            return depart.value === position.department;
+          })
+        ) {
+          departments.push({
+            value: position.department || "Other Department",
+            label: position.department || "Other Department"
+          });
+        }
       });
+      setPositions(positions);
+      setFilteredPositions(positions);
+      setLocations(locations);
+      setDepartments(departments);
+    });
   }, []);
 
   useEffect(() => {
@@ -142,21 +182,21 @@ const Career = props => {
       selectedLocation.value === defaultLocation.value
         ? positions
         : helper.getFilteredPostsByTerm(
-        positions,
-        "location",
-        selectedLocation.value
-        );
+            positions,
+            "location",
+            selectedLocation.value
+          );
     const filteredPositions =
       selectedDepartment.value === defaultDepartment.value
         ? filteredPositionsByLocation
         : helper.getFilteredPostsByTerm(
-        filteredPositionsByLocation,
-        "department",
-        selectedDepartment.value,
-        "Other Department"
-        );
+            filteredPositionsByLocation,
+            "department",
+            selectedDepartment.value,
+            "Other Department"
+          );
     setFilteredPositions(filteredPositions);
-  }, [selectedLocation.value, selectedDepartment.value])
+  }, [selectedLocation.value, selectedDepartment.value]);
 
   return (
     <div id="content">
@@ -373,7 +413,7 @@ const Career = props => {
           </div>
           <div className="row">
             <div className="col-12">
-              <BenefitsList/>
+              <BenefitsList />
             </div>
           </div>
         </div>
@@ -382,7 +422,7 @@ const Career = props => {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
-              <h2 className="offices-heading">Global Offices</h2>
+              <h2 className="offices-heading withGrid">Global Offices</h2>
               <p className="offices-subheading">
                 SOFTGAMES is made up of individuals from 25+ different
                 countries. We believe in proactive, independent teams with the
@@ -392,76 +432,50 @@ const Career = props => {
               </p>
             </div>
           </div>
-          {/*<div className="row">*/}
-          {/*  <div className="col-lg-10 mx-auto">*/}
-          {/*    {pageData.acf && pageData.acf.culture_gallery ? (*/}
-          {/*      <Slider*/}
-          {/*        className="slider slider3 culture-slider"*/}
-          {/*        customPaging={function(i) {*/}
-          {/*          return (*/}
-          {/*            <a>*/}
-          {/*              <img*/}
-          {/*                src={pageData.acf.culture_gallery[i].url}*/}
-          {/*                alt={pageData.acf.culture_gallery[i].alt}*/}
-          {/*              />*/}
-          {/*            </a>*/}
-          {/*          );*/}
-          {/*        }}*/}
-          {/*        dots={true}*/}
-          {/*        dotsClass="slick-dots slick-thumb"*/}
-          {/*        infinite={true}*/}
-          {/*        speed={500}*/}
-          {/*        slidesToShow={1}*/}
-          {/*        slidesToScroll={1}*/}
-          {/*      >*/}
-          {/*        {pageData.acf.culture_gallery.map((slide, index) => {*/}
-          {/*          return (*/}
-          {/*            <div className="slider3-slide" key={index}>*/}
-          {/*              <img src={slide.url} alt={slide.alt} />*/}
-          {/*              <p></p>*/}
-          {/*            </div>*/}
-          {/*          );*/}
-          {/*        })}*/}
-          {/*      </Slider>*/}
-          {/*    ) : null}*/}
-          {/*  </div>*/}
-          {/*</div>*/}
-          {/*<div className="row">*/}
-          {/*  <div className="col-lg-10 mx-auto">*/}
-          {/*    {pageData.acf && pageData.acf.culture_gallery ? (*/}
-          {/*      <Slider*/}
-          {/*        className="slider slider3 culture-slider"*/}
-          {/*        customPaging={function(i) {*/}
-          {/*          return (*/}
-          {/*            <a>*/}
-          {/*              <img*/}
-          {/*                src={pageData.acf.culture_gallery[i].url}*/}
-          {/*                alt={pageData.acf.culture_gallery[i].alt}*/}
-          {/*              />*/}
-          {/*            </a>*/}
-          {/*          );*/}
-          {/*        }}*/}
-          {/*        dots={true}*/}
-          {/*        dotsClass="slick-dots slick-thumb"*/}
-          {/*        infinite={true}*/}
-          {/*        speed={500}*/}
-          {/*        slidesToShow={1}*/}
-          {/*        slidesToScroll={1}*/}
-          {/*      >*/}
-          {/*        {pageData.acf.culture_gallery.map((slide, index) => {*/}
-          {/*          return (*/}
-          {/*            <div className="slider3-slide" key={index}>*/}
-          {/*              <img src={slide.url} alt={slide.alt} />*/}
-          {/*              <p></p>*/}
-          {/*            </div>*/}
-          {/*          );*/}
-          {/*        })}*/}
-          {/*      </Slider>*/}
-          {/*    ) : null}*/}
-          {/*  </div>*/}
-          {/*</div>*/}
+          {offices.map((office, index) => (
+            <div className="row office" key={index}>
+              <div className="col-12">
+                <h4 className="office-location">
+                  {office.location}
+                </h4>
+                <p className="office-department">
+                  {office.department}
+                </p>
+              </div>
+              <div className="col-lg-10 mx-auto">
+                <Slider
+                  className="slider slider3 culture-slider"
+                  customPaging={function(i) {
+                    return (
+                      <a>
+                        <img
+                          src={office.slides[i].image}
+                          alt={office.slides[i].caption}
+                        />
+                      </a>
+                    );
+                  }}
+                  dots={true}
+                  dotsClass="slick-dots slick-thumb"
+                  infinite={true}
+                  speed={500}
+                  slidesToShow={1}
+                  slidesToScroll={1}
+                >
+                  {office.slides.map((slide, index) => {
+                    return (
+                      <div className="office-slide" key={index}>
+                        <img src={slide.image} alt={slide.caption} />
+                      </div>
+                    );
+                  })}
+                </Slider>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
+      <FAQ/>
     </div>
   );
 };

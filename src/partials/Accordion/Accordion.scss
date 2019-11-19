@@ -1,0 +1,42 @@
+@import "../../variables";
+
+.accordion{
+  &>.accordionSection{
+    background: $white-color;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 2px 2px 0px 0px;
+    margin-bottom: 25px;
+    &>.accordionSection-panel{
+      padding: 35px;
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 400;
+      font-family: $heading-font;
+    }
+    &>.accordionSection-content{
+      padding: 0 35px 25px;
+    }
+  }
+  .accordionSection-icon{
+    float: right;
+  }
+  .accordionSection-panel{
+    cursor: pointer;
+  }
+}
+.subAccordion{
+  padding-top: 35px;
+  &>.accordionSection{
+    &>.accordionSection-panel{
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      font-family: $heading-font;
+      padding: 25px 45px;
+      border-top: 1px solid $grey-light-color;
+    }
+    &>.accordionSection-content{
+      padding: 25px 90px;
+    }
+  }
+}

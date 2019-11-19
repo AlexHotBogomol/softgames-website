@@ -99,8 +99,8 @@ const benefits = [
 const BenefitsList = props => {
   return (
     <ul className="benefits-list">
-      {benefits.map((benefit) => (
-        <li className="benefits-item">
+      {benefits.map((benefit, index) => (
+        <li className="benefits-item" key={index}>
           <div className="benefits-icon">
             {benefit.icon}
           </div>
