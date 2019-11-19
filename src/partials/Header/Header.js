@@ -4,7 +4,7 @@ import "./Header.scss";
 import Logo from "../Logo/Logo";
 import ArrowDownSmall from "../../assets/icons/ArrowDownSmall";
 
-const Header = () => (
+const Header = (props) => (
   <header className="header">
     <div className="container">
       <Logo />

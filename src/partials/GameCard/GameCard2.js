@@ -23,6 +23,6 @@ const GameCard = ({link, googlePlayLink, appStoreLink, img, title, icon}) => {
       </div>
     </div>
   )
-}
+};
 
 export default GameCard

@@ -57,8 +57,6 @@ const Home = (props) => {
       });
   }, []);
 
-  console.log(positions);
-
   return (
     <div id="content">
       <div className="container--fullWidth">

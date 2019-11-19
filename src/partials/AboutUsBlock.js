@@ -15,9 +15,9 @@ const AboutUsBlock = ({heading, image, content, withButton}) => {
         ) : null}
         <div className="row">
           <div className="col-lg-6">
-            {image.url ? (
+            {image ? (
               <div className="aboutUsBlock-img withGrid">
-                <img src={image.url} alt={image.alt}/>
+                <img src={image} alt="Softgames"/>
               </div>
             ) : null}
           </div>

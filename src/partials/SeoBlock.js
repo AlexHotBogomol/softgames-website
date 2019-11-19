@@ -21,9 +21,9 @@ const SeoBlock = ({heading, image, content, withButton}) => {
             ) : null}
           </div>
           <div className="col-lg-6">
-            {image.url ? (
+            {image ? (
               <div className="seo-img withGrid">
-                <img src={image.url} alt={image.alt} />
+                <img src={image} alt="Softgames" />
               </div>
             ) : null}
           </div>

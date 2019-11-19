@@ -19,6 +19,6 @@ const GameCard = ({url, img, title, description}) => (
       }} />
     </div>
   </div>
-)
+);
 
 export default GameCard
