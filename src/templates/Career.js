@@ -304,11 +304,11 @@ const Career = props => {
               </div>
             )}
           </div>
-          <div className="row">
-            <button className="btn btn--primary loadMorePositions mx-auto">
-              Load more
-            </button>
-          </div>
+          {/*<div className="row">*/}
+          {/*  <button className="btn btn--primary loadMorePositions mx-auto">*/}
+          {/*    Load more*/}
+          {/*  </button>*/}
+          {/*</div>*/}
         </div>
       </div>
       <section className="culture">

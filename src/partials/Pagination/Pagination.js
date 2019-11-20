@@ -68,6 +68,6 @@ const Pagination = ({currentPage, totalPosts, postsPerPage, paginate}) => {
       </ul>
     </nav>
   )
-}
+};
 
 export default Pagination

@@ -7,7 +7,7 @@ import ArrowDownSmall from "../../assets/icons/ArrowDownSmall";
 const Header = (props) => (
   <header className="header">
     <div className="container">
-      <Logo />
+      <Logo className="header-logo"/>
       <nav className="header-nav">
         <ul className="menu header-menu">
           <li className="menu-item">

@@ -9,6 +9,7 @@
   color: $white-color;
   text-align: center;
   position: relative;
+  background-image: url("../../assets/images/joinUs.jpg");
   &-title{
     padding-bottom: 90px;
   }
@@ -37,5 +38,116 @@
   }
 }
 .footer{
+  padding-top: 70px;
+  padding-bottom: 20px;
   background-color: $brand-color2;
+  overflow: hidden;
+  &-socials{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline-block;
+      margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        display: block;
+        transition: 0.2s;
+        svg{
+          width: 100%;
+          height: 100%;
+        }
+        &:hover, &:focus{
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  &-copyright{
+    color: $white-color;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  &-logoWrapper{
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      background-image: url("data:image/svg+xml,%3Csvg width='857' height='995' viewBox='0 0 857 995' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M621.825 621.815C652.754 545.366 486.991 467.523 428.336 377.291C340.436 242.071 272.673 398.23 210.466 577.547C148.26 756.863 91.641 924.057 158.988 849.544C376.543 608.842 577.964 730.229 621.825 621.815Z' fill='white'/%3E%3Cpath opacity='0.1' d='M52.5761 542.701C58.1757 718.329 314.401 696.968 431.884 774.984C657.734 924.964 587.638 603.54 758.628 553.858C997.406 484.481 470.769 -72.4528 434.523 54.0461C317.436 462.685 47.7228 390.48 52.5761 542.701Z' fill='%23EEEEEE'/%3E%3C/svg%3E%0A");
+      width: 857px;
+      height: 995px;
+      top: -590px;
+      left: -340px;
+    }
+  }
+  &-logo{
+    z-index: 50;
+    position: relative;
+    .logo-img{
+      display: block;
+      .logo-letter{
+        fill: $brand-color1;
+      }
+      .logo-bg{
+        fill: transparent;
+      }
+    }
+  }
+}
+
+.footerMenu{
+  margin-bottom: 40px;
+  &-item{
+    padding-bottom: 15px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  &-subitem{
+    line-height: 1.5;
+    text-transform: capitalize;
+    font-weight: 400;
+  }
+  &-link, &-sublink{
+    color: $white-color;
+    &:hover, &:focus{
+      color: $white-color;
+      border-bottom: 1px solid $white-color;
+    }
+  }
+}
+.footerBottom{
+  padding-top: 10px;
+  padding-bottom: 25px;
+  border-top: 1px solid $white-color;
+  &-menu{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li{
+      display: inline-block;
+      &:first-child:before{
+        display: none;
+      }
+      &:before{
+        content: '\00a0-\00a0';
+        color: $white-color;
+      }
+      a{
+        color: $white-color;
+        border-bottom: 1px solid transparent;
+        transition: 0.2s;
+        &:hover{
+          border-color: $white-color;
+        }
+      }
+    }
+  }
+
 }
