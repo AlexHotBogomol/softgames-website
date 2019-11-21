@@ -21,7 +21,7 @@ const ManagerCard = ({managerName, managerPosition, renderManagerHistory, manage
       <div className="row">
         {photoPosition === "left" ? (
           <div className="col-lg-6 d-flex justify-content-center align-items-center">
-            {renderManagerPhoto("left")}
+            {renderManagerPhoto("right")}
           </div>
         ) : null}
         <div className="col-lg-6">
@@ -31,7 +31,7 @@ const ManagerCard = ({managerName, managerPosition, renderManagerHistory, manage
         </div>
         {photoPosition !== "left" ? (
           <div className="col-lg-6 d-flex justify-content-center align-items-center">
-            {renderManagerPhoto("right")}
+            {renderManagerPhoto("left")}
           </div>
         ) : null}
       </div>

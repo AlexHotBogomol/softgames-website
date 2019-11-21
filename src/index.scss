@@ -1045,16 +1045,71 @@
   }
 }
 .ourStory{
+  position: relative;
   padding-bottom: 75px;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -190px;
+    right: -170px;
+    background-image: url("data:image/svg+xml,%3Csvg width='780' height='1151' viewBox='0 0 780 1151' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M0 437.179C8.17776e-05 178.178 316 225.557 460 81.5566C653.443 -111.887 782 54.6785 779 413.678C776 772.678 654.732 1290.83 581.984 1115.31C346.984 548.31 -7.6199e-05 678.512 0 437.179Z' fill='%23EEEEEE'/%3E%3C/svg%3E%0A");
+    width: 780px;
+    height: 1151px;
+    z-index: -1;
+    @media only screen and (max-width: 1500px){
+      right: -500px;
+    }
+  }
   &-heading{
     text-align: center;
     padding-bottom: 60px;
   }
 }
 .management{
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -240px;
+    left: -170px;
+    background-image: url("data:image/svg+xml,%3Csvg width='780' height='1151' viewBox='0 0 780 1151' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M779.051 437.179C779.051 178.178 463.051 225.557 319.051 81.5566C125.607 -111.887 -2.94922 54.6785 0.0507812 413.678C3.05078 772.678 124.319 1290.83 197.066 1115.31C432.066 548.31 779.051 678.512 779.051 437.179Z' fill='%23EEEEEE'/%3E%3C/svg%3E%0A");
+    width: 780px;
+    height: 1151px;
+    z-index: -1;
+    @media only screen and (max-width: 1500px){
+      left: -410px;
+    }
+  }
   padding-top: 75px;
   &-heading{
     text-align: center;
     padding-bottom: 50px;
+  }
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -740px;
+    right: -280px;
+    background-image: url("data:image/svg+xml,%3Csvg width='780' height='1151' viewBox='0 0 780 1151' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M0 437.179C8.17776e-05 178.178 316 225.557 460 81.5566C653.443 -111.887 782 54.6785 779 413.678C776 772.678 654.732 1290.83 581.984 1115.31C346.984 548.31 -7.6199e-05 678.512 0 437.179Z' fill='%23EEEEEE'/%3E%3C/svg%3E%0A");
+    width: 780px;
+    height: 1151px;
+    z-index: -1;
+    @media only screen and (max-width: 1500px){
+      right: -450px;
+    }
+  }
+}
+.pressRoom{
+  padding-top: 20px;
+  &-heading{
+    text-align: center;
+    padding-bottom: 60px;
+    color: $brand-color2;
+  }
+  .newsCard{
+    margin-bottom: 30px;
   }
 }

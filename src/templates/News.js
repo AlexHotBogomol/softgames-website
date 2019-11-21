@@ -6,8 +6,6 @@ import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import Pagination from "../partials/Pagination/Pagination";
 import Breadcrumb from "../partials/Breadcrumb";
-import AboutUsBlock from "../partials/AboutUsBlock";
-import SeoBlock from "../partials/SeoBlock";
 
 class News extends Component {
   constructor(props) {
@@ -79,11 +77,9 @@ class News extends Component {
   render() {
     const {
       loading,
-      pageData,
       filteredNews,
       currentPage,
       newsPerPage,
-      tags
     } = this.state;
 
     const indexOfLastNews = currentPage * newsPerPage;
@@ -172,22 +168,6 @@ class News extends Component {
                 </div>
               </div>
             </section>
-            {pageData.acf && pageData.acf.add_about_us_block && pageData.acf.add_about_us_block.length ? (
-              <AboutUsBlock
-                heading={pageData.acf.about_us_block.heading}
-                image={pageData.acf.about_us_block.image}
-                content={pageData.acf.about_us_block.content}
-                withButton={!!pageData.acf.about_us_block.add_contact_us_button.length}
-              />
-            ) : null}
-            {pageData.acf && pageData.acf.add_seo_block && pageData.acf.add_seo_block.length ? (
-              <SeoBlock
-                heading={pageData.acf.seo_block.heading}
-                image={pageData.acf.seo_block.image}
-                content={pageData.acf.seo_block.content}
-                withButton={!!pageData.acf.seo_block.add_contact_us_button.length}
-              />
-            ) : null}
           </Fragment>
         )}
       </div>

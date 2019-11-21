@@ -1,10 +1,13 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
 import Breadcrumb from "../partials/Breadcrumb";
 import TimelineSlider from "../partials/TimelineSlider/TimelineSlider";
 import ManagerList from "../partials/ManagerList/ManagerList";
+import NewsCard from "../partials/NewsCard/NewsCard";
+import Sidebar from "../partials/Sidebar/Sidebar";
+import WpApiService from "../services/WpApiService";
 
 const aboutUsData = {
   heading: "About Us",
@@ -22,56 +25,105 @@ const seoBlockData = {
   contactUsBtn: true,
 };
 
-const Company = (props) => (
-  <div id="content">
-    <div className="container">
-      <div className="row">
-        <div className="col-12">
-          <Breadcrumb
-            items={[
-              { name: "Home", slug: "/" },
-              { name: "Company", slug: "/company/" },
-            ]}
-          />
+const Company = (props) => {
+  const wpApiService = new WpApiService();
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    wpApiService.getCustomPostCollection("blog", {
+      per_page: 6
+    }).then(({data: news}) => {
+      setNews(news);
+    })
+  }, []);
+
+  return (
+    <div id="content">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <Breadcrumb
+              items={[
+                {name: "Home", slug: "/"},
+                {name: "Company", slug: "/company/"},
+              ]}
+            />
+          </div>
         </div>
       </div>
+      <AboutUsBlock
+        heading={aboutUsData.heading}
+        image={aboutUsData.image}
+        content={aboutUsData.content}
+        withButton={aboutUsData.contactUsBtn}
+        className="company-aboutUs"
+      />
+      <section className="ourStory">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="ourStory-heading">
+                Our Story
+              </h2>
+              <TimelineSlider/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="management">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="management-heading">Management</h2>
+              <ManagerList/>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="pressRoom">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="pressRoom-heading">
+                Press Room
+              </h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="row news-list">
+                {news.map(newsItem => {
+                  return (
+                    <div className="col-md-6" key={newsItem.id}>
+                      <NewsCard
+                        id={newsItem.id}
+                        title={newsItem.title}
+                        img={newsItem.media.large}
+                        slug={newsItem.slug}
+                        date={newsItem.date}
+                      />
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <Sidebar
+                subscribe={false}
+                tags={false}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <SeoBlock
+        heading={seoBlockData.heading}
+        image={seoBlockData.image}
+        content={seoBlockData.content}
+        withButton={seoBlockData.contactUsBtn}
+      />
     </div>
-    <AboutUsBlock
-      heading={aboutUsData.heading}
-      image={aboutUsData.image}
-      content={aboutUsData.content}
-      withButton={aboutUsData.contactUsBtn}
-      className="company-aboutUs"
-    />
-    <section className="ourStory">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <h2 className="ourStory-heading">
-              Our Story
-            </h2>
-            <TimelineSlider/>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section className="management">
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <h2 className="management-heading">Management</h2>
-            <ManagerList/>
-          </div>
-        </div>
-      </div>
-    </section>
-    <SeoBlock
-      heading={seoBlockData.heading}
-      image={seoBlockData.image}
-      content={seoBlockData.content}
-      withButton={seoBlockData.contactUsBtn}
-    />
-  </div>
-);
+  );
+}
 
 export default Company;
