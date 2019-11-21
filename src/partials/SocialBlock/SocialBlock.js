@@ -16,16 +16,16 @@ const SocialBlock = (props) => {
       </h5>
       <ul className="socialBlock-list">
         <li>
-          <Facebook/>
+          <Facebook link="https://www.google.com"/>
         </li>
         <li>
-          <Twitter/>
+          <Twitter link="https://www.google.com"/>
         </li>
         <li>
-          <Google/>
+          <Google link="https://www.google.com"/>
         </li>
         <li>
-          <Linkedin/>
+          <Linkedin link="https://www.google.com"/>
         </li>
       </ul>
     </div>

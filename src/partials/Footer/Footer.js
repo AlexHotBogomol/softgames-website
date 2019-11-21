@@ -212,16 +212,16 @@ const Footer = props => (
           <div className="col-lg-2">
             <ul className="footer-socials">
               <li>
-                <Facebook />
+                <Facebook link="https://www.google.com"/>
               </li>
               <li>
-                <Twitter />
+                <Twitter link="https://www.google.com" />
               </li>
               <li>
-                <Google />
+                <Google link="https://www.google.com" />
               </li>
               <li>
-                <Linkedin />
+                <Linkedin link="https://www.google.com" />
               </li>
             </ul>
           </div>

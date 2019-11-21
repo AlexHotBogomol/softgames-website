@@ -2,6 +2,9 @@ import React from "react";
 import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
+import Breadcrumb from "../partials/Breadcrumb";
+import TimelineSlider from "../partials/TimelineSlider/TimelineSlider";
+import ManagerList from "../partials/ManagerList/ManagerList";
 
 const aboutUsData = {
   heading: "About Us",
@@ -21,13 +24,47 @@ const seoBlockData = {
 
 const Company = (props) => (
   <div id="content">
-    Company
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <Breadcrumb
+            items={[
+              { name: "Home", slug: "/" },
+              { name: "Company", slug: "/company/" },
+            ]}
+          />
+        </div>
+      </div>
+    </div>
     <AboutUsBlock
       heading={aboutUsData.heading}
       image={aboutUsData.image}
       content={aboutUsData.content}
       withButton={aboutUsData.contactUsBtn}
+      className="company-aboutUs"
     />
+    <section className="ourStory">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h2 className="ourStory-heading">
+              Our Story
+            </h2>
+            <TimelineSlider/>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="management">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <h2 className="management-heading">Management</h2>
+            <ManagerList/>
+          </div>
+        </div>
+      </div>
+    </section>
     <SeoBlock
       heading={seoBlockData.heading}
       image={seoBlockData.image}

@@ -1032,3 +1032,29 @@
     }
   }
 }
+.company{
+  &-aboutUs{
+    padding-top: 0;
+    &:before{
+      top: -40px;
+    }
+    .aboutUsBlock-title{
+      @include h1;
+      color: $brand-color2;
+    }
+  }
+}
+.ourStory{
+  padding-bottom: 75px;
+  &-heading{
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+.management{
+  padding-top: 75px;
+  &-heading{
+    text-align: center;
+    padding-bottom: 50px;
+  }
+}

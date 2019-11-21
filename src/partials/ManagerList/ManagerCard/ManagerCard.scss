@@ -1,0 +1,44 @@
+.managerCard{
+  margin-bottom: 150px;
+  &-photoWrapper{
+    width: 370px;
+    height: 370px;
+    border-radius: 50%;
+    position: relative;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-name{
+    padding-bottom: 10px;
+  }
+  &-position{
+    padding-bottom: 50px;
+  }
+  &-history{
+    p{
+      padding-bottom: 15px;
+      line-height: 1.75;
+      &:last-child{
+        padding-bottom: 0;
+      }
+    }
+  }
+  &-linkedin{
+    position: absolute;
+    bottom: 15px;
+    right: 60px;
+    width: 48px;
+    height: 48px;
+    transition: 0.2s;
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+    &:hover{
+      transform: scale(1.05);
+    }
+  }
+}

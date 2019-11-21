@@ -1,8 +1,13 @@
 import React from 'react';
 
-const AboutUsBlock = ({heading, image, content, withButton}) => {
+const AboutUsBlock = ({heading, image, content, withButton, className}) => {
+  const classes = [
+    'simpleBlock',
+    'aboutUsBlock',
+    className
+  ];
   return (
-    <section className="simpleBlock aboutUsBlock">
+    <section className={classes.join(" ")}>
       <div className="container">
         {heading ? (
           <div className="row">
