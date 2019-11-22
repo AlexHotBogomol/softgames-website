@@ -1,16 +1,25 @@
 import React from "react";
-import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
-
-const aboutUsData = {
-  heading: "About Us",
-  image: seoImg,
-  content: `<p>SOFTGAMES is a leading developer of the most popular Instant Games. Our flagship titles Cookie Crush, Solitaire Story and Candy Match are being played by tens of millions of users every month.</p>
-  <p>Our mission is to enable everybody to instantly play great casual games with their friends across any device.</p>
-  <p>Further our line of products includes over 400 hyper casual games within our innovative HTML5 games platform which allows our partners to engage and retain their user base. Founded in 2006 we are operating out of Berlin, Germany and Toronto, Canada.</p>`,
-  contactUsBtn: true,
-};
+import BasicBlock from "../partials/BasicBlock/BasicBlock";
+import Breadcrumb from "../partials/Breadcrumb";
+import ArrowDown from "../assets/icons/ArrowDown";
+import PartnersList from "../partials/PartnersList/PartnersList";
+import Rtl from "../assets/icons/partners/Rtl";
+import Samsung from "../assets/icons/partners/Samsung";
+import Facebook from "../assets/icons/partners/Facebook";
+import Yahoo from "../assets/icons/partners/Yahoo";
+import Stroer from "../assets/icons/partners/Stroer";
+import Twitch from "../assets/icons/partners/Twitch";
+import AxelSpringer from "../assets/icons/partners/AxelSpringer";
+import SimpleCard from "../partials/SimpleCard/SimpleCard";
+import PremiumGames from "../assets/icons/publishers/PremiumGames";
+import InstantPlay from "../assets/icons/publishers/InstantPlay";
+import MultipleLanguage from "../assets/icons/publishers/MultipleLanguages";
+import CrossPlatform from "../assets/icons/publishers/CrossPlatform";
+import RealtimeDashboard from "../assets/icons/publishers/RealtimeDashboard";
+import PremiumMonetization from "../assets/icons/publishers/PremiumMonetization";
+import NewGame from "../assets/icons/publishers/NewGame";
 
 const seoBlockData = {
   heading: "Seo Title",
@@ -19,14 +28,159 @@ const seoBlockData = {
   contactUsBtn: true,
 };
 
+const simpleCards = [
+  {
+    icon: <PremiumGames/>,
+    content: <div><h4>400+ Premium Games</h4></div>,
+  },
+  {
+    icon: <InstantPlay/>,
+    content: <div><h4>Instant Play</h4></div>,
+  },
+  {
+    icon: <MultipleLanguage/>,
+    content: <div><h4>Multiple Languages</h4></div>,
+  },
+];
+
+const whyUsCards = [
+  {
+    icon: <CrossPlatform/>,
+    content: <div><h4>Cross<br/>Platform</h4></div>,
+  },
+  {
+    icon: <RealtimeDashboard/>,
+    content: <div><h4>Realtime<br/>Dashboard</h4></div>,
+  },
+  {
+    icon: <PremiumMonetization/>,
+    content: <div><h4>Premium<br/>Monetization</h4></div>,
+  },
+  {
+    icon: <NewGame/>,
+    content: <div><h4>New Games<br/>Every Month</h4></div>,
+  },
+];
+
 const Publishers = (props) => (
   <div id="content">
-    Publishers
-    <AboutUsBlock
-      heading={aboutUsData.heading}
-      image={aboutUsData.image}
-      content={aboutUsData.content}
-      withButton={aboutUsData.contactUsBtn}
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <Breadcrumb
+            items={[
+              { name: "Home", slug: "/" },
+              { name: "Publishers", slug: "/publishers/" }
+            ]}
+          />
+        </div>
+      </div>
+    </div>
+    <BasicBlock
+      className="partnerUpBlock publishersBlock withIllustration"
+      category="Publishers"
+      title={<h1>Games Affiliate<br/><span>Program</span></h1>}
+      description={<p>Join the best Games Affiliate Program as a publisher and maximize your
+                    earnings! Earn the highest commissions and monetize your online and app
+        traffic by embedding high quality, cross-platform games.</p>}
+      image={seoImg}
+      imageAlt="Softgames"
+      btn={<button className="btn btn--primary">browse games</button>}
+    />
+    <ArrowDown className="arrowDown" />
+
+    <section className="affiliateProgram withIllustration">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mx-auto">
+            <p className="affiliateProgram-description">
+              Earn money with SOFTGAMES Games Affiliate Program! Join the world’s no.1 casual games platform and
+              offer your users premium entertainment with our games directly embedded on your site or in your app.
+            </p>
+          </div>
+        </div>
+        <div className="row affiliateProgram-list">
+          {simpleCards.map((card,index) => (
+            <SimpleCard
+              key={index}
+              icon={card.icon}
+              content={card.content}
+              className="affiliateProgram-card"
+            />
+          ))}
+        </div>
+        <div className="col-lg-8 mx-auto text-center">
+          <h4 className="affiliateProgram-title">Join our Games Affiliate Program and start earning money!</h4>
+          <button className="btn btn--primary">Join Us</button>
+        </div>
+      </div>
+    </section>
+    <section className="whyUs withIllustration">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mx-auto text-center">
+            <h2 className="whyUs-heading">Why SOFTGAMES?</h2>
+            <p className="whyUs-subheading">
+              To-date, more than 1 billion people have enjoyed our games, including the most popular titles like Cookie Crush, Solitaire Story, Space Invaders, Fish Story and Bubble Shooter HD.
+            </p>
+            <p className="whyUs-subheading">
+              Whether you run a site, app, bot or messenger, we offer everything you need to entertain, retain and monetise your audience:
+            </p>
+          </div>
+        </div>
+        <div className="row whyUs-list">
+          {whyUsCards.map((card,index) => (
+            <div className="col-lg-3" key={index}>
+              <SimpleCard
+                icon={card.icon}
+                content={card.content}
+                className="whyUs-card"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section className="ourPartners withIllustration">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-6 mx-auto text-center">
+            <h2 className="basicHeading">Our partners</h2>
+            <p className="ourPartners-subheading">
+              Over 2500 global publishers trust us to deliver brand safe entertainment, retention and new revenue to their sites and apps.
+            </p>
+          </div>
+        </div>
+        <PartnersList
+          firstColumn={[
+            <Rtl/>,
+            <Samsung/>
+          ]}
+          secondColumn={[
+            <Facebook/>,
+            <Yahoo/>
+          ]}
+          thirdColumn={[
+            <Stroer/>,
+            <Twitch/>
+          ]}
+          fourthColumn={[
+            <AxelSpringer/>
+          ]}
+        />
+      </div>
+    </section>
+    <BasicBlock
+      className="partnerUpBlock publishersBlock2 withIllustration"
+      category="Publishers"
+      title={<h2>Join our<br/><span>Games Affiliate Program!</span></h2>}
+      description={<p>Join our Games Affiliate Program and start earning money!
+                    Get in touch, we love talking to people! Reach out:<br/>
+                    <a className="link" href="mailto:publishers@softgames.com">publishers@softgames.com</a>
+                    </p>}
+      image={seoImg}
+      imageAlt="Softgames"
+      btn={<button className="btn btn--primary">register now</button>}
     />
     <SeoBlock
       heading={seoBlockData.heading}

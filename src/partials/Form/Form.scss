@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.form{
+  display: block;
+  width: 100%;
+  padding: 50px;
+  background-color: $white-color;
+  &--getInTouch{
+    label{
+      margin-bottom: 13px;
+    }
+    input, textarea{
+      background-color: $grey-light-color;
+    }
+    textarea{
+      resize: none;
+      min-height: 215px;
+    }
+    button{
+      margin-top: 15px;
+    }
+  }
+}

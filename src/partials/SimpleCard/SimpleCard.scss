@@ -1,0 +1,11 @@
+@import '../../variables';
+
+.simpleCard{
+  text-align: center;
+  &-imgWrapper{
+    width: 100%;
+  }
+  h4{
+    color: $brand-color1;
+  }
+}

@@ -635,7 +635,6 @@
     text-align: center;
     color: $brand-color1;
     padding-bottom: 60px;
-
   }
   &-img{
     &:before{
@@ -1104,6 +1103,7 @@
 }
 .pressRoom{
   padding-top: 20px;
+  padding-bottom: 40px;
   &-heading{
     text-align: center;
     padding-bottom: 60px;
@@ -1111,5 +1111,127 @@
   }
   .newsCard{
     margin-bottom: 30px;
+  }
+  .news-list{
+    margin-bottom: 40px;
+  }
+}
+
+.getInTouch{
+  padding-top: 40px;
+  &-heading{
+    text-align: center;
+    color: $brand-color2;
+    padding-bottom: 40px;
+  }
+}
+.basicHeading{
+  padding-bottom: 40px;
+}
+.globalReach{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  &-subheading{
+    padding-bottom: 25px;
+  }
+}
+.betterMonetization{
+  padding-top: 60px;
+  padding-bottom: 120px;
+  &-subheading{
+    padding-bottom: 70px;
+  }
+  &-title{
+    padding-bottom: 55px;
+  }
+}
+.publishWithUs{
+  padding-top: 120px;
+  padding-bottom: 120px;
+  &-heading{
+    padding-bottom: 60px;
+  }
+}
+.ourPartners{
+  padding-top: 80px;
+  padding-bottom: 90px;
+  &:before{
+    background-image: url("data:image/svg+xml,%3Csvg width='1289' height='1388' viewBox='0 0 1289 1388' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M13.8619 731.941C-95.1617 433.398 467.646 421.631 697.146 71.6309C847.156 -157.144 1291.15 204.131 1288.15 563.131C1285.15 922.131 826.893 1532.15 754.146 1356.63C519.146 789.631 96.6457 958.631 13.8619 731.941Z' fill='%23EEEEEE'/%3E%3C/svg%3E%0A");
+    width: 1289px;
+    height: 1388px;
+    right: -611px;
+    top: 130px;
+    @media only screen and (max-width: 1500px) {
+      right: -511px;
+    }
+  }
+  &-subheading{
+    padding-bottom: 25px;
+  }
+}
+.affiliateProgram{
+  padding-top: 40px;
+  padding-bottom: 75px;
+  &:before{
+    background-image: url("data:image/svg+xml,%3Csvg width='1289' height='1388' viewBox='0 0 1289 1388' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M13.8619 731.941C-95.1617 433.398 467.646 421.631 697.146 71.6309C847.156 -157.144 1291.15 204.131 1288.15 563.131C1285.15 922.131 826.893 1532.15 754.146 1356.63C519.146 789.631 96.6457 958.631 13.8619 731.941Z' fill='%23EEEEEE'/%3E%3C/svg%3E");
+    width: 1289px;
+    height: 1388px;
+    top: -360px;
+    right: -520px;
+    @media only screen and (max-width: 1500px){
+      right: -670px;
+    }
+  }
+  &-description{
+    padding-bottom: 100px;
+    text-align: center;
+  }
+  &-list{
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  &-title{
+    padding-bottom: 50px;
+  }
+  &-card{
+    margin: 0 40px;
+    .simpleCard-imgWrapper{
+      height: 200px;
+    }
+  }
+}
+.whyUs{
+  padding-top: 75px;
+  padding-bottom: 80px;
+  &:before{
+    background-image: url("data:image/svg+xml,%3Csvg width='1289' height='1388' viewBox='0 0 1289 1388' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' d='M1274.3 731.941C1383.32 433.398 820.515 421.631 591.015 71.6309C441.005 -157.144 -2.98511 204.131 0.0148926 563.131C3.01489 922.131 461.268 1532.15 534.015 1356.63C769.015 789.631 1191.52 958.631 1274.3 731.941Z' fill='%23EEEEEE'/%3E%3C/svg%3E");
+    width: 1289px;
+    height: 1388px;
+    top: -540px;
+    left: -590px;
+    @media only screen and (max-width: 1500px) {
+      left: -870px;
+    }
+  }
+  &-heading{
+    padding-bottom: 80px;
+  }
+  &-subheading{
+    padding-bottom: 55px;
+  }
+  &-card{
+    .simpleCard-imgWrapper{
+      width: 190px;
+      height: 190px;
+      background-color: $grey-light-color;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      position: relative;
+      svg{
+        position: absolute;
+        bottom: 0;
+        left: -10px;
+      }
+    }
   }
 }

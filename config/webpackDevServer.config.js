@@ -47,7 +47,7 @@ module.exports = function(proxy, allowedHost) {
     // In JavaScript code, you can access it with `process.env.PUBLIC_URL`.
     // Note that we only recommend to use `public` folder as an escape hatch
     // for files like `favicon.ico`, `manifest.json`, and libraries that are
-    // for some reason broken when imported through Webpack. If you just want to
+    // for Some reason broken when imported through Webpack. If you just want to
     // use an image, put it in `src` and `import` it from JavaScript instead.
     contentBase: paths.appPublic,
     // By default files from `contentBase` will not trigger a page reload.
@@ -64,7 +64,7 @@ module.exports = function(proxy, allowedHost) {
     // WebpackDevServer is noisy by default so we emit custom message instead
     // by listening to the compiler events with `compiler.hooks[...].tap` calls above.
     quiet: true,
-    // Reportedly, this avoids CPU overload on some systems.
+    // Reportedly, this avoids CPU overload on Some systems.
     // https://github.com/facebook/create-react-app/issues/293
     // src/node_modules is not ignored to support absolute imports
     // https://github.com/facebook/create-react-app/issues/1065

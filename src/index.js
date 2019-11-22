@@ -33,6 +33,7 @@ const routes = (
       <Route exact path="/developers/" component={Developers} />
       <Route exact path="/blog/:slug" component={SingleNews} />
       <Redirect from='/post/' to='/' />
+      <Redirect from='/partner-up/' to='/advertisers/' />
       <Redirect exact from='/page/' to='/' />
       <Redirect exact from='/search/' to='/' />
       <Route component={Notfound} />

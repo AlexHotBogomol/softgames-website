@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import {Link} from 'react-router-dom';
 import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
@@ -8,6 +9,8 @@ import ManagerList from "../partials/ManagerList/ManagerList";
 import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import WpApiService from "../services/WpApiService";
+import SocialBlock from "../partials/SocialBlock/SocialBlock";
+import Form from "../partials/Form/Form";
 
 const aboutUsData = {
   heading: "About Us",
@@ -39,6 +42,16 @@ const Company = (props) => {
 
   return (
     <div id="content">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8">
+            <Form className="form--getInTouch"/>
+          </div>
+          <div className="col-lg-4">
+            <SocialBlock/>
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -112,6 +125,32 @@ const Company = (props) => {
                 subscribe={false}
                 tags={false}
               />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <Link to="/news/" className="btn btn--secondary">
+                All news & events
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="getInTouch">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="getInTouch-heading">
+                Get in touch
+              </h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-8">
+              <Form className="form--getInTouch"/>
+            </div>
+            <div className="col-lg-4">
+              <SocialBlock/>
             </div>
           </div>
         </div>

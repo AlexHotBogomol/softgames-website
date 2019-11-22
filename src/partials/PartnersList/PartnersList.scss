@@ -1,0 +1,9 @@
+.partnersList{
+  @media only screen and (min-width: 1260px){
+    .partnersList-item{
+      &:nth-child(2), &:nth-child(4){
+        margin-top: 135px;
+      }
+    }
+  }
+}
