@@ -19,6 +19,8 @@ import Lego from "../assets/icons/partners/Lego";
 import Microsoft from "../assets/icons/partners/Microsoft";
 import Cisco from "../assets/icons/partners/Cisco";
 import Fiat from "../assets/icons/partners/Fiat";
+import GotGameIllustration from "../assets/icons/developers/GotGameIllustration";
+import NextChallengeIllustration from "../assets/icons/developers/NextChallengeIllustration";
 
 
 const seoBlockData = {
@@ -54,7 +56,7 @@ const Developers = (props) => (
       btn={<button className="btn btn--primary">Submit Game</button>}
     />
     <ArrowDown className="arrowDown" />
-    <section className="globalReach">
+    <section className="globalReach withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 mx-auto text-center">
@@ -84,7 +86,7 @@ const Developers = (props) => (
         />
       </div>
     </section>
-    <section className="betterMonetization">
+    <section className="betterMonetization withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 mx-auto text-center">
@@ -129,7 +131,27 @@ const Developers = (props) => (
               <div className="col-lg-6">
                 <div className="publishWithUsCard">
                   <div className="publishWithUsCard-imgWrapper">
-
+                    <GotGameIllustration/>
+                  </div>
+                  <div className="publishWithUsCard-content">
+                    <div className="publishWithUsCard-text">
+                      <h4>Got a great game?</h4>
+                    </div>
+                    <button className="btn btn--secondary">Get in touch</button>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-6">
+                <div className="publishWithUsCard">
+                  <div className="publishWithUsCard-imgWrapper">
+                    <NextChallengeIllustration/>
+                  </div>
+                  <div className="publishWithUsCard-content">
+                    <div className="publishWithUsCard-text">
+                      <h4>Ready for your next challenge?</h4>
+                      <p>We are always on the lookout for talents who share the same passion as us. </p>
+                    </div>
+                    <button className="btn btn--primary">Join the team</button>
                   </div>
                 </div>
               </div>

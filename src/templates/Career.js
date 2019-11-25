@@ -17,6 +17,7 @@ import seoImg from "../assets/images/seoImg.jpg";
 import cultureImg from "../assets/images/cultureImage.jpg";
 import employeePhoto from "../assets/images/emplPhoto.png";
 import FAQ from "../partials/FAQ/FAQ";
+import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 const cultureSlides = [
   {
@@ -212,7 +213,7 @@ const Career = props => {
           </div>
         </div>
       </div>
-      <section className="simpleBlock aboutUsBlock joinUsBlock">
+      <section className="simpleBlock aboutUsBlock joinUsBlock withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -398,7 +399,7 @@ const Career = props => {
           </div>
         </div>
       </section>
-      <section className="benefits">
+      <section className="benefits withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
@@ -418,7 +419,7 @@ const Career = props => {
           </div>
         </div>
       </section>
-      <section className="offices">
+      <section className="offices withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">

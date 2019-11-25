@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 import Helper from "../services/Helper";
 import Breadcrumb from "../partials/Breadcrumb";
 import Slider from "react-slick";
-// import SEO from "../partials/SEO";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -17,7 +16,6 @@ import FacebookShareIcon from "../assets/icons/FacebookShareIcon";
 import LinkedinShareIcon from "../assets/icons/LinkedinShareIcon";
 import TwitterShareIcon from "../assets/icons/TwitterShareIcon";
 import GooglePlusShareIcon from "../assets/icons/GooglePlusShareIcon";
-// import JoyStick from "../assets/icons/JoyStick";
 import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 
@@ -98,13 +96,6 @@ class SingleNews extends Component {
           />
         ) : (
           <Fragment>
-            {/*<SEO*/}
-            {/*  pageProps={{*/}
-            {/*    title: "Yet another page",*/}
-            {/*    thumbnail: "https://picsum.photos/id/52/1200/600",*/}
-            {/*    url: "yetanotherawesomeapp.com"*/}
-            {/*  }}*/}
-            {/*/>*/}
             <section className="singleNews">
               <div className="container">
                 <div className="row">

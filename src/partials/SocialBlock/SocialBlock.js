@@ -5,9 +5,13 @@ import Google from "./Socials/Google";
 import Linkedin from "./Socials/Linkedin";
 import './SocialBlock.scss';
 
-const SocialBlock = (props) => {
+const SocialBlock = ({className}) => {
+  const classes = [
+    'socialBlock',
+    className
+  ];
   return (
-    <div className="socialBlock">
+    <div className={classes.join(" ")}>
       <h3 className="socialBlock-title">
         Our social media
       </h3>

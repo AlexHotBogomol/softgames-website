@@ -8,6 +8,7 @@ import gameIcon from "../assets/images/games/gameIcon.png";
 import placeholderImg from "../assets/images/placeholder.jpg";
 import seoImg from "../assets/images/seoImg.jpg";
 import gamesImg from "../assets/images/gamesImage.jpg";
+import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 const games = [
   {
@@ -133,7 +134,7 @@ const seoBlockData = {
 
 const Games = props => (
   <div id="content">
-    <section className="games">
+    <section className="games withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -177,7 +178,7 @@ const Games = props => (
         </div>
       </div>
     </section>
-    <section className="simpleBlock moreGamesBlock">
+    <section className="simpleBlock moreGamesBlock withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

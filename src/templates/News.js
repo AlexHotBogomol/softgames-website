@@ -6,6 +6,7 @@ import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import Pagination from "../partials/Pagination/Pagination";
 import Breadcrumb from "../partials/Breadcrumb";
+import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 class News extends Component {
   constructor(props) {

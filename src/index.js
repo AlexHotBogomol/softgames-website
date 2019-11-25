@@ -16,10 +16,13 @@ import SingleNews from "./templates/SingleNews";
 import Header from "./partials/Header/Header";
 import Footer from "./partials/Footer/Footer";
 import HotPanel from "./partials/HotPanel/HotPanel";
+import ScrollToTop from "./partials/ScrollToTop";
+import AnchorScroll from "./partials/AnchorScroll";
 
 
 const routes = (
   <Router>
+    <ScrollToTop/>
     <Header/>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -40,7 +43,8 @@ const routes = (
     </Switch>
     <HotPanel/>
     <Footer/>
+    <AnchorScroll/>
   </Router>
-)
+);
 
 ReactDOM.render(routes, document.getElementById('root'));

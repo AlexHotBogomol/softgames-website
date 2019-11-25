@@ -44,16 +44,6 @@ const Company = (props) => {
     <div id="content">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8">
-            <Form className="form--getInTouch"/>
-          </div>
-          <div className="col-lg-4">
-            <SocialBlock/>
-          </div>
-        </div>
-      </div>
-      <div className="container">
-        <div className="row">
           <div className="col-12">
             <Breadcrumb
               items={[
@@ -71,7 +61,7 @@ const Company = (props) => {
         withButton={aboutUsData.contactUsBtn}
         className="company-aboutUs"
       />
-      <section className="ourStory">
+      <section className="ourStory withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -83,7 +73,7 @@ const Company = (props) => {
           </div>
         </div>
       </section>
-      <section className="management">
+      <section className="management withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -150,7 +140,7 @@ const Company = (props) => {
               <Form className="form--getInTouch"/>
             </div>
             <div className="col-lg-4">
-              <SocialBlock/>
+              <SocialBlock className="socialBlock--company"/>
             </div>
           </div>
         </div>

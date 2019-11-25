@@ -2,7 +2,7 @@ import React from 'react';
 
 const SeoBlock = ({heading, image, content, withButton}) => {
   return (
-    <section className="simpleBlock seo">
+    <section className="simpleBlock seo withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

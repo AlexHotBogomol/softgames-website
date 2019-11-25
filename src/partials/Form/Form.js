@@ -54,24 +54,6 @@ const Form = ({className}) => {
             I agree to the use of my data in accordance with the data
             protection provisions but do not agree to third party sharing.
           </label>
-          <label className="check" >
-            <input className="check-input" type="checkbox" name="agreement" checked />
-            <span className="check-box"/>
-            I agree to the use of my data in accordance with the data
-            protection provisions but do not agree to third party sharing.
-          </label>
-          <label className="check" >
-            <input className="check-input" type="checkbox" name="agreement" disabled />
-            <span className="check-box"/>
-            I agree to the use of my data in accordance with the data
-            protection provisions but do not agree to third party sharing.
-          </label>
-          <label className="check" >
-            <input className="check-input" type="checkbox" name="agreement" checked disabled />
-            <span className="check-box"/>
-            I agree to the use of my data in accordance with the data
-            protection provisions but do not agree to third party sharing.
-          </label>
         </div>
       </div>
     </form>

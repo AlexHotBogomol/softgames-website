@@ -1,19 +1,38 @@
 import React from "react";
-import AboutUsBlock from "../partials/AboutUsBlock";
 import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
 import Breadcrumb from "../partials/Breadcrumb";
 import BasicBlock from "../partials/BasicBlock/BasicBlock";
 import ArrowDown from "../assets/icons/ArrowDown";
+import SimpleCard from "../partials/SimpleCard/SimpleCard";
+import PremiumPublishers from "../assets/icons/advertisers/PremiumPublishers";
+import ReleasedGames from "../assets/icons/advertisers/ReleasedGames";
+import ActiveUsers from "../assets/icons/advertisers/ActiveUsers";
+import ReturningVisitors from "../assets/icons/advertisers/ReturningVisitors";
+import SessionDuration from "../assets/icons/advertisers/SessionDuration";
+import PartnersList from "../partials/PartnersList/PartnersList";
+import Rtl from "../assets/icons/partners/Rtl";
+import Samsung from "../assets/icons/partners/Samsung";
+import Facebook from "../assets/icons/partners/Facebook";
+import Yahoo from "../assets/icons/partners/Yahoo";
+import Stroer from "../assets/icons/partners/Stroer";
+import Twitch from "../assets/icons/partners/Twitch";
+import AxelSpringer from "../assets/icons/partners/AxelSpringer";
+import Iab from "../assets/icons/partners/Iab";
+import PartnersItem from "../partials/PartnersList/PartnersItem/PartnersItem";
+import moat from '../assets/images/partners/moat.png';
+import gdpr from '../assets/images/partners/gdpr.png';
+import Amazon from "../assets/icons/partners/Amazon";
+import Lego from "../assets/icons/partners/Lego";
+import Microsoft from "../assets/icons/partners/Microsoft";
+import Cisco from "../assets/icons/partners/Cisco";
+import Hp from "../assets/icons/partners/Hp";
+import Fiat from "../assets/icons/partners/Fiat";
+import interstitialVideo from '../assets/images/adFormats/interstitialVideo.png';
+import preRollVideo from '../assets/images/adFormats/preRollVideo.png';
+import rewardedVideo from '../assets/images/adFormats/rewardedVideo.png';
+import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
-const aboutUsData = {
-  heading: "About Us",
-  image: seoImg,
-  content: `<p>SOFTGAMES is a leading developer of the most popular Instant Games. Our flagship titles Cookie Crush, Solitaire Story and Candy Match are being played by tens of millions of users every month.</p>
-  <p>Our mission is to enable everybody to instantly play great casual games with their friends across any device.</p>
-  <p>Further our line of products includes over 400 hyper casual games within our innovative HTML5 games platform which allows our partners to engage and retain their user base. Founded in 2006 we are operating out of Berlin, Germany and Toronto, Canada.</p>`,
-  contactUsBtn: true,
-};
 
 const seoBlockData = {
   heading: "Seo Title",
@@ -21,6 +40,44 @@ const seoBlockData = {
   content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
   contactUsBtn: true,
 };
+
+const whyUsCards = [
+  {
+    icon: <PremiumPublishers/>,
+    content: <div>
+      <div className="indicator">2000+</div>
+      <h5>Premium<br/>Publishers</h5>
+    </div>,
+  },
+  {
+    icon: <ReleasedGames/>,
+    content: <div>
+      <div className="indicator">400+</div>
+      <h5>In-house Released<br/>Games</h5>
+    </div>,
+  },
+  {
+    icon: <ActiveUsers/>,
+    content: <div>
+      <div className="indicator">30m+</div>
+      <h5>Monthly Active<br/>Users</h5>
+    </div>,
+  },
+  {
+    icon: <ReturningVisitors/>,
+    content: <div>
+      <div className="indicator">87%</div>
+      <h5>Returning<br/>Visitors</h5>
+    </div>,
+  },
+  {
+    icon: <SessionDuration/>,
+    content: <div>
+      <div className="indicator">45+</div>
+      <h5>Minutes average<br/>session duration</h5>
+    </div>,
+  },
+];
 
 const Advertisers = (props) => (
   <div id="content">
@@ -48,11 +105,179 @@ const Advertisers = (props) => (
       btn={<button className="btn btn--primary">get started</button>}
     />
     <ArrowDown className="arrowDown" />
-    <AboutUsBlock
-      heading={aboutUsData.heading}
-      image={aboutUsData.image}
-      content={aboutUsData.content}
-      withButton={aboutUsData.contactUsBtn}
+    <section className="whyUs whyUs--advertisers">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mx-auto text-center">
+            <h2 className="whyUs-heading">Why SOFTGAMES?</h2>
+            <h4 className="whyUs-subheading">
+              Engaged audience
+            </h4>
+          </div>
+        </div>
+        <div className="row whyUs-list justify-content-center">
+          {whyUsCards.map((card,index) => (
+            <div className="col-lg-4" key={index}>
+              <SimpleCard
+                icon={card.icon}
+                content={card.content}
+                className="whyUs-card"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section className="ourPartners ourPartners--advertisers withIllustration" id='things'>
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 mx-auto text-center">
+            <h4 className="ourPartners-subheading">Our games entertain the audiences of such companies:</h4>
+          </div>
+        </div>
+        <PartnersList
+          firstColumn={[
+            <Rtl/>,
+            <Samsung/>
+          ]}
+          secondColumn={[
+            <Facebook/>,
+            <Yahoo/>
+          ]}
+          thirdColumn={[
+            <Stroer/>,
+            <Twitch/>
+          ]}
+          fourthColumn={[
+            <AxelSpringer/>
+          ]}
+        />
+      </div>
+    </section>
+    <section className="adFormats">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 mx-auto text-center">
+            <h2 className="adFormats-heading">Ad formats</h2>
+            <p className="adFormats-subheading">We offer a variety of high impact formats for your brand to tell a story:</p>
+          </div>
+        </div>
+        <div className="row withIllustration preRollVideo">
+          <div className="col-lg-6">
+            <h2 className="adFormats-title withGrid">Pre-Roll Video</h2>
+            <p className="adFormats-description">
+              Pre-roll advertising is extremely practical. Running an ad before the user’s
+              desired content means the audience is likely still engaged, interested, and
+              willing to sit through a brief ad to get to the content they want to see. Since
+              they’re waiting for something specific, there’s a higher chance they’ll watch
+              your ad for at least for a few seconds, if not in its entirety.
+            </p>
+            <button className="btn btn--primary">contact us</button>
+          </div>
+          <div className="col-lg-6">
+            <div className="adFormats-imgWrapper">
+              <img src={preRollVideo} alt="Pre-Roll Video"/>
+            </div>
+          </div>
+        </div>
+        <div className="row withIllustration interstitialVideo">
+          <div className="col-lg-4 offset-lg-1">
+            <div className="adFormats-imgWrapper adFormats-imgWrapper--top">
+              <img src={interstitialVideo} alt="Interstitial Video/ Banner"/>
+            </div>
+          </div>
+          <div className="col-lg-6 offset-lg-1">
+            <h2 className="adFormats-title withGrid">Interstitial Video/ Banner</h2>
+            <p className="adFormats-description">
+              Interstitial ads are one of the most popular mobile ad formats used by
+              developers and marketers because of their high impression rate to
+              increase downloads and revenue. Well-known companies have seen
+              significant increases in app installs by optimizing interstitials, including
+              Pinterest and Airbnb with an increase of 100% and 300%, respectively.
+            </p>
+            <button className="btn btn--primary">contact us</button>
+          </div>
+        </div>
+        <div className="row withIllustration rewardedVideo">
+          <div className="col-lg-6">
+            <h2 className="adFormats-title withGrid">Rewarded Video</h2>
+            <p className="adFormats-description">
+              Pre-roll advertising is extremely practical. Running an ad before the user’s
+              desired content means the audience is likely still engaged, interested, and
+              willing to sit through a brief ad to get to the content they want to see. Since
+              they’re waiting for something specific, there’s a higher chance they’ll watch
+              your ad for at least for a few seconds, if not in its entirety.
+            </p>
+            <button className="btn btn--primary">contact us</button>
+          </div>
+          <div className="col-lg-6">
+            <div className="adFormats-imgWrapper">
+              <img src={rewardedVideo} alt="Rewarded Video"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="brandSafety">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-10 mx-auto text-center">
+            <h2 className="brandSafety-heading">Brand safety</h2>
+          </div>
+        </div>
+        <div className="row justify-content-center">
+          <div className="col-lg-3">
+            <PartnersItem icon={<Iab/>}/>
+            <p className="brandSafety-text">
+              Your ads are presented in a natural, non-intrusive format. We adopted the industry best practices and comply with IAB guidelines.
+            </p>
+          </div>
+          <div className="col-lg-3">
+            <PartnersItem icon={<img src={gdpr} alt="gdpr"/>}/>
+            <p className="brandSafety-text">Privacy of our user safety comes first and with it also lawful data processing. We are fully GDPR compliant.</p>
+          </div>
+          <div className="col-lg-3">
+            <PartnersItem icon={<img src={moat} alt="moat"/>}/>
+            <p className="brandSafety-text">The quality of our inventory is monitored and verified by MOAT.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section className="betterMonetization withIllustration">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-8 mx-auto text-center">
+            <h2 className="basicHeading">Brands</h2>
+            <h4 className="betterMonetization-title">Brands that regularly advertise in our games include:</h4>
+          </div>
+        </div>
+        <PartnersList
+          firstColumn={[
+            <Amazon/>,
+            <Lego/>
+          ]}
+          secondColumn={[
+            <Microsoft/>,
+          ]}
+          thirdColumn={[
+            <Cisco/>,
+            <Hp/>
+          ]}
+          fourthColumn={[
+            <Fiat/>
+          ]}
+        />
+      </div>
+    </section>
+    <BasicBlock
+      className="partnerUpBlock publishersBlock2"
+      category="Advertisers"
+      title={<h2><span>Join us</span><br/>to tell your story</h2>}
+      description={<p>Would you like to become a partner or expand an existing<br/>
+      cooperation? Get in touch, we love talking to people!</p>}
+      image={seoImg}
+      imageAlt="Softgames"
+      btn={<button className="btn btn--primary">Join Us</button>}
     />
     <SeoBlock
       heading={seoBlockData.heading}

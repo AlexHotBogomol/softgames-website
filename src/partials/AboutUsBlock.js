@@ -4,6 +4,7 @@ const AboutUsBlock = ({heading, image, content, withButton, className}) => {
   const classes = [
     'simpleBlock',
     'aboutUsBlock',
+    'withIllustration',
     className
   ];
   return (

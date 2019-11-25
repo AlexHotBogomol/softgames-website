@@ -14,6 +14,7 @@ import SocialBlock from "../partials/SocialBlock/SocialBlock";
 import HomeSlider1 from "../partials/HomeSlider1";
 import HomeSlider2 from "../partials/HomeSlider2";
 import cookieCrash from "../assets/images/games/CookieCrash.jpg";
+import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 const games = [
   {
@@ -63,7 +64,7 @@ const Home = (props) => {
         <HomeSlider1 />
       </div>
       <ArrowDown className="arrowDown" />
-      <div className="slider2-wrapper">
+      <div className="slider2-wrapper withIllustration">
         <div className="container">
           <HomeSlider2 />
         </div>
@@ -102,7 +103,7 @@ const Home = (props) => {
           </div>
         </div>
       </section>
-      <section className="latestPositions">
+      <section className="latestPositions withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -132,7 +133,7 @@ const Home = (props) => {
           </div>
         </div>
       </section>
-      <section className="latestNews">
+      <section className="latestNews withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">

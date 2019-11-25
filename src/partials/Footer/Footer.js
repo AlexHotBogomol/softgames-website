@@ -44,7 +44,7 @@ const Footer = props => (
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/advertisers/" className="footerMenu-sublink">
+                    <Link to='/advertisers/#things' className="footerMenu-sublink">
                       Why SOFTGAMES?
                     </Link>
                   </li>
