@@ -1,13 +1,13 @@
 import React from 'react';
 import './BasicBlock.scss';
 
-const BasicBlock = ({title, image, imageAlt, description, btn, category, className}) => {
+const BasicBlock = ({title, image, imageAlt, description, btn, category, className, id}) => {
   const classes = [
     'basicBlock',
     className
   ];
   return (
-    <section className={classes.join(' ')}>
+    <section className={classes.join(' ')} id={id}>
       <div className="container">
         <div className="row">
           <div className="col-lg-6">

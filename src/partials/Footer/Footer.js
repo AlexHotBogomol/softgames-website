@@ -1,11 +1,15 @@
 import React, { Fragment } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import "./Footer.scss";
 import Logo from "../Logo/Logo";
 import Facebook from "../SocialBlock/Socials/Facebook";
 import Twitter from "../SocialBlock/Socials/Twitter";
 import Google from "../SocialBlock/Socials/Google";
 import Linkedin from "../SocialBlock/Socials/Linkedin";
+
+const scrollTo = (el, position = 'center') => {
+  el.scrollIntoView({ behavior: 'smooth', block: position })
+};
 
 const Footer = props => (
   <Fragment>
@@ -44,39 +48,63 @@ const Footer = props => (
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to='/advertisers/#things' className="footerMenu-sublink">
+                    <Link
+                      to="/advertisers/#why-softgames"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Why SOFTGAMES?
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/advertisers/" className="footerMenu-sublink">
+                    <Link
+                      to="/advertisers/#brands"
+                      className="footerMenu-sublink"
+                      scroll={(el) => scrollTo(el)}
+                    >
                       Brands
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/advertisers/" className="footerMenu-sublink">
+                    <Link
+                      to="/advertisers/#join-us"
+                      className="footerMenu-sublink"
+                      scroll={(el) => scrollTo(el)}
+                    >
                       Join us to tell your story
                     </Link>
                   </li>
                 </ul>
                 <ul className="menu footerMenu">
                   <li className="menu-item footerMenu-item">
-                    <Link to="/advertisers/" className="footerMenu-link">
+                    <Link to="/developers/" className="footerMenu-link">
                       Developers
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/advertisers/" className="footerMenu-sublink">
+                    <Link
+                      smooth
+                      to="/developers/#global-reach"
+                      className="footerMenu-sublink"
+                    >
                       Global Reach
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/advertisers/" className="footerMenu-sublink">
+                    <Link
+                      smooth
+                      to="/developers/#better-monetization"
+                      className="footerMenu-sublink"
+                    >
                       Better Monetization
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/advertisers/" className="footerMenu-sublink">
+                    <Link
+                      to="/developers/#publish-with-us"
+                      className="footerMenu-sublink"
+                      scroll={(el) => scrollTo(el)}
+                    >
                       Publish with us
                     </Link>
                   </li>
@@ -90,17 +118,29 @@ const Footer = props => (
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/publishers/" className="footerMenu-sublink">
+                    <Link
+                      smooth
+                      to="/publishers/#games-affiliate"
+                      className="footerMenu-sublink"
+                    >
                       Games Affiliate Program
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/publishers/" className="footerMenu-sublink">
+                    <Link
+                      to="/publishers/#why-softgames"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Why SOFTGAMES?
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/publishers/" className="footerMenu-sublink">
+                    <Link
+                      to="/publishers/#our-partners"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Our partners
                     </Link>
                   </li>
@@ -114,32 +154,56 @@ const Footer = props => (
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/career/" className="footerMenu-sublink">
+                    <Link
+                      to="/career/#job-openings"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Job Openings
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/career/" className="footerMenu-sublink">
+                    <Link
+                      to="/career/#culture-values"
+                      className="footerMenu-sublink"
+                      scroll={el => scrollTo(el, 'center')}
+                    >
                       Culture & Values
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/career/" className="footerMenu-sublink">
+                    <Link
+                      to="/career/#application-process"
+                      className="footerMenu-sublink"
+                      scroll={el => scrollTo(el, 'center')}
+                    >
                       Application Process
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/career/" className="footerMenu-sublink">
+                    <Link
+                      to="/career/#benefits"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Benefits
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/career/" className="footerMenu-sublink">
+                    <Link
+                      to="/career/#global-offices"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Global Offices
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/career/" className="footerMenu-sublink">
+                    <Link
+                      to="/career/#FAQ"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       FAQ
                     </Link>
                   </li>
@@ -153,22 +217,38 @@ const Footer = props => (
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/company/" className="footerMenu-sublink">
+                    <Link
+                      to="/company/#about-us"
+                      className="footerMenu-sublink"
+                      scroll={el => scrollTo(el, 'center')}
+                    >
                       About
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/company/" className="footerMenu-sublink">
+                    <Link
+                      to="/company/#our-story"
+                      className="footerMenu-sublink"
+                      scroll={el => scrollTo(el, 'center')}
+                    >
                       Our Story
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/company/" className="footerMenu-sublink">
+                    <Link
+                      to="/company/#management"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Management
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link to="/company/" className="footerMenu-sublink">
+                    <Link
+                      to="/company/#press-room"
+                      className="footerMenu-sublink"
+                      smooth
+                    >
                       Press Room
                     </Link>
                   </li>

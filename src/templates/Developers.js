@@ -3,7 +3,7 @@ import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
 import Breadcrumb from "../partials/Breadcrumb";
 import BasicBlock from "../partials/BasicBlock/BasicBlock";
-import ArrowDown from "../assets/icons/ArrowDown";
+import ArrowDown from "../partials/ArrowDown";
 import PartnersList from "../partials/PartnersList/PartnersList";
 
 import Rtl from "../assets/icons/partners/Rtl";
@@ -55,8 +55,12 @@ const Developers = (props) => (
       imageAlt="Softgames"
       btn={<button className="btn btn--primary">Submit Game</button>}
     />
-    <ArrowDown className="arrowDown" />
-    <section className="globalReach withIllustration">
+    <ArrowDown
+      className="arrowDown"
+      hashlink="#global-reach"
+      scrollPosition="start"
+    />
+    <section id="global-reach" className="globalReach withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 mx-auto text-center">
@@ -86,7 +90,7 @@ const Developers = (props) => (
         />
       </div>
     </section>
-    <section className="betterMonetization withIllustration">
+    <section id="better-monetization" className="betterMonetization withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 mx-auto text-center">
@@ -122,7 +126,7 @@ const Developers = (props) => (
         />
       </div>
     </section>
-    <section className="publishWithUs">
+    <section id="publish-with-us" className="publishWithUs">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto text-center">

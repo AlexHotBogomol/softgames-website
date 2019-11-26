@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./HotPanel.scss";
 import WpApiService from "../../services/WpApiService";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from 'react-router-hash-link';
 import OpenPositionsIcon from "../../assets/icons/OpenPositionIcon";
 
 const HotPanel = props => {
@@ -21,7 +21,7 @@ const HotPanel = props => {
           <span className="hotPanel-positionsCounter">{positions.length}</span>
         ) : null}
         open positions
-        <Link to={"/career/"} className="hotPanel-positionsBadge">
+        <Link smooth to="/career/#job-openings" className="hotPanel-positionsBadge">
           <div className="hotPanel-positionsInfo">
             {positions.length ? (
               <h4 className="hotPanel-positionsCounter">{positions.length}</h4>

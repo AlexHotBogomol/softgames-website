@@ -9,7 +9,7 @@ import DropdownIndicator from "../partials/DropdownIndicator";
 import PositionCard from "../partials/PositionCard/PositionCard";
 import BenefitsList from "../partials/BenefitsList";
 
-import ArrowDown from "../assets/icons/ArrowDown";
+import ArrowDown from "../partials/ArrowDown";
 import Stars from "../assets/icons/Stars";
 import GlassDoor from "../assets/icons/GlassDoor";
 
@@ -236,7 +236,11 @@ const Career = props => {
           </div>
         </div>
       </section>
-      <ArrowDown className="arrowDown" />
+      <ArrowDown
+        className="arrowDown"
+        hashlink="#job-openings"
+        scrollPosition="start"
+      />
       <div className="container">
         <div className="row">
           <div className="col-lg-7 offset-lg-3">
@@ -254,7 +258,7 @@ const Career = props => {
           </div>
         </div>
       </div>
-      <div className="openPositions">
+      <div id="job-openings" className="openPositions">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -312,7 +316,7 @@ const Career = props => {
           {/*</div>*/}
         </div>
       </div>
-      <section className="culture">
+      <section id="culture-values" className="culture">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -353,7 +357,7 @@ const Career = props => {
           </div>
         </div>
       </section>
-      <section className="employeeStories">
+      <section id="application-process" className="employeeStories">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -399,7 +403,7 @@ const Career = props => {
           </div>
         </div>
       </section>
-      <section className="benefits withIllustration">
+      <section id="benefits" className="benefits withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
@@ -419,7 +423,7 @@ const Career = props => {
           </div>
         </div>
       </section>
-      <section className="offices withIllustration">
+      <section id="global-offices" className="offices withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto">
@@ -476,7 +480,7 @@ const Career = props => {
           ))}
         </div>
       </section>
-      <FAQ/>
+      <FAQ id="FAQ"/>
     </div>
   );
 };

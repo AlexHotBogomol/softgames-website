@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import WpApiService from "../services/WpApiService";
 
-import ArrowDown from "../assets/icons/ArrowDown";
+import ArrowDown from "../partials/ArrowDown";
 import character from "../assets/images/character.png";
 
 import GameCard from "../partials/GameCard/GameCard";
@@ -63,8 +63,12 @@ const Home = (props) => {
       <div className="container--fullWidth">
         <HomeSlider1 />
       </div>
-      <ArrowDown className="arrowDown" />
-      <div className="slider2-wrapper withIllustration">
+      <ArrowDown
+        className="arrowDown"
+        hashlink="#global-reach"
+        scrollPosition="center"
+      />
+      <div id="global-reach" className="slider2-wrapper withIllustration">
         <div className="container">
           <HomeSlider2 />
         </div>

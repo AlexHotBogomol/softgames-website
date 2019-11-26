@@ -43,7 +43,6 @@ const routes = (
     </Switch>
     <HotPanel/>
     <Footer/>
-    <AnchorScroll/>
   </Router>
 );
 

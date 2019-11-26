@@ -3,7 +3,7 @@ import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
 import BasicBlock from "../partials/BasicBlock/BasicBlock";
 import Breadcrumb from "../partials/Breadcrumb";
-import ArrowDown from "../assets/icons/ArrowDown";
+import ArrowDown from "../partials/ArrowDown";
 import PartnersList from "../partials/PartnersList/PartnersList";
 import Rtl from "../assets/icons/partners/Rtl";
 import Samsung from "../assets/icons/partners/Samsung";
@@ -78,6 +78,7 @@ const Publishers = (props) => (
     </div>
     <BasicBlock
       className="partnerUpBlock publishersBlock withIllustration"
+      id="games-affiliate"
       category="Publishers"
       title={<h1>Games Affiliate<br/><span>Program</span></h1>}
       description={<p>Join the best Games Affiliate Program as a publisher and maximize your
@@ -87,9 +88,12 @@ const Publishers = (props) => (
       imageAlt="Softgames"
       btn={<button className="btn btn--primary">browse games</button>}
     />
-    <ArrowDown className="arrowDown" />
-
-    <section className="affiliateProgram withIllustration">
+    <ArrowDown
+      className="arrowDown"
+      hashlink="#earn-money"
+      scrollPosition="center"
+    />
+    <section id="earn-money" className="affiliateProgram withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto">
@@ -115,7 +119,7 @@ const Publishers = (props) => (
         </div>
       </div>
     </section>
-    <section className="whyUs withIllustration">
+    <section id="why-softgames" className="whyUs withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto text-center">
@@ -141,7 +145,7 @@ const Publishers = (props) => (
         </div>
       </div>
     </section>
-    <section className="ourPartners withIllustration">
+    <section id="our-partners" className="ourPartners withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-6 mx-auto text-center">

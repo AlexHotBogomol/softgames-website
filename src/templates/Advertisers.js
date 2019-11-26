@@ -3,7 +3,7 @@ import SeoBlock from "../partials/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg"
 import Breadcrumb from "../partials/Breadcrumb";
 import BasicBlock from "../partials/BasicBlock/BasicBlock";
-import ArrowDown from "../assets/icons/ArrowDown";
+import ArrowDown from "../partials/ArrowDown";
 import SimpleCard from "../partials/SimpleCard/SimpleCard";
 import PremiumPublishers from "../assets/icons/advertisers/PremiumPublishers";
 import ReleasedGames from "../assets/icons/advertisers/ReleasedGames";
@@ -104,8 +104,12 @@ const Advertisers = (props) => (
       imageAlt="Softgames"
       btn={<button className="btn btn--primary">get started</button>}
     />
-    <ArrowDown className="arrowDown" />
-    <section className="whyUs whyUs--advertisers">
+    <ArrowDown
+      className="arrowDown"
+      hashlink="#why-softgames"
+      scrollPosition="start"
+    />
+    <section id="why-softgames" className="whyUs whyUs--advertisers">
       <div className="container">
         <div className="row">
           <div className="col-lg-8 mx-auto text-center">
@@ -128,7 +132,7 @@ const Advertisers = (props) => (
         </div>
       </div>
     </section>
-    <section className="ourPartners ourPartners--advertisers withIllustration" id='things'>
+    <section className="ourPartners ourPartners--advertisers withIllustration">
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center">
@@ -218,7 +222,7 @@ const Advertisers = (props) => (
         </div>
       </div>
     </section>
-    <section className="brandSafety">
+    <section id="brands" className="brandSafety">
       <div className="container">
         <div className="row">
           <div className="col-lg-10 mx-auto text-center">
@@ -271,6 +275,7 @@ const Advertisers = (props) => (
     </section>
     <BasicBlock
       className="partnerUpBlock publishersBlock2"
+      id="join-us"
       category="Advertisers"
       title={<h2><span>Join us</span><br/>to tell your story</h2>}
       description={<p>Would you like to become a partner or expand an existing<br/>

@@ -56,12 +56,13 @@ const Company = (props) => {
       </div>
       <AboutUsBlock
         heading={aboutUsData.heading}
+        id="about-us"
         image={aboutUsData.image}
         content={aboutUsData.content}
         withButton={aboutUsData.contactUsBtn}
         className="company-aboutUs"
       />
-      <section className="ourStory withIllustration">
+      <section id="our-story" className="ourStory withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -73,7 +74,7 @@ const Company = (props) => {
           </div>
         </div>
       </section>
-      <section className="management withIllustration">
+      <section id="management" className="management withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">
@@ -83,7 +84,7 @@ const Company = (props) => {
           </div>
         </div>
       </section>
-      <section className="pressRoom">
+      <section id="press-room" className="pressRoom">
         <div className="container">
           <div className="row">
             <div className="col-12">

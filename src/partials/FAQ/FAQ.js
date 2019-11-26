@@ -2,9 +2,9 @@ import React from 'react';
 import './FAQ.scss';
 import Accordion from "../Accordion/Accordion";
 
-const FAQ = props => {
+const FAQ = ({id}) => {
   return (
-    <section className="faq">
+    <section className="faq" id={id}>
       <div className="container">
         <div className="row">
           <div className="col-12">
