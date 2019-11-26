@@ -446,7 +446,9 @@ label{
 }
 #content{
   margin-top: $header-height;
-  //padding-bottom: 200px;
+  @media only screen and (max-width: 1259px) {
+    margin-top: 56px;
+  }
 }
 /*LOADER*/
 .Loader{
