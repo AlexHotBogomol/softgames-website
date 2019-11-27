@@ -16,17 +16,6 @@
     &:focus{
       outline: none;
     }
-    @media only screen and (max-width: 1500px){
-      height: calc(100vh - 72px - 64px); //header and arrow height
-      display: flex !important;
-      justify-content: center;
-      align-items: center;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
   }
   &-content{
     position: absolute;
@@ -223,30 +212,6 @@
     position: absolute;
     bottom: 0;
     left: -130px;
-    @media only screen and (max-width: 1500px){
-      left: -40px;
-      width: 350px;
-    }
-    @media only screen and (max-width: 1320px){
-      left: -30px;
-      width: 340px;
-    }
-  }
-  @media only screen and (max-width: 1259px){
-    padding-top: 80px;
-    &-heading{
-      padding-bottom: 45px;
-    }
-    &-gameList{
-      padding-bottom: 40px;
-    }
-    .container{
-      padding-bottom: 45px;
-    }
-    &-character{
-      width: 260px;
-      left: -15px;
-    }
   }
 }
 .latestPositions{
@@ -271,10 +236,6 @@
     height: 1151px;
     right: -130px;
     top: -84px;
-    @media only screen and (max-width: 1500px){
-      right: -390px;
-      top: -64px;
-    }
   }
 }
 .latestNews{
@@ -1260,6 +1221,10 @@
   border-radius: 2px;
   &-imgWrapper{
     height: 152px;
+    svg{
+      max-width: 100%;
+      height: auto;
+    }
   }
   &-content {
     text-align: center;
@@ -1467,9 +1432,6 @@
       height: 737px;
       top: 0;
       left: -340px;
-      @media only screen and (max-width: 1500px) {
-
-      }
     }
   }
   .rewardedVideo{
@@ -1481,6 +1443,9 @@
       right: -700px;
     }
   }
+}
+.adFormats{
+  padding-top: 70px;
 }
 @media only screen and (max-width: 1500px){
   .latestNews{
@@ -1507,12 +1472,43 @@
       left: -690px;
     }
   }
+  .featuredGames{
+    &-character{
+      left: -40px;
+      width: 350px;
+    }
+  }
+  .slider1{
+    &-slide{
+      height: calc(100vh - 72px - 64px); //header and arrow height
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1320px){
+  .featuredGames{
+    &-character{
+      left: -30px;
+      width: 340px;
+    }
+  }
 }
 @media only screen and (max-width: 1259px){
   .latestPositions{
     padding: 80px 0 50px;
     &-list{
       padding-bottom: 20px;
+    }
+    &:before{
+      right: -390px;
+      top: -64px;
     }
   }
   .latestNews{
@@ -1563,6 +1559,10 @@
     padding-bottom: 100px;
     &-title{
       margin-top: 0;
+      &:before{
+        top: -45px;
+        left: -70px;
+      }
     }
     &:before{
       right: -600px;
@@ -1698,5 +1698,181 @@
   }
   .office {
     margin-bottom: 80px;
+  }
+  .featuredGames{
+    padding-top: 80px;
+    &-heading{
+      padding-bottom: 45px;
+    }
+    &-gameList{
+      padding-bottom: 40px;
+    }
+    .container{
+      padding-bottom: 45px;
+    }
+    &-character{
+      width: 260px;
+      left: -15px;
+    }
+    .gameCard{
+      .btn--withIcon{
+        padding: 15px;
+        width: 170px;
+        min-width: 0;
+      }
+    }
+  }
+  .whyUs{
+    padding: 50px 0 0;
+    &:before{
+      height: 1098px;
+      top: -220px;
+      left: -1090px;
+    }
+    &-heading{
+      padding-bottom: 40px;
+    }
+    &-subheading{
+      padding-bottom: 35px;
+    }
+  }
+  .ourPartners{
+    padding: 50px 0;
+    &:before{
+      width: 999px;
+      height: 938px;
+      right: -600px;
+      top: 240px;
+    }
+    &:after{
+      width: 280px;
+      height: 297px;
+      top: 455px;
+    }
+    &-subheading{
+      padding-bottom: 40px;
+    }
+  }
+  .adFormats{
+    padding: 50px 0 0;
+    &-subheading{
+      padding-bottom: 0;
+    }
+    .interstitialVideo, .rewardedVideo, .preRollVideo{
+      padding: 50px 0;
+    }
+    &-title{
+      padding-bottom: 20px;
+      &:before{
+        bottom: 20px;
+        left: -30px;
+      }
+    }
+    &-description{
+      padding-bottom: 30px;
+    }
+    .preRollVideo{
+      &:before{
+        height: 995px;
+        right: -740px;
+        top: -120px;
+      }
+    }
+    .interstitialVideo{
+      &:before{
+        height: 617px;
+        top: 80px;
+        left: -480px;
+      }
+    }
+    .rewardedVideo{
+      &:before{
+        height: 970px;
+        top: -140px;
+        right: -700px;
+      }
+    }
+  }
+  .brandSafety{
+    padding: 50px 0;
+    &-heading{
+      padding-bottom: 40px;
+    }
+  }
+  .betterMonetization{
+    padding: 50px 0;
+    &-title{
+      padding-bottom: 30px;
+    }
+    &:before{
+      height: 778px;
+      top: 0;
+      left: -680px;
+    }
+    &:after{
+      height: 1038px;
+      bottom: -390px;
+      right: -810px;
+    }
+  }
+  .ourPartners{
+    &--advertisers{
+      &:before{
+        top: -20px;
+        right: -1020px;
+      }
+      &:after{
+        width: 280px;
+        height: 297px;
+      }
+    }
+  }
+  .affiliateProgram{
+    padding: 50px 0;
+    &:before{
+      right: -890px;
+      height: 1098px;
+      top: -220px;
+    }
+    &-description{
+      padding-bottom: 70px;
+    }
+    &-list{
+      margin-bottom: 60px;
+    }
+    &-title{
+      padding-bottom: 30px;
+    }
+  }
+  .globalReach{
+    &:before{
+      width: 979px;
+      height: 1038px;
+      right: -650px;
+    }
+    &:after{
+      width: 280px;
+      height: 297px;
+      top: 340px;
+    }
+  }
+  .publishWithUs{
+    padding: 50px 0;
+    &-heading{
+      padding-bottom: 40px;
+    }
+  }
+  .publishWithUsCard{
+    &-imgWrapper{
+      height: 122px;
+    }
+  }
+  .offices{
+    &-heading{
+      padding-bottom: 40px;
+    }
+    &-subheading{
+      padding-bottom: 50px;
+    }
   }
 }

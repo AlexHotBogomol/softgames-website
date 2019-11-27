@@ -140,9 +140,11 @@
       }
     }
     .menu-link{
-      color: $black-color;
-      text-decoration: none;
       height: $header-height;
+      color: $black-color;
+      height: 72px;
+      color: #000000;
+      text-decoration: none;
       display: flex;
       justify-content: center;
       align-items: center;

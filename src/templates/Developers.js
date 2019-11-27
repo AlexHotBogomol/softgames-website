@@ -93,7 +93,7 @@ const Developers = (props) => (
     <section id="better-monetization" className="betterMonetization withIllustration">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 mx-auto text-center">
+          <div className="col-lg-9 col-xl-6 mx-auto text-center">
             <h2 className="basicHeading">Better Monetization</h2>
             <p className="betterMonetization-subheading">
               Concentrate on doing what you can do best – create great HTML5 games and

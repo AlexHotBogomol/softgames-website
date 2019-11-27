@@ -113,7 +113,7 @@ const Publishers = (props) => (
             />
           ))}
         </div>
-        <div className="col-lg-8 mx-auto text-center">
+        <div className="col-lg-10 col-xl-8 mx-auto text-center">
           <h4 className="affiliateProgram-title">Join our Games Affiliate Program and start earning money!</h4>
           <button className="btn btn--primary">Join Us</button>
         </div>

@@ -230,17 +230,17 @@ const Advertisers = (props) => (
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-3">
+          <div className="col-lg-4 col-xl-3">
             <PartnersItem icon={<Iab/>}/>
             <p className="brandSafety-text">
               Your ads are presented in a natural, non-intrusive format. We adopted the industry best practices and comply with IAB guidelines.
             </p>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-4 col-xl-3">
             <PartnersItem icon={<img src={gdpr} alt="gdpr"/>}/>
             <p className="brandSafety-text">Privacy of our user safety comes first and with it also lawful data processing. We are fully GDPR compliant.</p>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-4 col-xl-3">
             <PartnersItem icon={<img src={moat} alt="moat"/>}/>
             <p className="brandSafety-text">The quality of our inventory is monitored and verified by MOAT.</p>
           </div>
@@ -250,7 +250,7 @@ const Advertisers = (props) => (
     <section className="betterMonetization withIllustration">
       <div className="container">
         <div className="row">
-          <div className="col-lg-8 mx-auto text-center">
+          <div className="col-lg-10 col-xl-8 mx-auto text-center">
             <h2 className="basicHeading">Brands</h2>
             <h4 className="betterMonetization-title">Brands that regularly advertise in our games include:</h4>
           </div>
