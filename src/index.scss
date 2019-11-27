@@ -69,6 +69,9 @@
       }
     }
     bottom: 70px;
+    @media only screen and (max-width: 1259px){
+      bottom: 0;
+    }
   }
   &-slide{
     &:focus{
@@ -123,11 +126,19 @@
       @media only screen and (max-width: 1500px){
         right: -710px;
       }
+      @media only screen and (max-width: 1500px){
+        top: -280px;
+        right: -830px;
+      }
     }
   }
   &:before{
     top: 80px;
     right: 24%;
+    @media only screen and (max-width: 1259px){
+      top: 30px;
+      right: 90px;
+    }
   }
   @media only screen and (max-width: 1500px){
     .slick-prev{
@@ -144,6 +155,26 @@
     .slick-next{
       right: -42px;
     }
+  }
+  @media only screen and (max-width: 1259px){
+    padding: 40px 0;
+    &-category{
+      font-size: 16px;
+    }
+    &-left{
+      h2{
+        padding-bottom: 25px;
+      }
+      p{
+        padding-bottom: 40px;
+      }
+    }
+    .slick-prev, .slick-next{
+      display: none !important;
+    }
+  }
+  @media only screen and (max-width: 991px){
+
   }
 }
 
@@ -201,6 +232,22 @@
       width: 340px;
     }
   }
+  @media only screen and (max-width: 1259px){
+    padding-top: 80px;
+    &-heading{
+      padding-bottom: 45px;
+    }
+    &-gameList{
+      padding-bottom: 40px;
+    }
+    .container{
+      padding-bottom: 45px;
+    }
+    &-character{
+      width: 260px;
+      left: -15px;
+    }
+  }
 }
 .latestPositions{
   padding-top: 165px;
@@ -247,9 +294,6 @@
     left: 0;
     width: 687px;
     height: 786px;
-    @media only screen and (max-width: 1500px){
-      left: -280px;
-    }
   }
   &:after{
     background-image: url("data:image/svg+xml,%3Csvg width='712' height='1064' viewBox='0 0 712 1064' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.4043 289.697C84.4227 187.197 424.178 171.72 545.249 50.6967C707.89 -111.881 713.415 142.651 710.892 444.369C708.37 746.088 606.412 1181.57 545.249 1034.05C347.669 557.519 -103.096 492.197 21.4043 289.697Z' fill='%23F5842D'/%3E%3C/svg%3E%0A");
@@ -257,9 +301,6 @@
     right: -200px;
     width: 712px;
     height: 1064px;
-    @media only screen and (max-width: 1500px){
-      right: -460px;
-    }
   }
 }
 //GAMES
@@ -268,8 +309,8 @@
   padding-bottom: 110px;
   position: relative;
   &:before{
-    right: -14%;
-    top: -220px;
+    top: -460px;
+    right: -150px;
     background-image: url("data:image/svg+xml,%3Csvg width='662' height='967' viewBox='0 0 662 967' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.30495 341C-48.8334 130.424 272.487 189.567 393.557 68.5435C556.198 -94.0346 664.284 45.954 661.762 347.672C659.24 649.391 557.281 1084.87 496.118 937.352C298.538 460.822 58.805 541.5 6.30495 341Z' fill='%23F5842D'/%3E%3C/svg%3E%0A");
     width: 662px;
     height: 967px;
@@ -293,11 +334,7 @@
       grid-column: 1 / span 2;
       grid-row: 1 / span 2;
     }
-    .gameCard:last-child{
-      grid-column: 3 / span 2;
-      grid-row: 4 / span 2;
-    }
-    .gameCard:first-child, .gameCard:last-child{
+    .gameCard:first-child{
       .gameCard{
         &-icon{
           width: 60px;
@@ -314,6 +351,32 @@
           a{
             img{
               width: auto;
+            }
+          }
+        }
+      }
+    }
+    @media only screen and (min-width: 1260px) {
+      .gameCard:last-child{
+        grid-column: 3 / span 2;
+        grid-row: 4 / span 2;
+        .gameCard{
+          &-icon{
+            width: 60px;
+            height: 60px;
+          }
+          &-name{
+            font-size: 24px;
+            line-height: 36px;
+          }
+          &-meta{
+            bottom: 30px;
+          }
+          &-platforms{
+            a{
+              img{
+                width: auto;
+              }
             }
           }
         }
@@ -337,7 +400,7 @@
 }
 .moreGamesBlock{
   &:before{
-    right: -25%;
+    right: -430px;
     top: -260px;
     background-image: url("data:image/svg+xml,%3Csvg width='1314' height='1436' viewBox='0 0 1314 1436' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M394.375 435.917C401.422 250.334 704.375 265.416 787.874 103.916C901.286 -115.438 915.374 239.945 976.374 346.445C1094.86 553.3 1014.61 858.08 916.375 778.916C712.875 614.916 385.936 658.161 394.375 435.917Z' fill='%23F5842D'/%3E%3Cpath opacity='0.5' d='M73.0463 647.999C116.547 450.5 569.769 543.332 690.047 378.999C862.047 143.999 1069.92 249.643 1162.55 596.5C1255.18 943.357 956.176 1372.04 829.279 1230.63C441.046 797.999 4.65711 958.5 73.0463 647.999Z' fill='%23EEEEEE'/%3E%3C/svg%3E");
     width: 1314px;
@@ -357,8 +420,8 @@
   &:before{
     content: '';
     position: absolute;
-    left: -24%;
-    top: -364px;
+    left: -510px;
+    top: -340px;
     background-image: url("data:image/svg+xml,%3Csvg width='1086' height='1047' viewBox='0 0 1086 1047' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M982.55 515.2C974.275 387.722 670.581 344.784 591.91 193.619C479.409 -22.5503 294.087 38.5006 173.529 313.67C52.9714 588.84 67.0878 721.252 277.071 824.749C527.225 948.045 999.786 780.694 982.55 515.2Z' fill='%23F5842D'/%3E%3C/svg%3E");
     width: 1086px;
     height: 1047px;
@@ -1417,5 +1480,223 @@
       top: -250px;
       right: -700px;
     }
+  }
+}
+@media only screen and (max-width: 1500px){
+  .latestNews{
+    &:before{
+      left: -280px;
+    }
+    &:after{
+      right: -460px;
+    }
+  }
+  .games{
+    &:before{
+      top: -460px;
+      right: -230px;
+    }
+  }
+  .moreGamesBlock{
+    &:before{
+      right: -670px;
+    }
+  }
+  .participateBlock{
+    &:before{
+      left: -690px;
+    }
+  }
+}
+@media only screen and (max-width: 1259px){
+  .latestPositions{
+    padding: 80px 0 50px;
+    &-list{
+      padding-bottom: 20px;
+    }
+  }
+  .latestNews{
+    padding: 50px 0 80px;
+    &-list{
+      padding-bottom: 50px;
+    }
+    &:before{
+      top: -160px;
+      left: -350px;
+    }
+    &:after{
+      right: -600px;
+    }
+  }
+  .games{
+    padding-bottom: 50px;
+    &:before{
+      right: -310px;
+    }
+    &-description{
+      padding-bottom: 30px;
+    }
+    &-grid{
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(6, 290px);
+    }
+  }
+  .simpleBlock{
+    padding: 50px 0;
+    &-title{
+      padding-bottom: 25px;
+    }
+    &-description{
+      padding-bottom: 40px;
+    }
+  }
+  .moreGamesBlock{
+    &:before{
+      top: -450px;
+      right: -840px;
+    }
+    &-title{
+      padding-top: 0;
+    }
+  }
+  .seo{
+    padding-bottom: 100px;
+    &-title{
+      margin-top: 0;
+    }
+    &:before{
+      right: -600px;
+      bottom: -280px;
+    }
+  }
+  .participateBlock{
+    &:before{
+      left: -760px;
+    }
+  }
+  .company-aboutUs{
+    padding-top: 0;
+  }
+  .aboutUsBlock{
+    &:before{
+      left: -830px;
+      top: -170px;
+    }
+    &-title{
+      padding-bottom: 40px;
+    }
+  }
+  .ourStory{
+    padding: 50px 0;
+    &:before{
+      display: none;
+    }
+    &-heading{
+      padding-bottom: 30px;
+    }
+  }
+  .management{
+    padding: 50px 0;
+    &:before{
+      left: -490px;
+    }
+    &:after{
+      bottom: -600px;
+      right: -560px;
+    }
+    .managerCard{
+      &:last-child{
+        margin-bottom: 0;
+      }
+    }
+  }
+  .pressRoom{
+    padding: 50px 0;
+    .news-list{
+      margin-bottom: 0;
+    }
+  }
+  .getInTouch{
+    padding: 50px 0;
+  }
+  .joinUsBlock{
+    padding-top: 0;
+  }
+  .employerCard{
+    padding-bottom: 50px;
+  }
+  .openPositions{
+    padding: 50px 0 30px;
+    &-heading{
+      padding-bottom: 40px;
+    }
+    &-filterbar{
+      margin-bottom: 40px;
+    }
+  }
+  .culture{
+    padding: 50px 0;
+    &-heading{
+      padding-bottom: 40px;
+    }
+    &-slider{
+      .slick-prev{
+        left: -70px;
+      }
+      .slick-next{
+        right: -70px;
+      }
+    }
+  }
+  .employeeStories{
+    padding: 50px 0;
+    &-heading{
+      padding-bottom: 40px;
+    }
+    &:before{
+      left: -930px;
+    }
+    &-employee{
+      margin-left: 10px;
+    }
+    &-quote{
+      padding: 30px 60px 30px 130px;
+      &:after{
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .benefits{
+    padding: 50px 0 0px;
+    &:before{
+      right: -980px;
+    }
+    &:after{
+      left: -980px;
+    }
+    &-heading{
+      padding-bottom: 40px;
+    }
+    &-subheading{
+      padding-bottom: 30px;
+    }
+    &-description{
+      width: 100%;
+      padding: 100px 10px 20px;
+    }
+    &-item{
+      margin-bottom: 50px;
+    }
+  }
+  .offices{
+    padding: 50px 0;
+    &:before{
+      right: -87%;
+      top: -150px;
+    }
+  }
+  .office {
+    margin-bottom: 80px;
   }
 }

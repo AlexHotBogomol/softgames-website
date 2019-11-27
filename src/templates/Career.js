@@ -293,7 +293,7 @@ const Career = props => {
             {filteredPositions.length ? (
               filteredPositions.map(position => {
                 return (
-                  <div className="col-lg-4" key={position.id}>
+                  <div className="col-lg-6 col-xl-4" key={position.id}>
                     <PositionCard
                       title={position.title}
                       department={position.department}

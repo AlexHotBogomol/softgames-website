@@ -15,8 +15,8 @@ class AccordionSection extends Component {
         <div onClick={onClick} className="accordionSection-panel">
           {label}
           <div className="accordionSection-icon">
-            {!isOpen && <DropDownUp/>}
-            {isOpen && <DropDownDown/>}
+            {!isOpen && <DropDownDown/>}
+            {isOpen && <DropDownUp/>}
           </div>
         </div>
         {isOpen && (

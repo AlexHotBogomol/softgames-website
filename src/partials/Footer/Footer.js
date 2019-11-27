@@ -289,7 +289,7 @@ const Footer = props => (
               </li>
             </ul>
           </div>
-          <div className="col-lg-2">
+          <div className="col-lg-3 col-xl-2">
             <ul className="footer-socials">
               <li>
                 <Facebook link="https://www.google.com"/>

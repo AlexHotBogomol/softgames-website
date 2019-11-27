@@ -6,3 +6,12 @@
     padding-bottom: 60px;
   }
 }
+
+@media only screen and (max-width: 1259px){
+  .faq{
+    padding-top: 50px;
+    &-heading{
+      padding-bottom: 40px;
+    }
+  }
+}

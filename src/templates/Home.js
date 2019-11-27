@@ -70,7 +70,11 @@ const Home = (props) => {
       />
       <div id="global-reach" className="slider2-wrapper withIllustration">
         <div className="container">
-          <HomeSlider2 />
+          <div className="row">
+            <div className="col-12">
+              <HomeSlider2 />
+            </div>
+          </div>
         </div>
       </div>
       <section className="featuredGames">
@@ -119,7 +123,7 @@ const Home = (props) => {
           <div className="row latestPositions-list">
             {positions ? (positions.slice(0, 6).map(position => {
               return (
-                <div className="col-lg-4" key={position.id}>
+                <div className="col-lg-6 col-xl-4" key={position.id}>
                   <PositionCard
                     title={position.title}
                     department={position.department}

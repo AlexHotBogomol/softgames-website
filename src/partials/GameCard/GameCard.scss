@@ -81,3 +81,14 @@
     }
   }
 }
+
+@media only screen and (max-width: 1259px){
+  .gameCard{
+    &-title{
+      padding-bottom: 15px;
+    }
+    &-overlay{
+      display: flex;
+    }
+  }
+}

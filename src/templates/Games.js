@@ -134,18 +134,20 @@ const seoBlockData = {
 
 const Games = props => (
   <div id="content">
+    <div className="container">
+      <div className="row">
+        <div className="col-12">
+          <Breadcrumb
+            items={[
+              { name: "Home", slug: "/" },
+              { name: "Games", slug: "/games/" }
+            ]}
+          />
+        </div>
+      </div>
+    </div>
     <section className="games withIllustration">
       <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <Breadcrumb
-              items={[
-                { name: "Home", slug: "/" },
-                { name: "Games", slug: "/games/" }
-              ]}
-            />
-          </div>
-        </div>
         <div className="row">
           <div className="col-lg-9 mx-auto">
             <h1 className="games-heading">Games</h1>
