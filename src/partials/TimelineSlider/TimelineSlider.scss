@@ -111,3 +111,43 @@
     width: 100%;
   }
 }
+@media only screen and (max-width: 1500px){
+  .timelineSlider{
+    &-prevArrow{
+      left: 0;
+    }
+    &-nextArrow{
+      right: 0;
+    }
+  }
+}
+@media only screen and (max-width: 991px){
+  .timelineSlider{
+    &-arrow{
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 767px){
+  .timelineSlider{
+    &-date{
+      width: 14%; // 2 rows with 7 items  100/7 = 14
+    }
+    &-dateWrapper{
+      h1{
+        font-size: 200px;
+        letter-spacing: -19.479px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px){
+  .timelineSlider{
+    &-dateWrapper{
+      h1{
+        font-size: 130px;
+        letter-spacing: -5px;
+      }
+    }
+  }
+}

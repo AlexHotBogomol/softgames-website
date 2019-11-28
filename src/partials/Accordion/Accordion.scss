@@ -40,3 +40,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 767px){
+  .subAccordion > .accordionSection > .accordionSection-panel{
+    padding: 25px;
+  }
+  .subAccordion > .accordionSection > .accordionSection-content {
+    padding: 25px 40px;
+  }
+}

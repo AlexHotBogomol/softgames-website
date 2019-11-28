@@ -37,6 +37,9 @@ h1{
   @media only screen and (max-width: 1259px){
     font-size: 42px;
   }
+  @media only screen and (max-width: 767px){
+    font-size: 36px;
+  }
 }
 @mixin h1 {
   font-weight: 600;
@@ -44,6 +47,9 @@ h1{
   line-height: 1.2;
   @media only screen and (max-width: 1259px){
     font-size: 42px;
+  }
+  @media only screen and (max-width: 767px){
+    font-size: 36px;
   }
 }
 h2{
@@ -53,22 +59,34 @@ h2{
   @media only screen and (max-width: 1259px){
     font-size: 36px;
   }
+  @media only screen and (max-width: 767px){
+    font-size: 32px;
+  }
 }
 .h2--big{
   font-size: 60px;
   @media only screen and (max-width: 1259px){
     font-size: 42px;
   }
+  @media only screen and (max-width: 767px){
+    font-size: 36px;
+  }
 }
 h3{
   font-weight: 600;
   font-size: 27px;
   line-height: 1.5;
+  @media only screen and (max-width: 767px){
+    font-size: 24px;
+  }
 }
 h4{
   font-weight: 500;
   font-size: 24px;
   line-height: 1.5;
+  @media only screen and (max-width: 991px){
+    font-size: 20px;
+  }
 }
 h5{
   font-size: 18px;
@@ -416,16 +434,17 @@ label{
   justify-content: center;
   cursor: pointer;
   transition: 0.2s ease-in-out;
-  will-change: transform;
   box-sizing: border-box;
   text-decoration: none;
   align-items: center;
+  transform: perspective(1px) translateZ(0) scale(1);
   &:focus{
     outline: none;
   }
   &:hover{
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-    transform: scale(1.02);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transform: perspective(1px) translateZ(0) scale(1.02);
+    backface-visibility: hidden;
     -webkit-font-smoothing: subpixel-antialiased;
   }
   &--withIcon{

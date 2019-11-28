@@ -11,7 +11,15 @@ const sliderSettings = {
   speed: 500,
   lazyLoad: true,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 991,
+      settings: {
+        fade: false,
+      }
+    }
+  ]
 };
 const slider2Slides = [
   {

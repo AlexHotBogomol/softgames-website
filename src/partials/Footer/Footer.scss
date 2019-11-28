@@ -165,3 +165,82 @@
     padding-top: 50px;
   }
 }
+
+@media only screen and (max-width: 991px){
+  .footer{
+    &-logoWrapper{
+      margin-bottom: 40px;
+      .logo-img{
+        .logo-letter{
+          fill: $white-color;
+        }
+      }
+      &:before{
+        display: none;
+      }
+    }
+  }
+  .footerMenu{
+    &-subitem{
+      margin: 5px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .footer{
+    &-logoWrapper{
+      margin-bottom: 20px;
+    }
+    &-socials{
+      margin-top: 20px;
+      margin-bottom: 30px;
+      li{
+        margin-right: 15px;
+      }
+    }
+  }
+  .footerMenu{
+    margin-bottom: 0;
+    &-wrapper{
+      padding-bottom: 25px;
+    }
+    &-item{
+      text-transform: capitalize;
+      padding: 15px 0;
+    }
+    &-subitem{
+      display: none;
+    }
+  }
+  .games{
+    &:before{
+      display: none;
+    }
+  }
+}
+@media only screen and (max-width: 575px){
+  .footer{
+    &-logoWrapper{
+      .logo{
+        width: 145px;
+        svg{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .footerBottom{
+    padding-bottom: 10px;
+    &-menu{
+      li{
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .participateBlock:before{
+    display: none;
+  }
+}

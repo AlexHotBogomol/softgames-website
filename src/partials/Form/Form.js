@@ -6,7 +6,7 @@ const Form = ({className}) => {
   return (
     <form className={formClasses.join(" ")} action="/" method="POST">
       <div className="row">
-        <div className="col-lg-6">
+        <div className="col-md-6">
           <label>
             <span className="caption">First Name*</span>
             <input
@@ -38,9 +38,9 @@ const Form = ({className}) => {
             <span className="caption">Telephone (optional)</span>
             <input type="tel" placeholder="Your telephone" name="telephone" />
           </label>
-          <button type="submit" className="btn btn--primary">SEND</button>
+          <button type="submit" className="btn btn--primary d-none d-md-block">SEND</button>
         </div>
-        <div className="col-lg-6">
+        <div className="col-md-6">
           <label>
             <span className="caption">Additional Background Information*</span>
             <textarea
@@ -54,6 +54,7 @@ const Form = ({className}) => {
             I agree to the use of my data in accordance with the data
             protection provisions but do not agree to third party sharing.
           </label>
+          <button type="submit" className="btn btn--primary d-md-none">SEND</button>
         </div>
       </div>
     </form>

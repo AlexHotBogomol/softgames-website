@@ -29,7 +29,7 @@ const slider1Slides = [
   },
   {
     image: sliderImg1,
-    title: "Solitaire Story2",
+    title: "Solitaire Story3",
     btnText: "click to play",
     btnLink: "#"
   }

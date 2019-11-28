@@ -293,7 +293,7 @@ const Career = props => {
             {filteredPositions.length ? (
               filteredPositions.map(position => {
                 return (
-                  <div className="col-lg-6 col-xl-4" key={position.id}>
+                  <div className="col-md-6 col-xl-4" key={position.id}>
                     <PositionCard
                       title={position.title}
                       department={position.department}
@@ -324,7 +324,7 @@ const Career = props => {
             </div>
           </div>
           <div className="row">
-            <div className="col-lg-10 mx-auto">
+            <div className="col-md-10 mx-auto">
               <Slider
                 className="slider slider3 culture-slider"
                 customPaging={function(i) {
@@ -447,7 +447,7 @@ const Career = props => {
                   {office.department}
                 </p>
               </div>
-              <div className="col-lg-10 mx-auto">
+              <div className="col-md-10 mx-auto">
                 <Slider
                   className="slider slider3 culture-slider"
                   customPaging={function(i) {

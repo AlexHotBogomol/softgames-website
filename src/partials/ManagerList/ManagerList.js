@@ -1,6 +1,7 @@
 import React from 'react';
 import managerPhoto from "../../assets/images/managerPhoto.png";
 import ManagerCard from "./ManagerCard/ManagerCard";
+import './ManagerList.scss';
 
 const ManagerList = props => {
   return (

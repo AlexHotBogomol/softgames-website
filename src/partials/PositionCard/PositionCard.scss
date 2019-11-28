@@ -44,3 +44,22 @@
     }
   }
 }
+
+@media only screen and (max-width: 991px){
+  .positionCard{
+    &-title{
+      min-height: 110px;
+    }
+    &-list{
+      padding-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .positionCard{
+    &-title{
+      min-height: 0;
+    }
+  }
+}

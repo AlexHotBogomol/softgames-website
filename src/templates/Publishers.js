@@ -134,7 +134,7 @@ const Publishers = (props) => (
         </div>
         <div className="row whyUs-list">
           {whyUsCards.map((card,index) => (
-            <div className="col-lg-3" key={index}>
+            <div className="col-sm-6 col-lg-3" key={index}>
               <SimpleCard
                 icon={card.icon}
                 content={card.content}

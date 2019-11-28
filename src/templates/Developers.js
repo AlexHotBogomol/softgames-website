@@ -132,7 +132,7 @@ const Developers = (props) => (
           <div className="col-lg-8 mx-auto text-center">
             <h2 className="publishWithUs-heading">Publish with us</h2>
             <div className="row">
-              <div className="col-lg-6">
+              <div className="col-sm-8 mx-auto col-md-6">
                 <div className="publishWithUsCard">
                   <div className="publishWithUsCard-imgWrapper">
                     <GotGameIllustration/>
@@ -145,7 +145,7 @@ const Developers = (props) => (
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6">
+              <div className="col-sm-8 mx-auto col-md-6">
                 <div className="publishWithUsCard">
                   <div className="publishWithUsCard-imgWrapper">
                     <NextChallengeIllustration/>

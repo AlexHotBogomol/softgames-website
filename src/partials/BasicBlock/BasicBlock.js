@@ -15,7 +15,7 @@ const BasicBlock = ({title, image, imageAlt, description, btn, category, classNa
               <img src={image} alt={imageAlt} />
             </div>
           </div>
-          <div className="col-lg-6 d-flex flex-column justify-content-between align-items-start">
+          <div className="col-lg-6 d-flex flex-column justify-content-between align-items-center align-items-lg-start">
             {category ? (
               <span className="basicBlock-category">
                 {category}

@@ -89,11 +89,11 @@ const Home = (props) => {
               <h2 className="featuredGames-heading">Featured Games</h2>
             </div>
           </div>
-          <div className="row featuredGames-gameList">
-            <div className="col-lg-3"></div>
+          <div className="row featuredGames-gameList justify-content-center">
+            <div className="d-none d-lg-block col-lg-3"></div>
             {games.map((game, index) => {
               return (
-                <div className="col-lg-3" key={index}>
+                <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
                   <GameCard
                     url={game.url}
                     img={game.image}
@@ -123,7 +123,7 @@ const Home = (props) => {
           <div className="row latestPositions-list">
             {positions ? (positions.slice(0, 6).map(position => {
               return (
-                <div className="col-lg-6 col-xl-4" key={position.id}>
+                <div className="col-md-6 col-xl-4" key={position.id}>
                   <PositionCard
                     title={position.title}
                     department={position.department}
@@ -153,7 +153,7 @@ const Home = (props) => {
               <div className="row">
                 {news ? (news.map(newsItem => {
                   return (
-                    <div className="col-md-6" key={newsItem.id}>
+                    <div className="col-sm-8 mx-auto col-md-6" key={newsItem.id}>
                       <NewsCard
                         title={newsItem.title}
                         img={newsItem.media.large}
@@ -164,12 +164,17 @@ const Home = (props) => {
                   );
                 })) : null}
               </div>
+              <div className="row d-lg-none">
+                <Link to="/news/" className="btn btn--primary mx-auto">
+                  All news & events
+                </Link>
+              </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 socialBlockWrapper">
               <SocialBlock/>
             </div>
           </div>
-          <div className="row">
+          <div className="row d-none d-lg-flex">
             <Link to="/news/" className="btn btn--primary mx-auto">
               All news & events
             </Link>

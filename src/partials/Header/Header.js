@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Header.scss";
 import Logo from "../Logo/Logo";
 import ArrowDownSmall from "../../assets/icons/ArrowDownSmall";
@@ -24,6 +24,12 @@ const Header = props => {
   const onOverlayClick = () => {
     setIsMenuOpen(false);
   };
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header className="header">
       <div className="container">
@@ -56,10 +62,10 @@ const Header = props => {
                 Company
               </NavLink>
             </li>
-            <li className="menu-item menu-dropdown">
-            <span className="menu-link">
-              Partner up <ArrowDownSmall/>
-            </span>
+            <li className="menu-item menu-dropdown d-none d-lg-flex">
+              <span className="menu-link">
+                Partner up <ArrowDownSmall/>
+              </span>
               <ul className="submenu">
                 <li className="submenu-item">
                   <Link className="submenu-link" to={`/advertisers/`}>
@@ -78,6 +84,23 @@ const Header = props => {
                 </li>
               </ul>
             </li>
+            {/*For adaptive menu*/}
+            <li className="menu-item d-lg-none">
+              <Link className="menu-link" to={`/advertisers/`}>
+                Advertisers
+              </Link>
+            </li>
+            <li className="menu-item d-lg-none">
+              <Link className="menu-link" to={`/publishers/`}>
+                Publishers
+              </Link>
+            </li>
+            <li className="menu-item d-lg-none">
+              <Link className="menu-link" to={`/developers/`}>
+                Developers
+              </Link>
+            </li>
+            {/*For adaptive menu*/}
             <li className="menu-item">
               <NavLink
                 activeClassName="selected"

@@ -121,7 +121,7 @@ const Advertisers = (props) => (
         </div>
         <div className="row whyUs-list justify-content-center">
           {whyUsCards.map((card,index) => (
-            <div className="col-lg-4" key={index}>
+            <div className="col-sm-6 col-lg-4" key={index}>
               <SimpleCard
                 icon={card.icon}
                 content={card.content}
@@ -230,17 +230,17 @@ const Advertisers = (props) => (
           </div>
         </div>
         <div className="row justify-content-center">
-          <div className="col-lg-4 col-xl-3">
+          <div className="col-sm-6 col-lg-4 col-xl-3">
             <PartnersItem icon={<Iab/>}/>
             <p className="brandSafety-text">
               Your ads are presented in a natural, non-intrusive format. We adopted the industry best practices and comply with IAB guidelines.
             </p>
           </div>
-          <div className="col-lg-4 col-xl-3">
+          <div className="col-sm-6 col-lg-4 col-xl-3">
             <PartnersItem icon={<img src={gdpr} alt="gdpr"/>}/>
             <p className="brandSafety-text">Privacy of our user safety comes first and with it also lawful data processing. We are fully GDPR compliant.</p>
           </div>
-          <div className="col-lg-4 col-xl-3">
+          <div className="col-sm-6 col-lg-4 col-xl-3">
             <PartnersItem icon={<img src={moat} alt="moat"/>}/>
             <p className="brandSafety-text">The quality of our inventory is monitored and verified by MOAT.</p>
           </div>

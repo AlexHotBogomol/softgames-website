@@ -98,7 +98,7 @@ const Company = (props) => {
               <div className="row news-list">
                 {news.map(newsItem => {
                   return (
-                    <div className="col-md-6" key={newsItem.id}>
+                    <div className="col-sm-8 mx-auto col-md-6" key={newsItem.id}>
                       <NewsCard
                         id={newsItem.id}
                         title={newsItem.title}
@@ -110,15 +110,22 @@ const Company = (props) => {
                   );
                 })}
               </div>
+              <div className="row d-lg-none">
+                <div className="col-12 text-center">
+                  <Link to="/news/" className="btn btn--secondary">
+                    All news & events
+                  </Link>
+                </div>
+              </div>
             </div>
-            <div className="col-lg-4">
+            <div className="col-sm-8 mx-auto col-lg-4">
               <Sidebar
                 subscribe={false}
                 tags={false}
               />
             </div>
           </div>
-          <div className="row">
+          <div className="row d-none d-lg-flex">
             <div className="col-12">
               <Link to="/news/" className="btn btn--secondary">
                 All news & events
@@ -140,7 +147,7 @@ const Company = (props) => {
             <div className="col-lg-8">
               <Form className="form--getInTouch"/>
             </div>
-            <div className="col-lg-4">
+            <div className="col-lg-4 socialBlockWrapper">
               <SocialBlock className="socialBlock--company"/>
             </div>
           </div>

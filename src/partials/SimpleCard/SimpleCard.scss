@@ -9,3 +9,9 @@
     color: $brand-color1;
   }
 }
+
+@media only screen and (max-width: 991px){
+  .simpleCard{
+    margin-bottom: 30px;
+  }
+}
