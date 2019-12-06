@@ -1987,7 +1987,7 @@ const Footer = props => {
     },
     __self: undefined
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/imprint/",
+    href: "/imprint",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 262

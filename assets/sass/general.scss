@@ -127,7 +127,8 @@ h6{
   line-height: 1.5;
 }
 ::selection{
-  background-color: rgba($brand-color1, 0.5);
+  background-color: $brand-color1;
+  color: $white-color;
 }
 .caption{
   font-family: $primary-font;

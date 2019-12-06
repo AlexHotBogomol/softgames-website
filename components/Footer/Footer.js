@@ -259,7 +259,7 @@ const Footer = (props) => {
             </p>
             <ul className="footerBottom-menu">
               <li>
-                <Link href="/imprint/">
+                <Link href="/imprint">
                   <a>
                     Imprint
                   </a>

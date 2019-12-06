@@ -1883,7 +1883,7 @@ var Footer = function Footer(props) {
     },
     __self: this
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/imprint/",
+    href: "/imprint",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 262
@@ -16902,7 +16902,7 @@ Tokenizer.prototype._emitPartial = function(value) {
 module.exports = Stream;
 
 var Parser = __webpack_require__(/*! ./Parser.js */ "./node_modules/htmlparser2/lib/Parser.js");
-var WritableStream = __webpack_require__(/*! readable-stream */ 18).Writable;
+var WritableStream = __webpack_require__(/*! readable-stream */ 21).Writable;
 var StringDecoder = __webpack_require__(/*! string_decoder */ "./node_modules/string_decoder/lib/string_decoder.js").StringDecoder;
 var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
 
@@ -30593,7 +30593,7 @@ var smoothScroll = function smoothScroll(el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 18:
+/***/ 21:
 /*!*********************************!*\
   !*** readable-stream (ignored) ***!
   \*********************************/
