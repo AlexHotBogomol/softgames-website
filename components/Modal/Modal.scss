@@ -19,18 +19,10 @@
     width: 992px;
     max-width: 80%;
     position: absolute;
-    top: 50px;
+    top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 30px 80px 60px;
     z-index: 100;
-    h3 {
-      padding-bottom: 30px;
-      color: $brand-color2
-    }
-    @media only screen and (max-width: 767px){
-      padding: 30px;
-    }
   }
   &-closeBtn{
     cursor: pointer;
@@ -44,6 +36,7 @@
     font-size: 30px;
     line-height: 24px;
     transition: 0.2s;
+    z-index: 100;
     &:focus{
       outline: none;
     }

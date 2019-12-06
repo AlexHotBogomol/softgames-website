@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -6641,7 +6641,7 @@ const smoothScroll = function (el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 9:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

@@ -30714,7 +30714,7 @@ var smoothScroll = function smoothScroll(el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 26:
+/***/ 44:
 /*!***************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcareer&absolutePagePath=C%3A%5CUsers%5CBogomol%5CDesktop%5Csoftgames%5Cpages%5Ccareer.js ***!
   \***************************************************************************************************************************************/
@@ -30737,5 +30737,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[26,"static/runtime/webpack.js","styles"]]]);
+},[[44,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=career.js.map

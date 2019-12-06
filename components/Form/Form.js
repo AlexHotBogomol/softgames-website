@@ -62,7 +62,7 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
     setIsSend(true);
     e.target.reset();
     closeFormModal();
-    alert("Отправлено");
+    openThankYouModal();
     console.log(data);
   };
   return (

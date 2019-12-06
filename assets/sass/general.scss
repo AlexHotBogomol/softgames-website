@@ -447,7 +447,8 @@ label{
   text-transform: uppercase;
   border-radius: 2px;
   padding: 15px 35px;
-  min-width: 226px;
+  width: 226px;
+  max-width: 100%;
   height: 56px;
   display: inline-flex;
   justify-content: center;

@@ -16902,7 +16902,7 @@ Tokenizer.prototype._emitPartial = function(value) {
 module.exports = Stream;
 
 var Parser = __webpack_require__(/*! ./Parser.js */ "./node_modules/htmlparser2/lib/Parser.js");
-var WritableStream = __webpack_require__(/*! readable-stream */ 17).Writable;
+var WritableStream = __webpack_require__(/*! readable-stream */ 18).Writable;
 var StringDecoder = __webpack_require__(/*! string_decoder */ "./node_modules/string_decoder/lib/string_decoder.js").StringDecoder;
 var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
 
@@ -30593,7 +30593,7 @@ var smoothScroll = function smoothScroll(el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 17:
+/***/ 18:
 /*!*********************************!*\
   !*** readable-stream (ignored) ***!
   \*********************************/
@@ -30604,7 +30604,7 @@ var smoothScroll = function smoothScroll(el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 50:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CBogomol%5CDesktop%5Csoftgames%5Cpages%5Cindex.js ***!
   \********************************************************************************************************************************/
@@ -30627,5 +30627,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[50,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
