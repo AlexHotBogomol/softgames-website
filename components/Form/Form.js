@@ -4,6 +4,7 @@ import useForm from "react-hook-form";
 import "./Form.scss";
 import Select from "react-select";
 import DropdownIndicator from "../DropdownIndicator";
+import axios from "axios";
 
 const selectOptions = {
   components: { DropdownIndicator },
@@ -40,6 +41,13 @@ const options = [
 
 const Form = ({className, categorySelect, websiteInput, closeFormModal, openThankYouModal}) => {
 
+  if(!closeFormModal){
+    closeFormModal = useContext(ModalContext).closeModal
+  }
+
+  if(!openThankYouModal){
+    openThankYouModal = useContext(ModalContext).openThankYouModal
+  }
 
   const [isSend, setIsSend] = useState(false);
 
@@ -59,11 +67,18 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
   const formClasses = ['form', className];
 
   const onSubmit = (data, e) => {
-    setIsSend(true);
-    e.target.reset();
-    closeFormModal();
-    openThankYouModal();
     console.log(data);
+    axios.post('/api/contact', data)
+      .then(function (response) {
+        setIsSend(true);
+        e.target.reset();
+        closeFormModal();
+        openThankYouModal();
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
   return (
     <form className={formClasses.join(" ")} onSubmit={handleSubmit(onSubmit)}>
@@ -142,7 +157,14 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
             <input
               placeholder="Your telephone"
               name="telephone"
-              ref={register()}
+              ref={register(
+                {
+                  pattern: {
+                    value: /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/,
+                    message: "Invalid telephone"
+                  }
+                }
+              )}
             />
           </label>
           {errors.telephone && <p className="caption form-message">{errors.telephone.message}</p>}
@@ -154,7 +176,7 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
               <span className="caption">Choose one option</span>
               <Select
                 className="form-select"
-                name="filters"
+                name="category"
                 value={value}
                 options={options}
                 onChange={onSelectChange}
@@ -166,7 +188,7 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
           <label>
             <span className="caption">Additional Background Information</span>
             <textarea
-              name="text"
+              name="message"
               placeholder="Additional Background Information"
               ref={register}
             />

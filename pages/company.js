@@ -138,10 +138,7 @@ const Company = (props) => {
               </div>
             </div>
             <div className="col-sm-8 mx-auto col-lg-4">
-              <Sidebar
-                subscribe={false}
-                tags={false}
-              />
+              <Sidebar />
             </div>
           </div>
           <div className="row d-none d-lg-flex">

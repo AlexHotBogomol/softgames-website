@@ -38,6 +38,7 @@ class MyApp extends App {
           value={{
             openModal: () => this.openModal("FormModal"),
             closeModal: () => this.closeModal("FormModal"),
+            openThankYouModal: () => this.openModal("ThankYouModal"),
           }}
         >
           <Component {...pageProps} />
