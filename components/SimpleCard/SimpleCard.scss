@@ -1,0 +1,17 @@
+@import '../../assets/sass/variables';
+
+.simpleCard{
+  text-align: center;
+  &-imgWrapper{
+    width: 100%;
+  }
+  h4{
+    color: $brand-color1;
+  }
+}
+
+@media only screen and (max-width: 991px){
+  .simpleCard{
+    margin-bottom: 30px;
+  }
+}

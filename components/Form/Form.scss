@@ -1,0 +1,54 @@
+@import '../../assets/sass/variables';
+
+.form{
+  display: block;
+  width: 100%;
+  &-message{
+    color: $error-color;
+    margin-bottom: 5px;
+  }
+  textarea{
+    resize: none;
+    min-height: 238px;
+    background-color: $white-color;
+  }
+  label{
+    margin-bottom: 20px;
+  }
+  button{
+    margin-top: 30px;
+    width: 100%;
+  }
+  &--getInTouch{
+    background-color: $white-color;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 2px;
+    position: relative;
+    padding: 50px;
+    input, textarea{
+      background-color: $grey-light-color;
+    }
+    &:before{
+      top: -70px;
+      left: -50px;
+    }
+  }
+  &-select{
+    .css-l852rc-control, .css-14n07ud-control{
+      border-right: 2px;
+      height: 50px;
+      border-bottom: 2px solid $grey-color;
+      .css-1okebmr-indicatorSeparator{
+        display: none;
+      }
+      .css-tlfecz-indicatorContainer, .css-1gtu0rj-indicatorContainer{
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1259px) {
+  .form{
+    padding: 0;
+  }
+}
