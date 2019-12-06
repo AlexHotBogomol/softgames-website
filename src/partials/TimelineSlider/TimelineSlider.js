@@ -112,13 +112,6 @@ const TimelineSlider = props => {
   const delay = 4000;
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      nextSlide(activeIndex);
-    }, delay);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
     setContent(slides[activeIndex]);
     const timeout = setTimeout(() => {
       nextSlide(activeIndex);

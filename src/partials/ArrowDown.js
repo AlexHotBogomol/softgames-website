@@ -25,7 +25,6 @@ const ArrowDown = ({className, hashlink, scrollPosition}) => {
       </div>
     )
   }
-
 };
 
 export default ArrowDown

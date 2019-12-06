@@ -31,7 +31,6 @@ import Fiat from "../assets/icons/partners/Fiat";
 import interstitialVideo from '../assets/images/adFormats/interstitialVideo.png';
 import preRollVideo from '../assets/images/adFormats/preRollVideo.png';
 import rewardedVideo from '../assets/images/adFormats/rewardedVideo.png';
-import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 
 const seoBlockData = {

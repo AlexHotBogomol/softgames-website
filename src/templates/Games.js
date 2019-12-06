@@ -8,7 +8,6 @@ import gameIcon from "../assets/images/games/gameIcon.png";
 import placeholderImg from "../assets/images/placeholder.jpg";
 import seoImg from "../assets/images/seoImg.jpg";
 import gamesImg from "../assets/images/gamesImage.jpg";
-import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 const games = [
   {

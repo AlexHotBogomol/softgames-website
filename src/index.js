@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
+// import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, } from "react-router-dom";
 import './index.scss';
 
 import Notfound from './templates/Notfound';
@@ -17,7 +18,6 @@ import Header from "./partials/Header/Header";
 import Footer from "./partials/Footer/Footer";
 import HotPanel from "./partials/HotPanel/HotPanel";
 import ScrollToTop from "./partials/ScrollToTop";
-import AnchorScroll from "./partials/AnchorScroll";
 
 
 const routes = (
@@ -35,10 +35,6 @@ const routes = (
       <Route exact path="/publishers/" component={Publishers} />
       <Route exact path="/developers/" component={Developers} />
       <Route exact path="/blog/:slug" component={SingleNews} />
-      <Redirect from='/post/' to='/' />
-      <Redirect from='/partner-up/' to='/advertisers/' />
-      <Redirect exact from='/page/' to='/' />
-      <Redirect exact from='/search/' to='/' />
       <Route component={Notfound} />
     </Switch>
     <HotPanel/>

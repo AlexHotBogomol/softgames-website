@@ -10,7 +10,7 @@ const Tags = props => {
     wpApiService.getAllTags('news_tag').then(({data: tags}) => {
       setTags(tags);
     });
-  }, []);
+  }, [wpApiService]);
 
   return (
     <div className="sidebar-block tags">

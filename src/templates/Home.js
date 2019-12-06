@@ -14,7 +14,6 @@ import SocialBlock from "../partials/SocialBlock/SocialBlock";
 import HomeSlider1 from "../partials/HomeSlider1";
 import HomeSlider2 from "../partials/HomeSlider2";
 import cookieCrash from "../assets/images/games/CookieCrash.jpg";
-import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 const games = [
   {

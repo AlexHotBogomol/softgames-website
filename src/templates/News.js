@@ -6,7 +6,6 @@ import NewsCard from "../partials/NewsCard/NewsCard";
 import Sidebar from "../partials/Sidebar/Sidebar";
 import Pagination from "../partials/Pagination/Pagination";
 import Breadcrumb from "../partials/Breadcrumb";
-import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 class News extends Component {
   constructor(props) {
@@ -44,16 +43,18 @@ class News extends Component {
   };
 
   filterNewsByTag = (news, tag) => {
-    return news.filter(newsItem => {
+    const filteredNews = [];
+    news.forEach(newsItem => {
       if (
         newsItem.terms &&
         newsItem.terms.some(term => {
           return term.slug === tag;
         })
       ) {
-        return newsItem;
+        filteredNews.push(newsItem);
       }
     });
+    return filteredNews
   };
 
   paginate = pageNumber => {

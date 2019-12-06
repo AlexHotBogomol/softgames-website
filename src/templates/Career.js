@@ -17,7 +17,6 @@ import seoImg from "../assets/images/seoImg.jpg";
 import cultureImg from "../assets/images/cultureImage.jpg";
 import employeePhoto from "../assets/images/emplPhoto.png";
 import FAQ from "../partials/FAQ/FAQ";
-import ScrollToTopOnMount from "../partials/ScrollToTopOnMount";
 
 const cultureSlides = [
   {
