@@ -11,7 +11,7 @@ class MyApp extends App {
   constructor(props) {
     super(props);
     this.state = {
-      isOpenFormModal: true,
+      isOpenFormModal: false,
       isOpenThankYouModal: false
     };
   }

@@ -22727,7 +22727,7 @@ function (_App) {
     });
 
     _this.state = {
-      isOpenFormModal: true,
+      isOpenFormModal: false,
       isOpenThankYouModal: false
     };
     return _this;

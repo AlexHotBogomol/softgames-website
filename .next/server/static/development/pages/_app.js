@@ -2909,7 +2909,7 @@ class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_3___default.a {
     });
 
     this.state = {
-      isOpenFormModal: true,
+      isOpenFormModal: false,
       isOpenThankYouModal: false
     };
   }
