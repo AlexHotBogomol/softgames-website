@@ -121,13 +121,6 @@
     }
   }
 }
-@media only screen and (max-width: 991px){
-  .timelineSlider{
-    &-arrow{
-      display: none;
-    }
-  }
-}
 @media only screen and (max-width: 767px){
   .timelineSlider{
     &-date{
@@ -138,6 +131,9 @@
         font-size: 200px;
         letter-spacing: -19.479px;
       }
+    }
+    &-arrow{
+      display: none;
     }
   }
 }

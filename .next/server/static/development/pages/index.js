@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -598,6 +598,28 @@ module.exports = "/_next/static/images/character-688cb1a401bae6cbc1706ffc7858d8a
 /***/ (function(module, exports) {
 
 module.exports = "/_next/static/images/CookieCrash-1b49a894f93e604986c47399fa8972b2.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/homeSlider1/slider1-medium.jpg":
+/*!******************************************************!*\
+  !*** ./assets/images/homeSlider1/slider1-medium.jpg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/slider1-medium-2f2f237aa039a19a642038f23c66b5b4.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/homeSlider1/slider1-small.jpg":
+/*!*****************************************************!*\
+  !*** ./assets/images/homeSlider1/slider1-small.jpg ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/slider1-small-56048719247a2312a2597b3c91d1ad85.jpg";
 
 /***/ }),
 
@@ -1192,9 +1214,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_slick_lib__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_slick_lib__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/images/homeSlider1/sliderImg1.jpg */ "./assets/images/homeSlider1/sliderImg1.jpg");
 /* harmony import */ var _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/homeSlider1/slider1-small.jpg */ "./assets/images/homeSlider1/slider1-small.jpg");
+/* harmony import */ var _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/images/homeSlider1/slider1-medium.jpg */ "./assets/images/homeSlider1/slider1-medium.jpg");
+/* harmony import */ var _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6__);
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
 
 
 
@@ -1210,16 +1238,22 @@ const sliderSettings = {
 };
 const slider1Slides = [{
   image: _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  mediumImage: _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  smallImage: _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
   title: "Solitaire Story",
   btnText: "click to play",
   btnLink: "#"
 }, {
   image: _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  mediumImage: _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  smallImage: _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
   title: "Solitaire Story2",
   btnText: "click to play",
   btnLink: "#"
 }, {
   image: _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  mediumImage: _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  smallImage: _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
   title: "Solitaire Story3",
   btnText: "click to play",
   btnLink: "#"
@@ -1231,10 +1265,16 @@ const HomeSlider1 = props => __jsx(react_slick_lib__WEBPACK_IMPORTED_MODULE_3___
   return __jsx("div", {
     className: "slider1-slide",
     key: index
-  }, __jsx("img", {
+  }, __jsx("picture", null, __jsx("source", {
+    srcSet: slide.smallImage,
+    media: "(max-width: 360px)"
+  }), __jsx("source", {
+    srcSet: slide.mediumImage,
+    media: "(max-width: 575px)"
+  }), __jsx("img", {
     src: slide.image,
     alt: slide.title
-  }), __jsx("div", {
+  })), __jsx("div", {
     className: "slider1-content"
   }, __jsx("a", {
     href: slide.btnLink,
@@ -1719,17 +1759,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _NewsCard_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewsCard.scss */ "./components/NewsCard/NewsCard.scss");
 /* harmony import */ var _NewsCard_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_NewsCard_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/icons/ArrowRight */ "./assets/icons/ArrowRight.js");
-/* harmony import */ var _utils_Helper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/Helper */ "./utils/Helper.js");
+/* harmony import */ var _assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/icons/ArrowRight */ "./assets/icons/ArrowRight.js");
+/* harmony import */ var _utils_Helper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/Helper */ "./utils/Helper.js");
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-const helper = new _utils_Helper__WEBPACK_IMPORTED_MODULE_4__["default"]();
+const helper = new _utils_Helper__WEBPACK_IMPORTED_MODULE_3__["default"]();
 
 const NewsCard = ({
   slug,
@@ -1740,24 +1777,22 @@ const NewsCard = ({
   const newDate = helper.formatDate(date);
   return __jsx("div", {
     className: "newsCard"
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: `/blog/${slug}`
   }, __jsx("a", {
+    href: `https://softgames.ein-des-ein.com/${slug}`,
     className: "newsCard-img"
   }, __jsx("img", {
     src: img,
     alt: title
-  }))), __jsx("div", {
+  })), __jsx("div", {
     className: "newsCard-content"
   }, __jsx("p", {
     className: "accentText newsCard-date"
   }, newDate), __jsx("h5", {
     className: "newsCard-title"
-  }, title), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: `/blog/${slug}`
-  }, __jsx("a", {
+  }, title), __jsx("a", {
+    href: `https://softgames.ein-des-ein.com/${slug}`,
     className: "accentText newsCard-link"
-  }, "Read More", __jsx(_assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_3__["default"], null)))));
+  }, "Read More", __jsx(_assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NewsCard);
@@ -4286,7 +4321,7 @@ __webpack_require__.r(__webpack_exports__);
 const _domain = "https://softgames.ein-des-ein.com";
 const _base = `${_domain}/wp-json/better-rest-endpoints/v1`;
 const endPoints = {
-  news: `${_base}/blog/`,
+  news: `${_base}/posts/`,
   positions: "https://softgames.recruitee.com/api/offers/"
 };
 /* harmony default export */ __webpack_exports__["default"] = (endPoints);
@@ -4400,7 +4435,7 @@ const smoothScroll = function (el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

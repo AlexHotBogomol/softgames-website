@@ -1495,7 +1495,7 @@
       display: flex !important;
       justify-content: center;
       align-items: center;
-      img {
+      picture, img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -2172,9 +2172,6 @@
       margin-top: 40px;
     }
   }
-  .arrowDown{
-    padding: 0 20px;
-  }
   .publishersBlock:before{
     display: none;
   }
@@ -2204,6 +2201,31 @@
       min-width: 100%;
       max-width: 100%;
     }
+  }
+  .moreGamesBlock{
+    .btn{
+      width: 100%;
+    }
+  }
+  .slider2-wrapper:before{
+    right: -980px;
+  }
+  .simpleBlock{
+    text-align: center;
+  }
+  .adFormats .interstitialVideo, .adFormats .rewardedVideo, .adFormats .preRollVideo{
+    text-align: center;
+  }
+  .publishersBlock2:before{
+    left: -1000px;
+    top: -280px;
+  }
+  .timelineSlider-dateWrapper h1 {
+    font-size: 90px;
+  }
+  .whyUs-card .simpleCard-imgWrapper{
+    width: 220px;
+    height: 220px;
   }
 }
 .formModal{
@@ -2236,6 +2258,7 @@
   &-heading{
     padding-bottom: 65px;
   }
+
 }
 @media only screen and (max-width: 991px){
   .thankYou{

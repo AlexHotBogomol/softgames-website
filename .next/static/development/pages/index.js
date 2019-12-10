@@ -508,6 +508,28 @@ module.exports = "/_next/static/images/CookieCrash-1b49a894f93e604986c47399fa897
 
 /***/ }),
 
+/***/ "./assets/images/homeSlider1/slider1-medium.jpg":
+/*!******************************************************!*\
+  !*** ./assets/images/homeSlider1/slider1-medium.jpg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/slider1-medium-2f2f237aa039a19a642038f23c66b5b4.jpg";
+
+/***/ }),
+
+/***/ "./assets/images/homeSlider1/slider1-small.jpg":
+/*!*****************************************************!*\
+  !*** ./assets/images/homeSlider1/slider1-small.jpg ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/_next/static/images/slider1-small-56048719247a2312a2597b3c91d1ad85.jpg";
+
+/***/ }),
+
 /***/ "./assets/images/homeSlider1/sliderImg1.jpg":
 /*!**************************************************!*\
   !*** ./assets/images/homeSlider1/sliderImg1.jpg ***!
@@ -1056,9 +1078,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_slick_lib__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_slick_lib__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/images/homeSlider1/sliderImg1.jpg */ "./assets/images/homeSlider1/sliderImg1.jpg");
 /* harmony import */ var _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/homeSlider1/slider1-small.jpg */ "./assets/images/homeSlider1/slider1-small.jpg");
+/* harmony import */ var _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/images/homeSlider1/slider1-medium.jpg */ "./assets/images/homeSlider1/slider1-medium.jpg");
+/* harmony import */ var _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6__);
 
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
+
 
 
 
@@ -1074,16 +1102,22 @@ var sliderSettings = {
 };
 var slider1Slides = [{
   image: _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  mediumImage: _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  smallImage: _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
   title: "Solitaire Story",
   btnText: "click to play",
   btnLink: "#"
 }, {
   image: _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  mediumImage: _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  smallImage: _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
   title: "Solitaire Story2",
   btnText: "click to play",
   btnLink: "#"
 }, {
   image: _assets_images_homeSlider1_sliderImg1_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+  mediumImage: _assets_images_homeSlider1_slider1_medium_jpg__WEBPACK_IMPORTED_MODULE_6___default.a,
+  smallImage: _assets_images_homeSlider1_slider1_small_jpg__WEBPACK_IMPORTED_MODULE_5___default.a,
   title: "Solitaire Story3",
   btnText: "click to play",
   btnLink: "#"
@@ -1096,10 +1130,16 @@ var HomeSlider1 = function HomeSlider1(props) {
     return __jsx("div", {
       className: "slider1-slide",
       key: index
-    }, __jsx("img", {
+    }, __jsx("picture", null, __jsx("source", {
+      srcSet: slide.smallImage,
+      media: "(max-width: 360px)"
+    }), __jsx("source", {
+      srcSet: slide.mediumImage,
+      media: "(max-width: 575px)"
+    }), __jsx("img", {
       src: slide.image,
       alt: slide.title
-    }), __jsx("div", {
+    })), __jsx("div", {
       className: "slider1-content"
     }, __jsx("a", {
       href: slide.btnLink,
@@ -1584,17 +1624,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _NewsCard_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NewsCard.scss */ "./components/NewsCard/NewsCard.scss");
 /* harmony import */ var _NewsCard_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_NewsCard_scss__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/icons/ArrowRight */ "./assets/icons/ArrowRight.js");
-/* harmony import */ var _utils_Helper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/Helper */ "./utils/Helper.js");
+/* harmony import */ var _assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../assets/icons/ArrowRight */ "./assets/icons/ArrowRight.js");
+/* harmony import */ var _utils_Helper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/Helper */ "./utils/Helper.js");
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
-
-var helper = new _utils_Helper__WEBPACK_IMPORTED_MODULE_4__["default"]();
+var helper = new _utils_Helper__WEBPACK_IMPORTED_MODULE_3__["default"]();
 
 var NewsCard = function NewsCard(_ref) {
   var slug = _ref.slug,
@@ -1604,24 +1641,22 @@ var NewsCard = function NewsCard(_ref) {
   var newDate = helper.formatDate(date);
   return __jsx("div", {
     className: "newsCard"
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/blog/".concat(slug)
   }, __jsx("a", {
+    href: "https://softgames.ein-des-ein.com/".concat(slug),
     className: "newsCard-img"
   }, __jsx("img", {
     src: img,
     alt: title
-  }))), __jsx("div", {
+  })), __jsx("div", {
     className: "newsCard-content"
   }, __jsx("p", {
     className: "accentText newsCard-date"
   }, newDate), __jsx("h5", {
     className: "newsCard-title"
-  }, title), __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-    href: "/blog/".concat(slug)
-  }, __jsx("a", {
+  }, title), __jsx("a", {
+    href: "https://softgames.ein-des-ein.com/".concat(slug),
     className: "accentText newsCard-link"
-  }, "Read More", __jsx(_assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_3__["default"], null)))));
+  }, "Read More", __jsx(_assets_icons_ArrowRight__WEBPACK_IMPORTED_MODULE_2__["default"], null))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NewsCard);
@@ -14938,7 +14973,7 @@ Tokenizer.prototype._emitPartial = function(value) {
 module.exports = Stream;
 
 var Parser = __webpack_require__(/*! ./Parser.js */ "./node_modules/htmlparser2/lib/Parser.js");
-var WritableStream = __webpack_require__(/*! readable-stream */ 6).Writable;
+var WritableStream = __webpack_require__(/*! readable-stream */ 17).Writable;
 var StringDecoder = __webpack_require__(/*! string_decoder */ "./node_modules/string_decoder/lib/string_decoder.js").StringDecoder;
 var Buffer = __webpack_require__(/*! buffer */ "./node_modules/buffer/index.js").Buffer;
 
@@ -28236,7 +28271,7 @@ var _domain = "https://softgames.ein-des-ein.com";
 var _base = "".concat(_domain, "/wp-json/better-rest-endpoints/v1");
 
 var endPoints = {
-  news: "".concat(_base, "/blog/"),
+  news: "".concat(_base, "/posts/"),
   positions: "https://softgames.recruitee.com/api/offers/"
 };
 /* harmony default export */ __webpack_exports__["default"] = (endPoints);
@@ -28352,7 +28387,18 @@ var smoothScroll = function smoothScroll(el, duration, callback, context) {
 
 /***/ }),
 
-/***/ 31:
+/***/ 17:
+/*!*********************************!*\
+  !*** readable-stream (ignored) ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 4:
 /*!********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CBogomol%5CDesktop%5Csoftgames%5Cpages%5Cindex.js ***!
   \********************************************************************************************************************************/
@@ -28361,17 +28407,6 @@ var smoothScroll = function smoothScroll(el, duration, callback, context) {
 
 module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CBogomol%5CDesktop%5Csoftgames%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CBogomol%5CDesktop%5Csoftgames%5Cpages%5Cindex.js!./");
 
-
-/***/ }),
-
-/***/ 6:
-/*!*********************************!*\
-  !*** readable-stream (ignored) ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -28386,5 +28421,5 @@ module.exports = dll_5f137288facb1107b491;
 
 /***/ })
 
-},[[31,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
