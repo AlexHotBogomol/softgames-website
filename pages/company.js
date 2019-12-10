@@ -28,7 +28,12 @@ const aboutUsData = {
 const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
-  content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
+  content: `<p>Games Affiliate Program
+  Earn money with SOFTGAMES Games Affiliate Program!
+  Join our best affiliate program tailored for gaming site publishers, online networks and website owners and become a Publisher at SOFTGAMES Affiliate Marketing Network! Earn the highest commissions and monetize your online traffic by embedding high quality, cross-platform gaming content.
+  As a worldwide leader in HTML5 casual gaming, SOFTGAMES makes it easy to profit and to be a part of the fast-growing and extremely popular mobile online games business.
+  Our Games Affiliate Program provides you with access to our catalog of 400+ exclusive HTML5 casual games from our catalogue as automatic feeds, full white label portals or selected content only.
+  </p>`,
   contactUsBtn: true,
 };
 

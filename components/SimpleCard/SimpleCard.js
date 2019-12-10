@@ -8,7 +8,12 @@ const SimpleCard = ({icon, content, className}) => {
   return (
     <div className={classes.join(" ")}>
       <div className="simpleCard-imgWrapper">
-        {icon}
+        {typeof icon !== "string" ? icon : (
+          <img
+            src={icon}
+            alt={content}
+          />
+        )}
       </div>
       {content}
     </div>

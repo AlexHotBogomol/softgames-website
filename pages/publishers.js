@@ -24,6 +24,11 @@ import NewGame from "../assets/icons/publishers/NewGame";
 import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 
+import crossPlatformGif from '../assets/images/publishers/crossPlatform.gif';
+import realTimeDashboardGif from '../assets/images/publishers/realTimeDashboard.gif';
+import premiumMonetizationGif from '../assets/images/publishers/premiumMonetization.gif';
+import newGamesGif from '../assets/images/publishers/newGames.gif';
+
 const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
@@ -60,7 +65,7 @@ const simpleCards = [
 
 const whyUsCards = [
   {
-    icon: <CrossPlatform />,
+    icon: crossPlatformGif,
     content: (
       <div>
         <h4>
@@ -72,7 +77,7 @@ const whyUsCards = [
     )
   },
   {
-    icon: <RealtimeDashboard />,
+    icon: realTimeDashboardGif,
     content: (
       <div>
         <h4>
@@ -84,7 +89,7 @@ const whyUsCards = [
     )
   },
   {
-    icon: <PremiumMonetization />,
+    icon: premiumMonetizationGif,
     content: (
       <div>
         <h4>
@@ -96,7 +101,7 @@ const whyUsCards = [
     )
   },
   {
-    icon: <NewGame />,
+    icon: newGamesGif,
     content: (
       <div>
         <h4>

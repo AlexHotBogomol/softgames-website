@@ -20,6 +20,14 @@ const slider1Slides = [
     image: sliderImg1,
     mediumImage: sliderMediumImg1,
     smallImage: sliderSmallImg1,
+    title: "Cookie Crush",
+    btnText: "click to play",
+    btnLink: "#"
+  },
+  {
+    image: sliderImg1,
+    mediumImage: sliderMediumImg1,
+    smallImage: sliderSmallImg1,
     title: "Solitaire Story",
     btnText: "click to play",
     btnLink: "#"
@@ -28,15 +36,7 @@ const slider1Slides = [
     image: sliderImg1,
     mediumImage: sliderMediumImg1,
     smallImage: sliderSmallImg1,
-    title: "Solitaire Story2",
-    btnText: "click to play",
-    btnLink: "#"
-  },
-  {
-    image: sliderImg1,
-    mediumImage: sliderMediumImg1,
-    smallImage: sliderSmallImg1,
-    title: "Solitaire Story3",
+    title: "Mahjong Story",
     btnText: "click to play",
     btnLink: "#"
   }

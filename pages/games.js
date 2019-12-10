@@ -3,13 +3,32 @@ import ModalContext from "../components/ModalContext";
 import GameCard2 from "../components/GameCard/GameCard2";
 import Breadcrumb from "../components/Breadcrumb";
 import SeoBlock from "../components/SeoBlock";
-
-import cookieCrushImg from "../assets/images/games/CookieCrash.jpg";
-import gameIcon from "../assets/images/games/gameIcon.png";
 import placeholderImg from "../assets/images/placeholder.jpg";
 import seoImg from "../assets/images/seoImg.jpg";
 import gamesImg from "../assets/images/gamesImage.jpg";
 import Layout from "../components/Layout";
+
+import cookieCrushImg from "../assets/images/games/COOKIE_CRUSH.png";
+import solitaireStory from "../assets/images/games/SolitaireStory.png";
+import bubbleShooter from "../assets/images/games/bubbleShooter.png";
+import gardenTales from "../assets/images/games/gardenTales.png";
+import jewelsBlitz from "../assets/images/games/jewelsBlitz.png";
+import mahjong from "../assets/images/games/mahjong.png";
+import spaceInvaders from "../assets/images/games/spaceInvaders.png";
+import yummuyTales from "../assets/images/games/yummuyTales.png";
+import connect2020 from "../assets/images/games/connect2020.png";
+
+import cookieCrushIcon from "../assets/images/games/icons/cookieCrushIcon.png";
+import solitaireStoryIcon from "../assets/images/games/icons/solitaireStoryIcon.png";
+import bubbleShooterIcon from "../assets/images/games/icons/bubbleShooterIcon.png";
+import gardenTalesIcon from "../assets/images/games/icons/garderTalesIcon.png";
+import jewelsBlitzIcon from "../assets/images/games/icons/jewelsBlitzIcon.png";
+import mahjongIcon from "../assets/images/games/icons/mahjongIcon.png";
+import spaceInvadersIcon from "../assets/images/games/icons/spaceInvadersIcon.png";
+import yummuyTalesIcon from "../assets/images/games/icons/yummuyTalesIcon.png";
+import connect2020Icon from "../assets/images/games/icons/connect2020Icon.png";
+
+import lookOutMoreGamesImg from "../assets/images/Lookout_More_Games.png";
 
 const games = [
   {
@@ -17,113 +36,73 @@ const games = [
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: cookieCrushImg,
-    title: "Cookie Crush 1",
-    icon: gameIcon
+    title: "Cookie Crush",
+    icon: cookieCrushIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 2",
-    icon: gameIcon
+    image: solitaireStory,
+    title: "Solitaire Story",
+    icon: solitaireStoryIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 3",
-    icon: gameIcon
+    image: mahjong,
+    title: "Mahjong Story",
+    icon: mahjongIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 4",
-    icon: gameIcon
+    image: gardenTales,
+    title: "Garden Tales",
+    icon: gardenTalesIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 5",
-    icon: gameIcon
+    image: spaceInvaders,
+    title: "Space Invaders",
+    icon: spaceInvadersIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 6",
-    icon: gameIcon
+    image: yummuyTales,
+    title: "Yummuy Tales",
+    icon: yummuyTalesIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 7",
-    icon: gameIcon
+    image: bubbleShooter,
+    title: "Bubble Shooter Classic",
+    icon: bubbleShooterIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 8",
-    icon: gameIcon
+    image: jewelsBlitz,
+    title: "Jewels Blitz",
+    icon: jewelsBlitzIcon
   },
   {
     link: "https://www.google.com",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 9",
-    icon: gameIcon
+    image: connect2020,
+    title: "2020 Connect",
+    icon: connect2020Icon
   },
-  {
-    link: "https://www.google.com",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 10",
-    icon: gameIcon
-  },
-  {
-    link: "https://www.google.com",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 11",
-    icon: gameIcon
-  },
-  {
-    link: "https://www.google.com",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 12",
-    icon: gameIcon
-  },
-  {
-    link: "https://www.google.com",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 13",
-    icon: gameIcon
-  },
-  {
-    link: "https://www.google.com",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
-    image: cookieCrushImg,
-    title: "Cookie Crush 14",
-    icon: gameIcon
-  }
 ];
 
 const seoBlockData = {
@@ -204,7 +183,7 @@ const Games = props => {
               </a>
             </div>
             <div className="col-lg-6">
-              <img src={placeholderImg} alt="Softgames" />
+              <img src={lookOutMoreGamesImg} alt="Softgames" />
             </div>
           </div>
         </div>

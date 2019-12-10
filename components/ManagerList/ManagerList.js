@@ -29,7 +29,7 @@ const ManagerList = props => {
         linkedinLink="https://www.google.com"
       />
       <ManagerCard
-        managerName="Alexander Krug"
+        managerName="Andre Krug"
         managerPosition="COO & Co-Founder"
         renderManagerHistory={() => (
           <div className="managerCard-history">

@@ -15,28 +15,31 @@ import Link from 'next/link';
 import cookieCrash from "../assets/images/games/CookieCrash.jpg";
 import character from "../assets/images/character.png";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
+import cookieCrushImg from "../assets/images/games/COOKIE_CRUSH.png";
+import solitaireStory from "../assets/images/games/SolitaireStory.png";
+import mahjong from "../assets/images/games/mahjong.png";
 
 
 
 const games = [
   {
     url: "https://www.google.com",
-    image: cookieCrash,
+    image: cookieCrushImg,
     title: "Cookie Crush",
     description:
       "Greyhound divisively hello coldly wonderfully marginally far..."
   },
   {
     url: "https://www.google.com",
-    image: cookieCrash,
+    image: solitaireStory,
     title: "Solitaire Story",
     description:
       "Greyhound divisively hello coldly wonderfully marginally far..."
   },
   {
     url: "https://www.google.com",
-    image: cookieCrash,
-    title: "Cookie Crush",
+    image: mahjong,
+    title: "Mahjong Story",
     description:
       "Greyhound divisively hello coldly wonderfully marginally far..."
   }
