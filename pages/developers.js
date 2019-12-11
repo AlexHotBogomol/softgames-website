@@ -20,8 +20,10 @@ import Lego from "../assets/icons/partners/Lego";
 import Microsoft from "../assets/icons/partners/Microsoft";
 import Cisco from "../assets/icons/partners/Cisco";
 import Fiat from "../assets/icons/partners/Fiat";
-import GotGameIllustration from "../assets/icons/developers/GotGameIllustration";
-import NextChallengeIllustration from "../assets/icons/developers/NextChallengeIllustration";
+// import GotGameIllustration from "../assets/icons/developers/GotGameIllustration";
+// import NextChallengeIllustration from "../assets/icons/developers/NextChallengeIllustration";
+import gotGameGif from '../assets/images/developers/gotGame.gif';
+import nextChallengeGif from '../assets/images/developers/nextChallenge.gif';
 import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 
@@ -133,7 +135,7 @@ const Developers = props => {
                 <div className="col-sm-8 mx-auto col-md-6">
                   <div className="publishWithUsCard">
                     <div className="publishWithUsCard-imgWrapper">
-                      <GotGameIllustration />
+                      <img src={gotGameGif} alt="Got a great game?"/>
                     </div>
                     <div className="publishWithUsCard-content">
                       <div className="publishWithUsCard-text">
@@ -148,7 +150,7 @@ const Developers = props => {
                 <div className="col-sm-8 mx-auto col-md-6">
                   <div className="publishWithUsCard">
                     <div className="publishWithUsCard-imgWrapper">
-                      <NextChallengeIllustration />
+                      <img src={nextChallengeGif} alt="Got a great game?"/>
                     </div>
                     <div className="publishWithUsCard-content">
                       <div className="publishWithUsCard-text">

@@ -157,7 +157,7 @@ const Company = (props) => {
           </div>
         </div>
       </section>
-      <section className="getInTouch">
+      <section className="getInTouch withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">

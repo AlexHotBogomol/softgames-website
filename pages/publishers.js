@@ -17,10 +17,6 @@ import SimpleCard from "../components/SimpleCard/SimpleCard";
 import PremiumGames from "../assets/icons/publishers/PremiumGames";
 import InstantPlay from "../assets/icons/publishers/InstantPlay";
 import MultipleLanguage from "../assets/icons/publishers/MultipleLanguages";
-import CrossPlatform from "../assets/icons/publishers/CrossPlatform";
-import RealtimeDashboard from "../assets/icons/publishers/RealtimeDashboard";
-import PremiumMonetization from "../assets/icons/publishers/PremiumMonetization";
-import NewGame from "../assets/icons/publishers/NewGame";
 import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 

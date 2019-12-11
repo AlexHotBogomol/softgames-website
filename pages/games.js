@@ -133,7 +133,7 @@ const Games = props => {
           <div className="row">
             <div className="col-lg-9 mx-auto">
               <h1 className="games-heading">Games</h1>
-              <p className="games-description">
+              <p className="games-description withGrid">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris

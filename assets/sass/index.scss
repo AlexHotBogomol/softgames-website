@@ -287,6 +287,10 @@
     text-align: center;
     color: $black-color;
     padding-bottom: 55px;
+    &:before{
+      top: -80px;
+      left: -200px;
+    }
   }
   &-grid {
     display: grid;
@@ -1155,6 +1159,16 @@
     text-align: center;
     color: $brand-color2;
     padding-bottom: 40px;
+  }
+  &:before{
+    background-image: url("data:image/svg+xml,%3Csvg width='711' height='1005' viewBox='0 0 711 1005' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.4043 230.729C84.4227 128.229 381.333 181.253 502.404 60.2293C665.045 -102.349 713.415 83.6835 710.892 385.402C708.37 687.12 606.412 1122.6 545.249 975.082C347.669 498.552 -103.096 433.229 21.4043 230.729Z' fill='%23F5842D'/%3E%3C/svg%3E%0A");
+    width: 711px;
+    height: 1005px;
+    right: -210px;
+    top: -270px;
+    @media only screen and (max-width: 1650px){
+      right: -460px;
+    }
   }
 }
 .basicHeading {
@@ -2383,6 +2397,11 @@
     h4{
       margin: 20px 0 15px;
     }
+    &:before{
+      display: none;
+    }
+  }
+  .developersBlock{
     &:before{
       display: none;
     }
