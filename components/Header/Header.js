@@ -67,7 +67,7 @@ const Header = props => {
               </span>
               <ul className="submenu">
                 <li className="submenu-item">
-                  <Link href="/advertisers">
+                  <Link href="/merchant">
                     <a className="submenu-link">
                       Advertisers
                     </a>
@@ -91,7 +91,7 @@ const Header = props => {
             </li>
             {/*For adaptive menu*/}
             <li className="menu-item d-lg-none">
-              <Link href="/advertisers">
+              <Link href="/merchant">
                 <a className="menu-link">
                   Advertisers
                 </a>

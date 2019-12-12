@@ -48,28 +48,28 @@ const Footer = (props) => {
                   <div className="col-md-4">
                     <ul className="menu menu footerMenu">
                       <li className="menu-item footerMenu-item">
-                        <Link href="/advertisers">
+                        <Link href="/merchant">
                           <a className="footerMenu-link">
                             Advertisers
                           </a>
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/advertisers/#why-softgames">
+                        <Link href="/merchant/#why-softgames">
                           <a className="footerMenu-sublink">
                             Why SOFTGAMES?
                           </a>
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/advertisers/#brands">
+                        <Link href="/merchant/#brands">
                           <a className="footerMenu-sublink">
                             Brands
                           </a>
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/advertisers/#join-us">
+                        <Link href="/merchant/#join-us">
                           <a className="footerMenu-sublink">
                             Join us to tell your story
                           </a>
