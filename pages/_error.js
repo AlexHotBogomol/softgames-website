@@ -1,8 +1,12 @@
 import React from 'react'
-import Error from 'next/error'
+import Error from 'next/error';
+import Err404 from "../components/Err404/Err404";
 
 const Page = ({ errorCode, stars }) => {
-  if (errorCode) {
+  if (errorCode === 404){
+    return <Err404/>
+  }
+  else if (errorCode) {
     return <Error statusCode={errorCode} />
   }
 
@@ -10,13 +14,13 @@ const Page = ({ errorCode, stars }) => {
 };
 
 Page.getInitialProps = async ({req, res}) => {
-  const errorCode = res.statusCode > 200 ? res.statusCode : false
+  const errorCode = res.statusCode > 200 ? res.statusCode : false;
 
   /*
     Handling ?= should be solved differently if you use dynamic routing,
     this will only remove the 404 for those urls.
   */
-  let urlParts = req.url.split('?')
+  let urlParts = req.url.split('?');
   if (urlParts[0].endsWith('/')) {
     urlParts[0] = urlParts[0].substring(0, urlParts[0].length - 1)
     res.writeHead(301, { Location: urlParts.join('?') })

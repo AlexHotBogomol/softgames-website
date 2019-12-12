@@ -1,0 +1,15 @@
+.page404{
+  text-align: center;
+  padding: 75px 30px;
+  &-img{
+    margin-bottom: 60px;
+    max-width: 100%;
+    height: auto;
+  }
+  &-title{
+    padding-bottom: 10px;
+  }
+  &-description{
+    padding-bottom: 20px;
+  }
+}
