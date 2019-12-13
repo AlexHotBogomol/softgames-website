@@ -55,25 +55,25 @@ const Footer = (props) => {
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/merchant/#why-softgames">
+                        <LinkSmoothScroll href="/merchant/#why-softgames">
                           <a className="footerMenu-sublink">
                             Why SOFTGAMES?
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/merchant/#brands">
+                        <LinkSmoothScroll href="/merchant/#brands">
                           <a className="footerMenu-sublink">
                             Brands
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/merchant/#join-us">
+                        <LinkSmoothScroll href="/merchant/#join-us">
                           <a className="footerMenu-sublink">
                             Join us to tell your story
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                     </ul>
                     <ul className="menu footerMenu">
@@ -85,25 +85,25 @@ const Footer = (props) => {
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/developers/#global-reach">
+                        <LinkSmoothScroll href="/developers/#global-reach">
                           <a className="footerMenu-sublink">
                             Global Reach
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/developers/#better-monetization">
+                        <LinkSmoothScroll href="/developers/#better-monetization">
                           <a className="footerMenu-sublink">
                             Better Monetization
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/developers/#publish-with-us">
+                        <LinkSmoothScroll href="/developers/#publish-with-us">
                           <a className="footerMenu-sublink">
                             Publish with us
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                     </ul>
                   </div>
@@ -117,25 +117,25 @@ const Footer = (props) => {
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/publishers/#games-affiliate">
+                        <LinkSmoothScroll href="/publishers/#games-affiliate">
                           <a className="footerMenu-sublink">
                             Games Affiliate Program
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/publishers/#why-softgames">
+                        <LinkSmoothScroll href="/publishers/#why-softgames">
                           <a className="footerMenu-sublink">
                             Why SOFTGAMES?
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/publishers/#our-partners">
+                        <LinkSmoothScroll href="/publishers/#our-partners">
                           <a className="footerMenu-sublink">
                             Our partners
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                     </ul>
                   </div>
@@ -149,46 +149,46 @@ const Footer = (props) => {
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/career/#job-openings">
+                        <LinkSmoothScroll href="/career/#job-openings">
                           <a className="footerMenu-sublink">
                             Job Openings
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/career/#culture-values">
+                        <LinkSmoothScroll href="/career/#culture-values">
                           <a className="footerMenu-sublink">
                             Culture & Values
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/career/#application-process">
+                        <LinkSmoothScroll href="/career/#application-process">
                           <a className="footerMenu-sublink">
                             Application Process
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/career/#benefits">
+                        <LinkSmoothScroll href="/career/#benefits">
                           <a className="footerMenu-sublink">
                             Benefits
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/career/#global-offices">
+                        <LinkSmoothScroll href="/career/#global-offices">
                           <a className="footerMenu-sublink">
                             Global Offices
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <Link href="/career/#FAQ">
+                        <LinkSmoothScroll href="/career/#FAQ">
                           <a className="footerMenu-sublink">
                             FAQ
                           </a>
-                        </Link>
+                        </LinkSmoothScroll>
                       </li>
                     </ul>
                   </div>
@@ -204,32 +204,32 @@ const Footer = (props) => {
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link href="/company/#about-us">
+                    <LinkSmoothScroll href="/company/#about-us">
                       <a className="footerMenu-sublink">
                         About
                       </a>
-                    </Link>
+                    </LinkSmoothScroll>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link href="/company/#our-story">
+                    <LinkSmoothScroll href="/company/#our-story">
                       <a className="footerMenu-sublink">
                         Our Story
                       </a>
-                    </Link>
+                    </LinkSmoothScroll>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link href="/company/#management">
+                    <LinkSmoothScroll href="/company/#management">
                       <a className="footerMenu-sublink">
                         Management
                       </a>
-                    </Link>
+                    </LinkSmoothScroll>
                   </li>
                   <li className="menu-item footerMenu-subitem">
-                    <Link href="/company/#press-room">
+                    <LinkSmoothScroll href="/company/#press-room">
                       <a className="footerMenu-sublink">
                         Press Room
                       </a>
-                    </Link>
+                    </LinkSmoothScroll>
                   </li>
                 </ul>
                 <ul className="menu footerMenu">

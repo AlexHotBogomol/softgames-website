@@ -5,6 +5,7 @@ import "./Form.scss";
 import Select from "react-select";
 import DropdownIndicator from "../DropdownIndicator";
 import axios from "axios";
+import Link from "next/link";
 
 const selectOptions = {
   components: { DropdownIndicator },
@@ -138,20 +139,14 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
           </label>
           {errors.email && <p className="caption form-message">{errors.email.message}</p>}
           {websiteInput ? (
-              <label
-                className={!isSend && !errors.website && formState.isSubmitted ? 'valid' : !isSend && errors.website ? 'invalid' : null}
-              >
-                <span className="caption">Website*</span>
+              <label>
+                <span className="caption">Website (optional)</span>
                 <input
-                  placeholder="Work website*"
+                  placeholder="Work website"
                   name="website"
-                  ref={register({
-                    required: "Website is required",
-                  })}
                 />
               </label>
           ) : null}
-          {errors.website && <p className="caption form-message">{errors.website.message}</p>}
           <label>
             <span className="caption">Telephone (optional)</span>
             <input
@@ -203,8 +198,8 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
               })}
             />
             <span className="check-box"/>
-            I agree to the use of my data in accordance with the data
-            protection provisions but do not agree to third party sharing.
+              <a href="/privacy" className="link" target="_blank">I agree to the use of my data in accordance with the data
+                protection provisions but do not agree to third party sharing.</a>
           </label>
           {errors.agreement && <p className="caption form-message">{errors.agreement.message}</p>}
           <button type="submit" className="btn btn--primary d-md-none">SEND</button>

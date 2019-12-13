@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import './Err404.scss';
 import Layout from "../Layout";
 import Err404icon from '../../assets/icons/Err404icon';
@@ -12,12 +13,15 @@ const Err404 = props => {
         />
         <h1 className="page404-title">OOPS!</h1>
         <p className="page404-description">Sorry, we can’t find this page</p>
-        <a
-          className="btn btn--primary"
+        <Link
           href="/"
         >
-          Back home
-        </a>
+          <a
+            className="btn btn--primary"
+          >
+            Back home
+          </a>
+        </Link>
       </div>
     </Layout>
   )

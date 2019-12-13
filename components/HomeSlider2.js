@@ -26,7 +26,7 @@ const sliderSettings = {
 const slider2Slides = [
   {
     categoryName: "Advertisers",
-    categoryLink: "/advertisers/",
+    categoryLink: "/merchant/",
     heading: "Global Reach<br><span>for your brand.</span>",
     description:
       "Enjoy our brand-safe traffic, high viewability, engaged users and diverse demographic audience! Select your target audience from 30+ million active users and advertise your brand on our HTML5 games platform.",

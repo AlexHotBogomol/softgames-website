@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import {NextSeo} from "next-seo";
 import apiEndpoints from '../utils/apiEndpoints';
 import {TransitionGroup, CSSTransition} from "react-transition-group";
 import Layout from "../components/Layout";
@@ -79,6 +80,9 @@ const Index = (props) => {
 
   return (
     <Layout>
+      <NextSeo
+        title="Home"
+      />
       <div className="container--fullWidth">
         <HomeSlider1 />
       </div>

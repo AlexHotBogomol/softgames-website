@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import ModalContext from "../components/ModalContext";
+import {NextSeo} from 'next-seo';
 import GameCard2 from "../components/GameCard/GameCard2";
 import Breadcrumb from "../components/Breadcrumb";
 import SeoBlock from "../components/SeoBlock";
@@ -116,6 +117,10 @@ const Games = props => {
   const { openModal } = useContext(ModalContext);
   return (
     <Layout>
+      <NextSeo
+        title="Games"
+        description="A short description goes here."
+      />
       <div className="container">
         <div className="row">
           <div className="col-12">
