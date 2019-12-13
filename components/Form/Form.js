@@ -5,7 +5,7 @@ import "./Form.scss";
 import Select from "react-select";
 import DropdownIndicator from "../DropdownIndicator";
 import axios from "axios";
-import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const selectOptions = {
   components: { DropdownIndicator },
@@ -51,6 +51,7 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
   }
 
   const [isSend, setIsSend] = useState(false);
+  const [isCaptchaAccept, setCaptchaAccept] = useState(false);
 
   const { register, handleSubmit, errors, formState, setValue } = useForm();
 
@@ -67,19 +68,28 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
 
   const formClasses = ['form', className];
 
+  function onCaptchaChange(value) {
+    if(value){
+      setCaptchaAccept(true);
+    }
+  }
+
+
   const onSubmit = (data, e) => {
     console.log(data);
-    axios.post('/api/contact', data)
-      .then(function (response) {
-        setIsSend(true);
-        e.target.reset();
-        closeFormModal();
-        openThankYouModal();
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    if(isCaptchaAccept){
+      axios.post('/api/contact', data)
+        .then(function (response) {
+          setIsSend(true);
+          e.target.reset();
+          closeFormModal();
+          openThankYouModal();
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   };
   return (
     <form className={formClasses.join(" ")} onSubmit={handleSubmit(onSubmit)}>
@@ -188,6 +198,12 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
               ref={register}
             />
           </label>
+          <ReCAPTCHA
+            sitekey="6Lfmm8cUAAAAAKjEuimOBR219uLhphaH61CK--dY"
+            className='recaptcha'
+            onChange={onCaptchaChange}
+          />
+          {!isSend && !isCaptchaAccept && formState.isSubmitted && <p className="caption form-message">captcha is required</p>}
           <label className="check">
             <input
               className="check-input"
