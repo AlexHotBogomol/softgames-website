@@ -39,23 +39,30 @@ const cultureSlides = [
 const employeeStories = [
   {
     quote:
-      "I was one of the first to join Softgames. Amazing to see this company grow and to develop together with it.",
-    employeeName: "Claudia Winkel",
-    employeeDepartment: "Finance",
+      "Working in a thriving company with a flat hierarchy, talented colleagues from all over the world and the opportunity to closely collaborate with all departments is one of the greatest benefits.",
+    employeeName: "Erin Downes",
+    employeeDepartment: "Senior Game Developer",
     employeePhoto: employeePhoto
   },
   {
     quote:
-      "I was one of the first to join Softgames. Amazing to see this company grow and to develop together with it.",
-    employeeName: "Claudia Winkel",
-    employeeDepartment: "Finance",
+      "Each developer loves challenges. After 8 years in one company it is usually not that easy to feel challenges – but not at SOFTGAMES. This is a reason why they keep me so long.",
+    employeeName: "Bartósz Wrobel",
+    employeeDepartment: "VP of Engineering",
     employeePhoto: employeePhoto
   },
   {
     quote:
-      "I was one of the first to join Softgames. Amazing to see this company grow and to develop together with it.",
-    employeeName: "Claudia Winkel",
-    employeeDepartment: "Finance",
+      "When I started working at SOFTGAMES I was immediately delighted by the team spirit and the opportunity to find creative solutions for challenges. Feeling appreciated and trusted is fantastic.",
+    employeeName: "David Fassbender",
+    employeeDepartment: "Senior Business Development Manager",
+    employeePhoto: employeePhoto
+  },
+  {
+    quote:
+      "At SOFTGAMES flat hierarchies are truly lived. Having a voice in my team, being able to have a real impact and make a difference for our players is one of the greatest benefits.",
+    employeeName: "Kerstin Winder",
+    employeeDepartment: "Junior QA Manager",
     employeePhoto: employeePhoto
   }
 ];

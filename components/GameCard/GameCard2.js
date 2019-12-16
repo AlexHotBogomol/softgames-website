@@ -9,10 +9,18 @@ const GameCard = ({link, googlePlayLink, appStoreLink, img, title, icon}) => {
       <div className="gameCard-img">
         <img src={img} alt={title}/>
         <div className="gameCard-overlay">
-          <a href={link} className="btn btn--primaryInverse btn--withIcon"><JoyStick/>click to play</a>
+          <a href={link} className="btn btn--primaryInverse btn--withIcon" target="_blank"><JoyStick/>click to play</a>
           <div className="gameCard-platforms">
-            <a href={googlePlayLink}><GooglePlay/></a>
-            <a href={appStoreLink}><AppStore/></a>
+            {
+              googlePlayLink
+                ? (<a href={googlePlayLink} target="_blank"><GooglePlay/></a>)
+                : null
+            }
+            {
+              appStoreLink
+                ? (<a href={appStoreLink} target="_blank"><AppStore/></a>)
+                : null
+            }
           </div>
         </div>
         <div className="gameCard-meta">

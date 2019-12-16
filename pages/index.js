@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import axios from 'axios';
-import {NextSeo} from "next-seo";
-import apiEndpoints from '../utils/apiEndpoints';
-import {TransitionGroup, CSSTransition} from "react-transition-group";
+import React, { useState, useEffect, Fragment } from "react";
+import axios from "axios";
+import { NextSeo } from "next-seo";
+import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
+import apiEndpoints from "../utils/apiEndpoints";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Layout from "../components/Layout";
 import HomeSlider1 from "../components/HomeSlider1";
 import ArrowDown from "../components/ArrowDown";
@@ -11,58 +12,64 @@ import GameCard from "../components/GameCard/GameCard";
 import PositionCard from "../components/PositionCard/PositionCard";
 import NewsCard from "../components/NewsCard/NewsCard";
 import SocialBlock from "../components/SocialBlock/SocialBlock";
-import Link from 'next/link';
+import Link from "next/link";
 
-import cookieCrash from "../assets/images/games/CookieCrash.jpg";
 import character from "../assets/images/character.png";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 import cookieCrushImg from "../assets/images/games/COOKIE_CRUSH.png";
 import solitaireStory from "../assets/images/games/SolitaireStory.png";
 import mahjong from "../assets/images/games/mahjong.png";
 
-
+import Preloader from "../components/Preloader/Preloader";
 
 const games = [
   {
-    url: "https://www.google.com",
+    url: "http://bit.ly/Play_CookieCrush",
     image: cookieCrushImg,
     title: "Cookie Crush",
     description:
-      "Greyhound divisively hello coldly wonderfully marginally far..."
+      "Match at least three delicious pastries to make them disappear!"
   },
   {
-    url: "https://www.google.com",
+    url: "http://bit.ly/Play_SolitaireStoryTripeaks",
     image: solitaireStory,
     title: "Solitaire Story",
-    description:
-      "Greyhound divisively hello coldly wonderfully marginally far..."
+    description: "Card game that puts fun twists on the traditional Solitaire."
   },
   {
-    url: "https://www.google.com",
+    url: "http://bit.ly/Play_MahjongStory",
     image: mahjong,
     title: "Mahjong Story",
     description:
-      "Greyhound divisively hello coldly wonderfully marginally far..."
+      "Clear tiles to win and unlock beautiful artwork along the way!"
   }
 ];
 
-const Index = (props) => {
-  const [positions , setPositions] = useState([]);
-  const [news , setNews] = useState([]);
+const Index = props => {
+  const [positions, setPositions] = useState([]);
+  const [news, setNews] = useState([]);
+  const [isPreloaderEnd, setIsPreloaderEnd] = useState(false);
 
   useEffect(() => {
     const CancelToken = axios.CancelToken;
     const source = CancelToken.source();
-
+    const htmlElement = document.getElementsByTagName('html')[0];
+    htmlElement.style.overflowY = "hidden";
     const loadData = () => {
-      try{
-        axios.get(`${apiEndpoints.news}?orderby=date&order=DESC&per_page=2`, { cancelToken: source.token }).then(({data: news}) => {
-          setNews(news);
-        });
-        axios.get(apiEndpoints.positions, { cancelToken: source.token }).then(({ data: { offers: positions } }) => {
-          setPositions(positions);
-        });
-      } catch(error) {
+      try {
+        axios
+          .get(`${apiEndpoints.news}?orderby=date&order=DESC&per_page=2`, {
+            cancelToken: source.token
+          })
+          .then(({ data: news }) => {
+            setNews(news);
+          });
+        axios
+          .get(apiEndpoints.positions, { cancelToken: source.token })
+          .then(({ data: { offers: positions } }) => {
+            setPositions(positions);
+          });
+      } catch (error) {
         if (axios.isCancel(error)) {
           console.log("cancelled");
         } else {
@@ -71,18 +78,21 @@ const Index = (props) => {
       }
     };
 
+    setTimeout(() => {
+      setIsPreloaderEnd(true);
+      htmlElement.style.overflowY = "scroll";
+    }, 3000);
+
     loadData();
     return () => {
       source.cancel();
-    }
+    };
   }, []);
-
 
   return (
     <Layout>
-      <NextSeo
-        title="Home"
-      />
+      <NextSeo title="Home" />
+      {isPreloaderEnd ? null : (<Preloader />)}
       <div className="container--fullWidth">
         <HomeSlider1 />
       </div>
@@ -116,11 +126,7 @@ const Index = (props) => {
             <TransitionGroup className="d-none d-lg-block col-lg-3" />
             {games.map((game, index) => {
               return (
-                <CSSTransition
-                  classNames="fade"
-                  timeout={200}
-                  key={index}
-                >
+                <CSSTransition classNames="fade" timeout={200} key={index}>
                   <div className="col-sm-6 col-md-4 col-lg-3">
                     <GameCard
                       url={game.url}
@@ -134,10 +140,8 @@ const Index = (props) => {
             })}
           </div>
           <div className="row">
-            <Link href="/games">
-              <a className="btn btn--primaryInverse mx-auto">
-                All Games
-              </a>
+            <Link href="/free-online-games">
+              <a className="btn btn--primaryInverse mx-auto">All Games</a>
             </Link>
           </div>
         </div>
@@ -152,30 +156,30 @@ const Index = (props) => {
             </div>
           </div>
           <TransitionGroup className="row latestPositions-list">
-            {positions ? (positions.slice(0, 6).map(position => {
-              return (
-                <CSSTransition
-                  classNames="fade"
-                  timeout={200}
-                  key={position.id}
-                >
-                  <div className="col-md-6 col-xl-4">
-                    <PositionCard
-                      title={position.title}
-                      department={position.department}
-                      location={position.location}
-                      url={position.careers_url}
-                    />
-                  </div>
-                </CSSTransition>
-              );
-            })) : null}
+            {positions
+              ? positions.slice(0, 6).map(position => {
+                return (
+                  <CSSTransition
+                    classNames="fade"
+                    timeout={200}
+                    key={position.id}
+                  >
+                    <div className="col-md-6 col-xl-4">
+                      <PositionCard
+                        title={position.title}
+                        department={position.department}
+                        location={position.location}
+                        url={position.careers_url}
+                      />
+                    </div>
+                  </CSSTransition>
+                );
+              })
+              : null}
           </TransitionGroup>
           <div className="row">
             <LinkSmoothScroll href="/career/#job-openings">
-              <a className="btn btn--primary mx-auto">
-                All open positions
-              </a>
+              <a className="btn btn--primary mx-auto">All open positions</a>
             </LinkSmoothScroll>
           </div>
         </div>
@@ -190,44 +194,54 @@ const Index = (props) => {
           <div className="row latestNews-list">
             <div className="col-lg-8">
               <TransitionGroup className="row">
-                {news ? (news.map(newsItem => {
-                  return (
-                    <CSSTransition
-                      classNames="fade"
-                      timeout={200}
-                      key={newsItem.id}
-                    >
-                      <div className="col-sm-8 mx-auto col-md-6">
-                        <NewsCard
-                          title={newsItem.title}
-                          img={newsItem.media.large}
-                          slug={newsItem.slug}
-                          date={newsItem.date}
-                        />
-                      </div>
-                    </CSSTransition>
-                  );
-                })) : null}
+                {news
+                  ? news.map(newsItem => {
+                    return (
+                      <CSSTransition
+                        classNames="fade"
+                        timeout={200}
+                        key={newsItem.id}
+                      >
+                        <div className="col-sm-8 mx-auto col-md-6">
+                          <NewsCard
+                            title={newsItem.title}
+                            img={newsItem.media.large}
+                            slug={newsItem.slug}
+                            date={newsItem.date}
+                          />
+                        </div>
+                      </CSSTransition>
+                    );
+                  })
+                  : null}
               </TransitionGroup>
               <div className="row d-lg-none">
-                <a href="https://softgames.ein-des-ein.com/" target="_blank" className="btn btn--primary mx-auto">
+                <a
+                  href="https://softgames.ein-des-ein.com/"
+                  target="_blank"
+                  className="btn btn--primary mx-auto"
+                >
                   All news & events
                 </a>
               </div>
             </div>
             <div className="col-lg-4 socialBlockWrapper">
-              <SocialBlock/>
+              <SocialBlock />
             </div>
           </div>
           <div className="row d-none d-lg-flex">
-            <a href="https://softgames.ein-des-ein.com/" target="_blank" className="btn btn--primary mx-auto">
+            <a
+              href="https://softgames.ein-des-ein.com/"
+              target="_blank"
+              className="btn btn--primary mx-auto"
+            >
               All news & events
             </a>
           </div>
         </div>
       </section>
     </Layout>
-  )
+  );
 };
 
-export default Index
+export default Index;

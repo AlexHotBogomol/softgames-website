@@ -1,6 +1,5 @@
 import Facebook from "./Socials/Facebook";
 import Twitter from "./Socials/Twitter";
-import Google from "./Socials/Google";
 import Linkedin from "./Socials/Linkedin";
 import './SocialBlock.scss';
 
@@ -19,20 +18,17 @@ const SocialBlock = ({className}) => {
       </h5>
       <ul className="socialBlock-list">
         <li>
-          <Facebook link="https://www.google.com"/>
+          <Facebook link="https://www.facebook.com/softgames/"/>
         </li>
         <li>
-          <Twitter link="https://www.google.com"/>
+          <Twitter link=" https://twitter.com/softgames"/>
         </li>
         <li>
-          <Google link="https://www.google.com"/>
-        </li>
-        <li>
-          <Linkedin link="https://www.google.com"/>
+          <Linkedin link="https://www.linkedin.com/company/softgames-mobile-entertainment-services"/>
         </li>
       </ul>
     </div>
   )
-}
+};
 
 export default SocialBlock

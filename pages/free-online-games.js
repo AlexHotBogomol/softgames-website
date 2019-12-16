@@ -4,7 +4,6 @@ import {NextSeo} from 'next-seo';
 import GameCard2 from "../components/GameCard/GameCard2";
 import Breadcrumb from "../components/Breadcrumb";
 import SeoBlock from "../components/SeoBlock";
-import placeholderImg from "../assets/images/placeholder.jpg";
 import seoImg from "../assets/images/seoImg.jpg";
 import gamesImg from "../assets/images/gamesImage.jpg";
 import Layout from "../components/Layout";
@@ -33,7 +32,7 @@ import lookOutMoreGamesImg from "../assets/images/Lookout_More_Games.png";
 
 const games = [
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_CookieCrush",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: cookieCrushImg,
@@ -41,15 +40,15 @@ const games = [
     icon: cookieCrushIcon
   },
   {
-    link: "https://www.google.com",
-    googlePlayLink: "https://www.google.com",
+    link: "http://bit.ly/Play_SolitaireStoryTripeaks",
+    googlePlayLink: "https://play.google.com/store/apps/details?id=com.softgames.solitairestory",
     appStoreLink: "https://www.google.com",
     image: solitaireStory,
     title: "Solitaire Story",
     icon: solitaireStoryIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_MahjongStory",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: mahjong,
@@ -57,7 +56,7 @@ const games = [
     icon: mahjongIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_GardenTales",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: gardenTales,
@@ -65,7 +64,7 @@ const games = [
     icon: gardenTalesIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_SpaceInvaders ",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: spaceInvaders,
@@ -73,7 +72,7 @@ const games = [
     icon: spaceInvadersIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_YummyTales",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: yummuyTales,
@@ -81,7 +80,7 @@ const games = [
     icon: yummuyTalesIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_BubbleShooterClassic ",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: bubbleShooter,
@@ -89,7 +88,7 @@ const games = [
     icon: bubbleShooterIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_JewelsBlitz",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: jewelsBlitz,
@@ -97,7 +96,7 @@ const games = [
     icon: jewelsBlitzIcon
   },
   {
-    link: "https://www.google.com",
+    link: "http://bit.ly/Play_2020_Connect",
     googlePlayLink: "https://www.google.com",
     appStoreLink: "https://www.google.com",
     image: connect2020,
@@ -127,7 +126,7 @@ const Games = props => {
             <Breadcrumb
               items={[
                 { name: "Home", slug: "/" },
-                { name: "Games", slug: "/games" }
+                { name: "Games", slug: "/free-online-games" }
               ]}
             />
           </div>

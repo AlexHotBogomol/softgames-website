@@ -1,0 +1,35 @@
+@import '../../assets/sass/variables';
+
+.preloaderWrapper{
+  position: fixed;
+  background: $brand-color1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.preloader{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  svg{
+    animation: pulse 2s infinite ease-in-out;
+  }
+}
+
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.25, 1.25, 1.25);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

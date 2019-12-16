@@ -22,7 +22,7 @@ const slider1Slides = [
     smallImage: sliderSmallImg1,
     title: "Cookie Crush",
     btnText: "click to play",
-    btnLink: "#"
+    btnLink: "http://bit.ly/Play_CookieCrush"
   },
   {
     image: sliderImg1,
@@ -30,7 +30,7 @@ const slider1Slides = [
     smallImage: sliderSmallImg1,
     title: "Solitaire Story",
     btnText: "click to play",
-    btnLink: "#"
+    btnLink: "http://bit.ly/Play_SolitaireStoryTripeaks"
   },
   {
     image: sliderImg1,
@@ -38,7 +38,7 @@ const slider1Slides = [
     smallImage: sliderSmallImg1,
     title: "Mahjong Story",
     btnText: "click to play",
-    btnLink: "#"
+    btnLink: "http://bit.ly/Play_MahjongStory"
   }
 ];
 
@@ -56,6 +56,7 @@ const HomeSlider1 = (props) => (
             <a
               href={slide.btnLink}
               className="btn btn--primaryInverse btn--withIcon"
+              target="_blank"
             >
               <JoyStick />
               {slide.btnText}

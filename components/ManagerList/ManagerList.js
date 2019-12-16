@@ -26,7 +26,7 @@ const ManagerList = props => {
         )}
         managerPhoto={managerPhoto}
         photoPosition="left"
-        linkedinLink="https://www.google.com"
+        linkedinLink="https://www.linkedin.com/in/alexanderkrug/"
       />
       <ManagerCard
         managerName="Andre Krug"
@@ -50,7 +50,7 @@ const ManagerList = props => {
         )}
         managerPhoto={managerPhoto}
         photoPosition="right"
-        linkedinLink="https://www.google.com"
+        linkedinLink="https://www.linkedin.com/in/krugandre/"
       />
       <ManagerCard
         managerName="Christian Rudnick"
@@ -102,7 +102,7 @@ const ManagerList = props => {
         )}
         managerPhoto={managerPhoto}
         photoPosition="right"
-        linkedinLink="https://www.google.com"
+        linkedinLink="https://www.linkedin.com/in/berndbeyreuther/"
       />
     </div>
   )

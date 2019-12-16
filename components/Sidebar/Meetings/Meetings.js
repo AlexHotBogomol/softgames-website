@@ -1,15 +1,9 @@
 const meetingsData = [
   {
-    date: "11-12 September 2019",
-    link: "https://www.google.com",
-    name: "DMEXCO",
-    location: "Cologne",
-  },
-  {
-    date: "1-2 October 2019",
-    link: "https://www.google.com",
-    name: "Pocket Gamerz Connects",
-    location: "Helsinki",
+    date: "20-21 January 2020",
+    link: "https://www.pgconnects.com/london/",
+    name: "Pocket Gamer Connects",
+    location: "London",
   },
 ];
 
@@ -25,7 +19,7 @@ const Meetings = props => {
           return (
             <li key={index}>
               <p className="accentText meetings-date">{meeting.date}</p>
-              <a className="link meetings-link" href={meeting.link}>
+              <a className="link meetings-link" href={meeting.link} target="_blank">
                 {meeting.name}
               </a>
               <span className="meetings-location">&nbsp;({meeting.location})</span>

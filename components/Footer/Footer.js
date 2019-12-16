@@ -234,7 +234,7 @@ const Footer = (props) => {
                 </ul>
                 <ul className="menu footerMenu">
                   <li className="menu-item footerMenu-item">
-                    <Link href="/games">
+                    <Link href="/free-online-games">
                       <a className="footerMenu-link">
                         Games
                       </a>
@@ -289,16 +289,13 @@ const Footer = (props) => {
           <div className="col-md-4 col-lg-3 col-xl-2 order-0 order-md-1">
             <ul className="footer-socials">
               <li>
-                <Facebook link="https://www.google.com"/>
+                <Facebook link="https://www.facebook.com/softgames/"/>
               </li>
               <li>
-                <Twitter link="https://www.google.com" />
+                <Twitter link="https://twitter.com/softgames"/>
               </li>
               <li>
-                <Google link="https://www.google.com" />
-              </li>
-              <li>
-                <Linkedin link="https://www.google.com" />
+                <Linkedin link="https://www.linkedin.com/company/softgames-mobile-entertainment-services"/>
               </li>
             </ul>
           </div>

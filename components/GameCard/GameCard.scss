@@ -25,6 +25,9 @@
       transition: 0.2s;
     }
   }
+  &-description{
+    min-height: 84px;
+  }
   &-overlay{
     display: none;
     position: absolute;

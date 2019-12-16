@@ -44,7 +44,7 @@ const Header = props => {
             <li className="menu-item">
               <NavLink
                 activeClassName="selected"
-                href="/games"
+                href="/free-online-games"
               >
                 <a className="menu-link">
                   Games
