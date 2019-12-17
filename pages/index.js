@@ -1,7 +1,6 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { NextSeo } from "next-seo";
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import apiEndpoints from "../utils/apiEndpoints";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Layout from "../components/Layout";
@@ -81,7 +80,7 @@ const Index = props => {
     setTimeout(() => {
       setIsPreloaderEnd(true);
       htmlElement.style.overflowY = "scroll";
-    }, 3000);
+    }, 2000);
 
     loadData();
     return () => {

@@ -67,21 +67,21 @@ const Header = props => {
               </span>
               <ul className="submenu">
                 <li className="submenu-item">
-                  <Link href="/merchant">
+                  <Link href="/advertisers">
                     <a className="submenu-link">
                       Advertisers
                     </a>
                   </Link>
                 </li>
                 <li className="submenu-item">
-                  <Link href="/publishers">
+                  <Link href="/license-html5-games">
                     <a className="submenu-link">
                       Publishers
                     </a>
                   </Link>
                 </li>
                 <li className="submenu-item">
-                  <Link href="/developers">
+                  <Link href="/distribute-html5-games">
                     <a className="submenu-link">
                       Developers
                     </a>
@@ -91,21 +91,21 @@ const Header = props => {
             </li>
             {/*For adaptive menu*/}
             <li className="menu-item d-lg-none">
-              <Link href="/merchant">
+              <Link href="/advertisers">
                 <a className="menu-link">
                   Advertisers
                 </a>
               </Link>
             </li>
             <li className="menu-item d-lg-none">
-              <Link href="/publishers">
+              <Link href="/license-html5-games">
                 <a className="menu-link">
                   Publishers
                 </a>
               </Link>
             </li>
             <li className="menu-item d-lg-none">
-              <Link href="/developers">
+              <Link href="/distribute-html5-games">
                 <a className="menu-link">
                   Developers
                 </a>

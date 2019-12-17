@@ -120,7 +120,7 @@ const Publishers = props => {
             <Breadcrumb
               items={[
                 { name: "Home", slug: "/" },
-                { name: "Publishers", slug: "/publishers" }
+                { name: "Publishers", slug: "/license-html5-games" }
               ]}
             />
           </div>
@@ -148,7 +148,7 @@ const Publishers = props => {
         imageAlt="Softgames"
         btn={<a href="https://publishers.softgames.com/" target="_blank" className="btn btn--primary">browse games</a>}
       />
-      <LinkSmoothScroll href="/publishers/#earn-money">
+      <LinkSmoothScroll href="/license-html5-games/#earn-money">
         <a>
           <ArrowDown />
         </a>

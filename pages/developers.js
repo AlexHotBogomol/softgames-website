@@ -20,8 +20,7 @@ import Lego from "../assets/icons/partners/Lego";
 import Microsoft from "../assets/icons/partners/Microsoft";
 import Cisco from "../assets/icons/partners/Cisco";
 import Fiat from "../assets/icons/partners/Fiat";
-// import GotGameIllustration from "../assets/icons/developers/GotGameIllustration";
-// import NextChallengeIllustration from "../assets/icons/developers/NextChallengeIllustration";
+
 import gotGameGif from '../assets/images/developers/gotGame.gif';
 import nextChallengeGif from '../assets/images/developers/nextChallenge.gif';
 import Layout from "../components/Layout";
@@ -44,7 +43,7 @@ const Developers = props => {
             <Breadcrumb
               items={[
                 { name: "Home", slug: "/" },
-                { name: "Developers", slug: "/developers" }
+                { name: "Developers", slug: "/distribute-html5-games" }
               ]}
             />
           </div>
@@ -70,7 +69,7 @@ const Developers = props => {
         imageAlt="Softgames"
         btn={<button className="btn btn--primary" onClick={openModal}>Submit Game</button>}
       />
-      <LinkSmoothScroll href="/developers/#global-reach">
+      <LinkSmoothScroll href="/distribute-html5-games/#global-reach">
         <a>
           <ArrowDown />
         </a>

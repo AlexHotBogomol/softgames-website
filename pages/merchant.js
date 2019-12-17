@@ -122,7 +122,7 @@ const Merchant = props => {
             <Breadcrumb
               items={[
                 { name: "Home", slug: "/" },
-                { name: "Merchant", slug: "/advertisers" }
+                { name: "Advertisers", slug: "/advertisers" }
               ]}
             />
           </div>

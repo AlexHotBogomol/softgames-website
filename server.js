@@ -1,6 +1,7 @@
 const express = require("express");
 const next = require("next");
 const bodyParser = require("body-parser");
+// import { routes } from "./routes";
 
 const PUBLIC_KEY = "1c96085a14d938307edc82d3cb531bd8";
 const PRIVATE_KEY = "a7d242a2be3a57faccd38e03365f8305";
@@ -14,7 +15,22 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
+  // server.use(handler).listen(3000);
+
   server.use(bodyParser.json());
+
+  server.get('/advertisers', (req, res) => {
+    return app.render(req, res, '/merchant');
+  });
+  server.get('/license-html5-games', (req, res) => {
+    return app.render(req, res, '/publishers');
+  });
+  server.get('/distribute-html5-games', (req, res) => {
+    return app.render(req, res, '/developers');
+  });
+  server.get('/free-online-games', (req, res) => {
+    return app.render(req, res, '/games');
+  });
 
   server.get("*", (req, res) => {
     return handle(req, res);
