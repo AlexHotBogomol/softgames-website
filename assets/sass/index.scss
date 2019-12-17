@@ -295,7 +295,7 @@
   &-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 270px);
+    grid-template-rows: repeat(5, 270px);
     grid-gap: 30px;
     .gameCard:first-child {
       grid-column: 1 / span 2;

@@ -9,6 +9,7 @@
   &-img{
     overflow: hidden;
     position: relative;
+    height: 100%;
     & > img{
       width: 100%;
       height: 100%;
@@ -93,6 +94,12 @@
     }
     .gameCard-overlay{
       display: flex;
+    }
+  }
+  &--secret{
+    background-color: #C4C4C4;
+    .gameCard-img:after{
+      display: none;
     }
   }
 }

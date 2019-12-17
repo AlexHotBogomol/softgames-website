@@ -103,6 +103,26 @@ const games = [
     title: "2020 Connect",
     icon: connect2020Icon
   },
+  {
+    title: "Secret Project 1",
+    secret: true
+  },
+  {
+    title: "Secret Project 2",
+    secret: true
+  },
+  {
+    title: "Secret Project 3",
+    secret: true
+  },
+  {
+    title: "Secret Project 4",
+    secret: true
+  },
+  {
+    title: "Secret Project 5",
+    secret: true
+  },
 ];
 
 const seoBlockData = {
@@ -158,6 +178,7 @@ const Games = props => {
                       img={game.image}
                       title={game.title}
                       icon={game.icon}
+                      secret={game.secret || false}
                     />
                   );
                 })}
