@@ -77,7 +77,7 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
 
   const onSubmit = (data, e) => {
     console.log(data);
-    if(isCaptchaAccept){
+    // if(isCaptchaAccept){
       axios.post('/api/contact', data)
         .then(function (response) {
           setIsSend(true);
@@ -89,7 +89,7 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
         .catch(function (error) {
           console.log(error);
         });
-    }
+    // }
   };
   return (
     <form className={formClasses.join(" ")} onSubmit={handleSubmit(onSubmit)}>
