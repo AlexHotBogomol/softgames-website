@@ -53,33 +53,6 @@ const ManagerList = props => {
         linkedinLink="https://www.linkedin.com/in/krugandre/"
       />
       <ManagerCard
-        managerName="Christian Rudnick"
-        managerPosition="CTO"
-        renderManagerHistory={() => (
-          <div className="managerCard-history">
-            <p>
-              Before joining SOFTGAMES, Christian gathered over 12 years of experience in
-              high scalability cross platform development, cluster computing and analytic
-              software set up´s.
-            </p>
-            <p>Previously, Christian worked at social network PinStyle as their CTO introducing
-              high level analytics and cross platform communications. Prior to this he was the
-              technical product management director of iconmobile technologies and in
-              charge of mobile platform development.
-            </p>
-            <p>
-              At SOFTGAMES Christian as the CTO is responsible for SOFTGAMES overall
-              technology decisions, as well as engineering, operations and information
-              technology. His passion and enthusiasm for clean, agile engineering drives the
-              technology culture throughout our Platform.
-            </p>
-          </div>
-        )}
-        managerPhoto={managerPhoto}
-        photoPosition="left"
-        linkedinLink="https://www.google.com"
-      />
-      <ManagerCard
         managerName="Bernd Beyreuther"
         managerPosition="Head of Studio"
         renderManagerHistory={() => (
