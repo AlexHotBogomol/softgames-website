@@ -3,6 +3,8 @@ import './GameCard.scss';
 import JoyStick from "../../assets/icons/JoyStick";
 import GooglePlay from "../../assets/icons/GooglePlay";
 import AppStore from "../../assets/icons/AppStore";
+import secretIcon from "../../assets/images/secret-icon.png";
+import secretImage from "../../assets/images/secret-image.jpg"
 
 const GameCard = ({link, googlePlayLink, appStoreLink, img, title, icon, secret}) => {
   const gameCardClasses = [
@@ -14,7 +16,10 @@ const GameCard = ({link, googlePlayLink, appStoreLink, img, title, icon, secret}
       <div className="gameCard-img">
         {!secret ? (
           <img src={img} alt={title}/>
-        ) : null}
+        ) : (
+          <img src={secretImage} alt={title}/>
+        )}
+
 
         {!secret ? (
           <div className="gameCard-overlay">
@@ -41,7 +46,7 @@ const GameCard = ({link, googlePlayLink, appStoreLink, img, title, icon, secret}
           {!secret ? (
             <img className="gameCard-icon" src={icon} alt={title}/>
           ) : (
-            <div className="gameCard-icon"/>
+            <img className="gameCard-icon" src={secretIcon} alt={title}/>
           )}
           <h4 className="gameCard-name">{title}</h4>
         </div>

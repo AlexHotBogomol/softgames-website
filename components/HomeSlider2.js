@@ -26,7 +26,8 @@ const sliderSettings = {
 const slider2Slides = [
   {
     categoryName: "Advertisers",
-    categoryLink: "/advertisers",
+    href: "/merchant",
+    linkAs: "/advertisers",
     heading: "Global Reach<br><span>for your brand.</span>",
     description:
       "Enjoy our brand-safe traffic, high viewability, engaged users and diverse demographic audience! Select your target audience from 30+ million active users and advertise your brand on our HTML5 games platform.",
@@ -36,7 +37,8 @@ const slider2Slides = [
   },
   {
     categoryName: "Publishers",
-    categoryLink: "/license-html5-games",
+    href: "/publishers",
+    linkAs: "/license-html5-games",
     heading: "games Affiliate <br><span>Program</span>",
     description:
       "Join the best games Affiliate Program as a publisher and maximize your earnings! Earn the highest commissions and monetize your online and app traffic by embedding high quality, cross-platform games.",
@@ -46,7 +48,8 @@ const slider2Slides = [
   },
   {
     categoryName: "Developers",
-    categoryLink: "/distribute-html5-games",
+    href: "/developers",
+    linkAs: "/distribute-html5-games",
     heading: "Global Reach<br><span>for your brand.</span>",
     description:
       "Publish your HTML5 Game or Messenger Game with SOFTGAMES and do what you love! We help you to distribute and monetize your HTML5 games better with our global reach and better ads.",
@@ -65,7 +68,9 @@ const HomeSlider2 = (props) => {
           <div className="slider2-slide" key={index}>
             <div className="slider2-content">
               <div className="slider2-left">
-                <Link href={slide.categoryLink}>
+                <Link
+                  href={slide.categoryLink}
+                >
                   <a className="link slider2-category">{slide.categoryName}</a>
                 </Link>
                 <h2 className="h2--big">{ReactHtmlParser(slide.heading)}</h2>

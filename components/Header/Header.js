@@ -44,7 +44,8 @@ const Header = props => {
             <li className="menu-item">
               <NavLink
                 activeClassName="selected"
-                href="/free-online-games"
+                as="/free-online-games"
+                href="/games"
               >
                 <a className="menu-link">
                   Games
@@ -67,21 +68,30 @@ const Header = props => {
               </span>
               <ul className="submenu">
                 <li className="submenu-item">
-                  <Link href="/advertisers">
+                  <Link
+                    as="/advertisers"
+                    href="/merchant"
+                  >
                     <a className="submenu-link">
                       Advertisers
                     </a>
                   </Link>
                 </li>
                 <li className="submenu-item">
-                  <Link href="/license-html5-games">
+                  <Link
+                    as="/license-html5-games"
+                    href="/publishers"
+                  >
                     <a className="submenu-link">
                       Publishers
                     </a>
                   </Link>
                 </li>
                 <li className="submenu-item">
-                  <Link href="/distribute-html5-games">
+                  <Link
+                    as="/distribute-html5-games"
+                    href="/developers"
+                  >
                     <a className="submenu-link">
                       Developers
                     </a>
@@ -91,21 +101,30 @@ const Header = props => {
             </li>
             {/*For adaptive menu*/}
             <li className="menu-item d-lg-none">
-              <Link href="/advertisers">
+              <Link
+                as="/advertisers"
+                href="/merchant"
+              >
                 <a className="menu-link">
                   Advertisers
                 </a>
               </Link>
             </li>
             <li className="menu-item d-lg-none">
-              <Link href="/license-html5-games">
+              <Link
+                as="/license-html5-games"
+                href="/publishers"
+              >
                 <a className="menu-link">
                   Publishers
                 </a>
               </Link>
             </li>
             <li className="menu-item d-lg-none">
-              <Link href="/distribute-html5-games">
+              <Link
+                as="/distribute-html5-games"
+                href="/developers"
+              >
                 <a className="menu-link">
                   Developers
                 </a>

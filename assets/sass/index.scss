@@ -298,11 +298,15 @@
     grid-template-rows: repeat(5, 270px);
     grid-gap: 30px;
     .gameCard:first-child {
-      grid-column: 1 / span 2;
-      grid-row: 1 / span 2;
+       grid-column: 1 / span 2;
+       grid-row: 1 / span 2;
+    }
+    .gameCard:last-child {
+      grid-column: 3 / span 2;
+      grid-row: 4 / span 2;
     }
     @media only screen and (min-width: 992px) {
-      .gameCard:first-child {
+      .gameCard:first-child, .gameCard:last-child {
         .gameCard {
           &-icon {
             width: 60px;
@@ -1559,7 +1563,31 @@
     }
     &-grid {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(4, 290px);
+      grid-template-rows: repeat(6, 290px);
+      .gameCard:last-child {
+        grid-column: auto;
+        grid-row: auto;
+        .gameCard {
+          &-icon {
+            width: 40px;
+            height: 40px;
+          }
+          &-name {
+            font-size: 18px;
+            line-height: 26px;
+          }
+          &-meta {
+            bottom: 20px;
+          }
+          &-platforms {
+            a {
+              img {
+                width: auto;
+              }
+            }
+          }
+        }
+      }
     }
   }
   .simpleBlock {
@@ -1951,7 +1979,7 @@
   .games {
     &-grid {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(5, 330px);
+      grid-template-rows: repeat(7, 330px);
       .gameCard {
         &:first-child {
           grid-column: 1;

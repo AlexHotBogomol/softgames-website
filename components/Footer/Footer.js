@@ -78,14 +78,20 @@ const Footer = (props) => {
                     </ul>
                     <ul className="menu footerMenu">
                       <li className="menu-item footerMenu-item">
-                        <Link href="/distribute-html5-games">
+                        <Link
+                          as="/distribute-html5-games"
+                          href="/developers"
+                        >
                           <a className="footerMenu-link">
                             Developers
                           </a>
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/distribute-html5-games/#global-reach">
+                        <LinkSmoothScroll
+                          as="/distribute-html5-games/#global-reach"
+                          href="/developers/#global-reach"
+                        >
                           <a className="footerMenu-sublink">
                             Global Reach
                           </a>
