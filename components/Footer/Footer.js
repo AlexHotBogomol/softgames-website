@@ -48,28 +48,40 @@ const Footer = (props) => {
                   <div className="col-md-4">
                     <ul className="menu menu footerMenu">
                       <li className="menu-item footerMenu-item">
-                        <Link href="/advertisers">
+                        <Link
+                          as="/advertisers"
+                          href="/merchant"
+                        >
                           <a className="footerMenu-link">
                             Advertisers
                           </a>
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/advertisers/#why-softgames">
+                        <LinkSmoothScroll
+                          as="/advertisers/#why-softgames"
+                          href="/merchant/#why-softgames"
+                        >
                           <a className="footerMenu-sublink">
                             Why SOFTGAMES?
                           </a>
                         </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/advertisers/#brands">
+                        <LinkSmoothScroll
+                          as="/advertisers/#brands"
+                          href="/merchant/#brands"
+                        >
                           <a className="footerMenu-sublink">
                             Brands
                           </a>
                         </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/advertisers/#join-us">
+                        <LinkSmoothScroll
+                          as="/advertisers/#join-us"
+                          href="/merchant/#join-us"
+                        >
                           <a className="footerMenu-sublink">
                             Join us to tell your story
                           </a>
@@ -98,14 +110,20 @@ const Footer = (props) => {
                         </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/distribute-html5-games/#better-monetization">
+                        <LinkSmoothScroll
+                          as="/distribute-html5-games/#better-monetization"
+                          href="/developers/#better-monetization"
+                        >
                           <a className="footerMenu-sublink">
                             Better Monetization
                           </a>
                         </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/distribute-html5-games/#publish-with-us">
+                        <LinkSmoothScroll
+                          as="/distribute-html5-games/#publish-with-us"
+                          href="/developers/#publish-with-us"
+                        >
                           <a className="footerMenu-sublink">
                             Publish with us
                           </a>
@@ -116,28 +134,40 @@ const Footer = (props) => {
                   <div className="col-md-4">
                     <ul className="menu footerMenu">
                       <li className="menu-item footerMenu-item">
-                        <Link href="/license-html5-games">
+                        <Link
+                          as="/license-html5-games"
+                          href="/publishers"
+                        >
                           <a className="footerMenu-link">
                             Publishers
                           </a>
                         </Link>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/license-html5-games/#games-affiliate">
+                        <LinkSmoothScroll
+                          as="/license-html5-games/#games-affiliate"
+                          href="/publishers/#games-affiliate"
+                        >
                           <a className="footerMenu-sublink">
                             Games Affiliate Program
                           </a>
                         </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/license-html5-games/#why-softgames">
+                        <LinkSmoothScroll
+                          as="/license-html5-games/#why-softgames"
+                          href="/publishers/#why-softgames"
+                        >
                           <a className="footerMenu-sublink">
                             Why SOFTGAMES?
                           </a>
                         </LinkSmoothScroll>
                       </li>
                       <li className="menu-item footerMenu-subitem">
-                        <LinkSmoothScroll href="/license-html5-games/#our-partners">
+                        <LinkSmoothScroll
+                          as="/license-html5-games/#our-partners"
+                          href="/publishers/#our-partners"
+                        >
                           <a className="footerMenu-sublink">
                             Our partners
                           </a>

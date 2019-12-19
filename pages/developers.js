@@ -22,7 +22,7 @@ import Cisco from "../assets/icons/partners/Cisco";
 import Fiat from "../assets/icons/partners/Fiat";
 
 import gotGameGif from '../assets/images/developers/gotGame.gif';
-// import nextChallengeGif from '../assets/images/developers/nextChallenge.gif';
+import challengeGif from '../assets/images/developers/challenge.gif';
 import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 
@@ -149,7 +149,7 @@ const Developers = props => {
                 <div className="col-sm-8 mx-auto col-md-6">
                   <div className="publishWithUsCard">
                     <div className="publishWithUsCard-imgWrapper">
-                      {/*<img src={nextChallengeGif} alt="Got a great game?"/>*/}
+                      <img src={challengeGif} alt="Got a great game?"/>
                     </div>
                     <div className="publishWithUsCard-content">
                       <div className="publishWithUsCard-text">
