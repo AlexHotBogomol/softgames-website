@@ -199,9 +199,8 @@
     &-nav{
       position: fixed;
       left: -300px;
-      bottom:0;
+      top: 55px;
       height: calc(100vh - 55px); //header height
-      z-index: 300;
       width: 300px;
       background-color: $brand-color1;
       transition: 0.3s;
