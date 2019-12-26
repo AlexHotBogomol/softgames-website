@@ -14,14 +14,6 @@ const sliderSettings = {
   lazyLoad: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 991,
-      settings: {
-        fade: false
-      }
-    }
-  ]
 };
 const slider2Slides = [
   {
@@ -69,9 +61,12 @@ const HomeSlider2 = (props) => {
             <div className="slider2-content">
               <div className="slider2-left">
                 <Link
-                  href={slide.categoryLink}
+                  href={slide.href}
+                  as={slide.linkAs}
                 >
-                  <a className="link slider2-category">{slide.categoryName}</a>
+                  <a className="link slider2-category">
+                    {slide.categoryName}
+                  </a>
                 </Link>
                 <h2 className="h2--big">{ReactHtmlParser(slide.heading)}</h2>
                 <p>{ReactHtmlParser(slide.description)}</p>
