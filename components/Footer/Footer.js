@@ -5,7 +5,7 @@ import "./Footer.scss";
 import Logo from "../Logo/Logo";
 import Facebook from "../SocialBlock/Socials/Facebook";
 import Twitter from "../SocialBlock/Socials/Twitter";
-import Google from "../SocialBlock/Socials/Google";
+// import Google from "../SocialBlock/Socials/Google";
 import Linkedin from "../SocialBlock/Socials/Linkedin";
 import HotPanel from "../HotPanel/HotPanel";
 
@@ -34,7 +34,7 @@ const Footer = (props) => {
       </div>
     </section>
     <footer className="footer">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
           <div className="col-lg-4">
             <div className="footer-logoWrapper">
