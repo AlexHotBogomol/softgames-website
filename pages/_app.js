@@ -77,9 +77,8 @@ class MyApp extends App {
         >
           <div className="thankYou-content withIllustration">
             <h1 className="thankYou-heading">
-              Thank You
-              <br />
-              for your registration!
+              Thanks for your message,<br/>
+              we will answer it as soon as posible
             </h1>
             <Link href="/">
               <button className="btn btn--primary" onClick={() => this.closeModal("ThankYouModal")}>
