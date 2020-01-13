@@ -62,7 +62,7 @@ const games = [
     image: spaceInvaders,
     title: "Space Invaders",
     icon: spaceInvadersIcon,
-    description: ""
+    description: "The long awaited nostalgic arcade game is back: time for Space Invaders!"
   },
   {
     link: "http://bit.ly/Play_YummyTales",
@@ -71,7 +71,7 @@ const games = [
     image: yummuyTales,
     title: "Yummuy Tales",
     icon: yummuyTalesIcon,
-    description: ""
+    description: "Match delicious fruits and vegetables to feed our cute baby animals!"
   },
   {
     link: "http://bit.ly/Play_BubbleShooterClassic ",
@@ -80,7 +80,7 @@ const games = [
     image: bubbleShooter,
     title: "Bubble Shooter Classic",
     icon: bubbleShooterIcon,
-    description: ""
+    description: "The more bubbles you remove in one shot, the more points you score!"
   },
   {
     link: "http://bit.ly/Play_JewelsBlitz",
@@ -98,7 +98,7 @@ const games = [
     image: connect2020,
     title: "2020 Connect",
     icon: connect2020Icon,
-    description: ""
+    description: "Connect four blocks with the same numbers to beat the highscore!"
   },
   {
     title: "Secret Project 1",
