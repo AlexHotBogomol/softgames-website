@@ -212,6 +212,15 @@
     bottom: 0;
     left: -130px;
   }
+  .gameCard{
+    margin: 0 15px;
+  }
+  .slick-prev{
+    left: -40px;
+  }
+  .slick-next{
+    right: -40px;
+  }
 }
 .latestPositions {
   padding-top: 165px;
@@ -292,8 +301,9 @@
   &-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 270px);
+    //grid-template-rows: repeat(5, 270px);
     grid-gap: 30px;
+    grid-auto-rows: 1fr;
     .gameCard:first-child {
        grid-column: 1 / span 2;
        grid-row: 1 / span 2;
@@ -301,6 +311,13 @@
     .gameCard:last-child {
       grid-column: 3 / span 2;
       grid-row: 4 / span 2;
+    }
+    &:before {
+      content: '';
+      width: 0;
+      padding-bottom: 100%;
+      grid-row: 1 / 1;
+      grid-column: 1 / 1;
     }
     @media only screen and (min-width: 992px) {
       .gameCard:first-child, .gameCard:last-child {
@@ -2109,6 +2126,12 @@
     &-gameList {
       padding-bottom: 15px;
     }
+    .slick-prev{
+      left: -30px;
+    }
+    .slick-next{
+      right: -30px;
+    }
   }
   .latestNews {
     padding: 50px 0 40px;
@@ -2201,6 +2224,14 @@
   }
   .aboutUsBlock:before{
     display: none;
+  }
+  .featuredGames {
+    &-gameList {
+      padding-bottom: 60px;
+    }
+    .slick-dots{
+      bottom: -20px;
+    }
   }
   .brandSafety{
     &-heading{

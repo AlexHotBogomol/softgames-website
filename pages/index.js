@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import HomeSlider1 from "../components/HomeSlider1";
 import ArrowDown from "../components/ArrowDown";
 import HomeSlider2 from "../components/HomeSlider2";
-import GameCard from "../components/GameCard/GameCard";
 import PositionCard from "../components/PositionCard/PositionCard";
 import NewsCard from "../components/NewsCard/NewsCard";
 import SocialBlock from "../components/SocialBlock/SocialBlock";
@@ -15,34 +14,10 @@ import Link from "next/link";
 
 import character from "../assets/images/character.png";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
-import cookieCrushImg from "../assets/images/games/COOKIE_CRUSH.png";
-import solitaireStory from "../assets/images/games/SolitaireStory.png";
-import mahjong from "../assets/images/games/mahjong.png";
 
 import Preloader from "../components/Preloader/Preloader";
 
-const games = [
-  {
-    url: "http://bit.ly/Play_CookieCrush",
-    image: cookieCrushImg,
-    title: "Cookie Crush",
-    description:
-      "Match at least three delicious pastries to make them disappear!"
-  },
-  {
-    url: "http://bit.ly/Play_SolitaireStoryTripeaks",
-    image: solitaireStory,
-    title: "Solitaire Story",
-    description: "Card game that puts fun twists on the traditional Solitaire."
-  },
-  {
-    url: "http://bit.ly/Play_MahjongStory",
-    image: mahjong,
-    title: "Mahjong Story",
-    description:
-      "Clear tiles to win and unlock beautiful artwork along the way!"
-  }
-];
+import HomeSlider3 from "../components/HomeSlider3";
 
 const Index = props => {
   const [positions, setPositions] = useState([]);
@@ -122,21 +97,10 @@ const Index = props => {
             </div>
           </div>
           <div className="row featuredGames-gameList justify-content-center">
-            <TransitionGroup className="d-none d-lg-block col-lg-3" />
-            {games.map((game, index) => {
-              return (
-                <CSSTransition classNames="fade" timeout={200} key={index}>
-                  <div className="col-sm-6 col-md-4 col-lg-3">
-                    <GameCard
-                      url={game.url}
-                      img={game.image}
-                      title={game.title}
-                      description={game.description}
-                    />
-                  </div>
-                </CSSTransition>
-              );
-            })}
+            <div className="d-none d-lg-block col-lg-3" />
+            <div className="col-lg-9">
+              <HomeSlider3 />
+            </div>
           </div>
           <div className="row">
             <Link href="/free-online-games">

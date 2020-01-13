@@ -7,7 +7,9 @@ import sliderMediumImg1 from "../assets/images/homeSlider1/slider1-medium.jpg";
 const sliderSettings = {
   dots: true,
   arrows: true,
-  // fade: true,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
   infinite: true,
   speed: 500,
   lazyLoad: true,
