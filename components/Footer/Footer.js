@@ -19,11 +19,11 @@ const Footer = (props) => {
         <div className="row">
           <div className="col-auto mx-auto">
             <h2 className="joinUs-title">Ready to join us?</h2>
-            <div className="joinUs-separator">
-              <span />
-              <span />
-              <span />
-            </div>
+            {/*<div className="joinUs-separator">*/}
+            {/*  <span />*/}
+            {/*  <span />*/}
+            {/*  <span />*/}
+            {/*</div>*/}
             <LinkSmoothScroll href="/career/#job-openings">
               <a className="btn btn--secondaryInverse">
                 see open positions
