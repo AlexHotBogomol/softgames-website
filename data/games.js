@@ -21,8 +21,6 @@ import connect2020Icon from "../assets/images/games/icons/connect2020Icon.png";
 const games = [
   {
     link: "http://bit.ly/Play_CookieCrush",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: cookieCrushImg,
     title: "Cookie Crush",
     icon: cookieCrushIcon,
@@ -31,7 +29,6 @@ const games = [
   {
     link: "http://bit.ly/Play_SolitaireStoryTripeaks",
     googlePlayLink: "https://play.google.com/store/apps/details?id=com.softgames.solitairestory",
-    appStoreLink: "https://www.google.com",
     image: solitaireStory,
     title: "Solitaire Story",
     icon: solitaireStoryIcon,
@@ -39,8 +36,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_MahjongStory",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: mahjong,
     title: "Mahjong Story",
     icon: mahjongIcon,
@@ -48,8 +43,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_GardenTales",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: gardenTales,
     title: "Garden Tales",
     icon: gardenTalesIcon,
@@ -57,8 +50,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_SpaceInvaders ",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: spaceInvaders,
     title: "Space Invaders",
     icon: spaceInvadersIcon,
@@ -66,8 +57,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_YummyTales",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: yummuyTales,
     title: "Yummuy Tales",
     icon: yummuyTalesIcon,
@@ -75,8 +64,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_BubbleShooterClassic ",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: bubbleShooter,
     title: "Bubble Shooter Classic",
     icon: bubbleShooterIcon,
@@ -84,8 +71,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_JewelsBlitz",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: jewelsBlitz,
     title: "Jewels Blitz",
     icon: jewelsBlitzIcon,
@@ -93,8 +78,6 @@ const games = [
   },
   {
     link: "http://bit.ly/Play_2020_Connect",
-    googlePlayLink: "https://www.google.com",
-    appStoreLink: "https://www.google.com",
     image: connect2020,
     title: "2020 Connect",
     icon: connect2020Icon,

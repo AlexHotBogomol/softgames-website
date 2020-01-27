@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
 import ModalContext from "../components/ModalContext";
-import {NextSeo} from 'next-seo';
+import LinkSmoothScroll from "../components/LinkSmoothScroll";
+import { NextSeo } from "next-seo";
 import GameCard2 from "../components/GameCard/GameCard2";
 import Breadcrumb from "../components/Breadcrumb";
 import SeoBlock from "../components/SeoBlock";
 import seoImg from "../assets/images/seoImg.jpg";
 import gamesImg from "../assets/images/gamesImage.jpg";
 import Layout from "../components/Layout";
-import games from '../data/games';
+import games from "../data/games";
 
 import lookOutMoreGamesImg from "../assets/images/Lookout_More_Games.png";
 
@@ -15,17 +16,14 @@ const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
   content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
-  contactUsBtn: true
+  contactUsBtn: false
 };
 
 const Games = props => {
   const { openModal } = useContext(ModalContext);
   return (
     <Layout>
-      <NextSeo
-        title="Games"
-        description="A short description goes here."
-      />
+      <NextSeo title="Games" description="A short description goes here." />
       <div className="container">
         <div className="row">
           <div className="col-12">
@@ -44,10 +42,9 @@ const Games = props => {
             <div className="col-lg-9 mx-auto">
               <h1 className="games-heading">Games</h1>
               <p className="games-description withGrid">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip.
+                Play Free Online Games. From Solitaire Tripeaks and Match 3
+                Games to Mahjong and Trivia Quiz - enjoy our collection of
+                premium, fun, free online games!
               </p>
             </div>
           </div>
@@ -113,9 +110,9 @@ const Games = props => {
                 We are always on the lookout for talents who share the same
                 passion as us. Ready for your next challenge?
               </p>
-              <button className="btn btn--primary" onClick={openModal}>
-                contact us
-              </button>
+              <LinkSmoothScroll href="/career/#job-openings">
+                <a className="btn btn--primary">join us</a>
+              </LinkSmoothScroll>
             </div>
           </div>
         </div>

@@ -101,7 +101,7 @@ const slides = [
 const TimelineSlider = props => {
   let [activeIndex, setActiveIndex] = useState(0);
   let [content, setContent] = useState(slides[0]);
-  const delay = 4000;
+  const delay = 6000;
 
   useEffect(() => {
     setContent(slides[activeIndex]);

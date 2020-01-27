@@ -47,7 +47,10 @@ const Header = props => {
                 as="/free-online-games"
                 href="/games"
               >
-                <a className="menu-link">
+                <a
+                  className="menu-link"
+                  onClick={()=>{setIsMenuOpen(false)}}
+                >
                   Games
                 </a>
               </NavLink>
@@ -57,7 +60,10 @@ const Header = props => {
                 activeClassName="selected"
                 href="/company"
               >
-                <a className="menu-link">
+                <a
+                  className="menu-link"
+                  onClick={()=>{setIsMenuOpen(false)}}
+                >
                   Company
                 </a>
               </NavLink>
@@ -105,7 +111,10 @@ const Header = props => {
                 as="/advertisers"
                 href="/merchant"
               >
-                <a className="menu-link">
+                <a
+                  className="menu-link"
+                  onClick={()=>{setIsMenuOpen(false)}}
+                >
                   Advertisers
                 </a>
               </Link>
@@ -115,7 +124,10 @@ const Header = props => {
                 as="/license-html5-games"
                 href="/publishers"
               >
-                <a className="menu-link">
+                <a
+                  className="menu-link"
+                  onClick={()=>{setIsMenuOpen(false)}}
+                >
                   Publishers
                 </a>
               </Link>
@@ -125,7 +137,10 @@ const Header = props => {
                 as="/distribute-html5-games"
                 href="/developers"
               >
-                <a className="menu-link">
+                <a
+                  className="menu-link"
+                  onClick={()=>{setIsMenuOpen(false)}}
+                >
                   Developers
                 </a>
               </Link>
@@ -136,7 +151,10 @@ const Header = props => {
                 activeClassName="selected"
                 href="/career"
               >
-                <a className="menu-link">
+                <a
+                  className="menu-link"
+                  onClick={()=>{setIsMenuOpen(false)}}
+                >
                   Career
                 </a>
               </NavLink>

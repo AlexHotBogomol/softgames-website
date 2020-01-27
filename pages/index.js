@@ -65,7 +65,10 @@ const Index = props => {
 
   return (
     <Layout>
-      <NextSeo title="Home" />
+      <NextSeo
+        title="Home"
+        description="Home page"
+      />
       {isPreloaderEnd ? null : (<Preloader />)}
       <div className="container--fullWidth">
         <HomeSlider1 />

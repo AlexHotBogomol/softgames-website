@@ -9,9 +9,9 @@ const sliderSettings = {
   arrows: true,
   autoplay: true,
   autoplaySpeed: 3000,
-  pauseOnHover: true,
+  pauseOnHover: false,
   infinite: true,
-  speed: 500,
+  speed: 1000,
   lazyLoad: true,
   slidesToShow: 1,
   slidesToScroll: 1

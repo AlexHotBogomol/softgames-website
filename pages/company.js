@@ -34,7 +34,7 @@ const seoBlockData = {
   As a worldwide leader in HTML5 casual gaming, SOFTGAMES makes it easy to profit and to be a part of the fast-growing and extremely popular mobile online games business.
   Our Games Affiliate Program provides you with access to our catalog of 400+ exclusive HTML5 casual games from our catalogue as automatic feeds, full white label portals or selected content only.
   </p>`,
-  contactUsBtn: true,
+  contactUsBtn: false,
 };
 
 const Company = (props) => {

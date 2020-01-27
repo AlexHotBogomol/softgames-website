@@ -33,7 +33,7 @@
         width: 0;
         height: 4px;
         background-color: $brand-color1;
-        animation: slide 4s ease-in-out;
+        animation: slide 6s ease-in-out;
       }
     }
     &:hover {
@@ -67,6 +67,7 @@
     width: 370px;
     max-width: 100%;
     margin: 0 auto;
+    min-height: 170px;
   }
   &-arrows {
     position: absolute;

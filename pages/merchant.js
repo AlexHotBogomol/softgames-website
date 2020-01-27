@@ -41,7 +41,7 @@ const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
   content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
-  contactUsBtn: true
+  contactUsBtn: false
 };
 
 const whyUsCards = [
@@ -321,7 +321,7 @@ const Merchant = props => {
         category="Advertisers"
         title={
           <h2>
-            <span>Join us</span>
+            <span>Contact us</span>
             <br />
             to tell your story
           </h2>
@@ -335,7 +335,7 @@ const Merchant = props => {
         }
         image={seoImg}
         imageAlt="Softgames"
-        btn={<button className="btn btn--primary" onClick={openModal}>Join Us</button>}
+        btn={<button className="btn btn--primary" onClick={openModal}>Contact Us</button>}
       />
       <SeoBlock
         heading={seoBlockData.heading}
