@@ -69,8 +69,8 @@ app.prepare().then(() => {
             <li>category: ${category ? category : ""}</li>
             <li>message: ${message}</li>
             <li>agreement: ${agreement}</li>          
-          </ul>
-          `,
+		  </ul>
+		  `,
           CustomID: "ContactForm"
         }
       ]
@@ -90,3 +90,4 @@ app.prepare().then(() => {
     console.log("> Read on http://localhost:5000");
   });
 });
+
