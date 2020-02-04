@@ -1,5 +1,5 @@
 import cookieCrushImg from "../assets/images/games/COOKIE_CRUSH.png";
-import solitaireStory from "../assets/images/games/SolitaireStory.png";
+import solitaireStory from "../assets/images/games/SolitaireStory.jpg";
 import bubbleShooter from "../assets/images/games/bubbleShooter.png";
 import gardenTales from "../assets/images/games/gardenTales.png";
 import jewelsBlitz from "../assets/images/games/jewelsBlitz.png";
@@ -20,26 +20,18 @@ import connect2020Icon from "../assets/images/games/icons/connect2020Icon.png";
 
 const games = [
   {
-    link: "http://bit.ly/Play_CookieCrush",
-    image: cookieCrushImg,
-    title: "Cookie Crush",
-    icon: cookieCrushIcon,
-    description: "Match at least three delicious pastries to make them disappear!"
-  },
-  {
-    link: "http://bit.ly/Play_SolitaireStoryTripeaks",
-    googlePlayLink: "https://play.google.com/store/apps/details?id=com.softgames.solitairestory",
-    image: solitaireStory,
-    title: "Solitaire Story",
-    icon: solitaireStoryIcon,
-    description: "Classic Solitaire Tripeaks card game with a twist."
-  },
-  {
     link: "http://bit.ly/Play_MahjongStory",
     image: mahjong,
     title: "Mahjong Story",
     icon: mahjongIcon,
     description: "Clear tiles to win and unlock a classic Mahjong experience!"
+  },
+  {
+    link: "http://bit.ly/Play_CookieCrush",
+    image: cookieCrushImg,
+    title: "Cookie Crush",
+    icon: cookieCrushIcon,
+    description: "Match at least three delicious pastries to make them disappear!"
   },
   {
     link: "http://bit.ly/Play_GardenTales",
@@ -82,6 +74,14 @@ const games = [
     title: "2020 Connect",
     icon: connect2020Icon,
     description: "Connect four blocks with the same numbers to beat the highscore!"
+  },
+  {
+    link: "http://bit.ly/Play_SolitaireStoryTripeaks",
+    googlePlayLink: "https://play.google.com/store/apps/details?id=com.softgames.solitairestory",
+    image: solitaireStory,
+    title: "Solitaire Story",
+    icon: solitaireStoryIcon,
+    description: "Classic Solitaire Tripeaks card game with a twist."
   },
   {
     title: "Secret Project 1",

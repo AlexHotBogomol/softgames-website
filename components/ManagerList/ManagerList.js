@@ -1,5 +1,8 @@
 import React from 'react';
 import managerPhoto from "../../assets/images/managerPhoto.png";
+import AlexPhoto from "../../assets/images/company/Alex.png";
+import AndrePhoto from "../../assets/images/company/Andre.png";
+import BerndPhoto from "../../assets/images/company/Bernd.png";
 import ManagerCard from "./ManagerCard/ManagerCard";
 import './ManagerList.scss';
 
@@ -24,7 +27,7 @@ const ManagerList = props => {
               Gamescom and many more.</p>
           </div>
         )}
-        managerPhoto={managerPhoto}
+        managerPhoto={AlexPhoto}
         photoPosition="left"
         linkedinLink="https://www.linkedin.com/in/alexanderkrug/"
       />
@@ -48,7 +51,7 @@ const ManagerList = props => {
             </p>
           </div>
         )}
-        managerPhoto={managerPhoto}
+        managerPhoto={AndrePhoto}
         photoPosition="right"
         linkedinLink="https://www.linkedin.com/in/krugandre/"
       />
@@ -73,7 +76,7 @@ const ManagerList = props => {
             </p>
           </div>
         )}
-        managerPhoto={managerPhoto}
+        managerPhoto={BerndPhoto}
         photoPosition="right"
         linkedinLink="https://www.linkedin.com/in/berndbeyreuther/"
       />

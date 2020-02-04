@@ -25,6 +25,9 @@ import realTimeDashboardGif from '../assets/images/publishers/realTimeDashboard.
 import premiumMonetizationGif from '../assets/images/publishers/premiumMonetization.gif';
 import newGamesGif from '../assets/images/publishers/newGames.gif';
 
+import PublishersImg from "../assets/images/homeSlider2/Publishers_Slide.png";
+import JoinUsImg from "../assets/images/publishers/publishersJoinUs.png";
+
 const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
@@ -144,7 +147,7 @@ const Publishers = props => {
             and app traffic by embedding high quality, cross-platform games.
           </p>
         }
-        image={seoImg}
+        image={PublishersImg}
         imageAlt="Softgames"
         btn={<a href="https://publishers.softgames.com/" target="_blank" className="btn btn--primary">browse games</a>}
       />
@@ -253,7 +256,7 @@ const Publishers = props => {
             </a>
           </p>
         }
-        image={seoImg}
+        image={JoinUsImg}
         imageAlt="Softgames"
         btn={<button className="btn btn--primary" onClick={openModal}>register now</button>}
       />

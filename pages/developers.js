@@ -26,6 +26,8 @@ import challengeGif from '../assets/images/developers/challenge.gif';
 import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 
+import DevelopersImg from "../assets/images/homeSlider2/Developers_Slide.png";
+
 const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
@@ -65,7 +67,7 @@ const Developers = props => {
             better with our global reach and better ads.
           </p>
         }
-        image={seoImg}
+        image={DevelopersImg}
         imageAlt="Softgames"
         btn={<button className="btn btn--primary" onClick={openModal}>Submit Game</button>}
       />

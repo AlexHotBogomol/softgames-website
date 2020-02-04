@@ -21,6 +21,38 @@ import employeePhoto from "../assets/images/emplPhoto.png";
 import FAQ from "../components/FAQ/FAQ";
 import Layout from "../components/Layout";
 
+import careerImg from "../assets/images/career/careerImg.png";
+
+import berlinOffice1 from "../assets/images/career/berlin/berlin1.jpg";
+import berlinOffice2 from "../assets/images/career/berlin/berlin2.jpg";
+import berlinOffice3 from "../assets/images/career/berlin/berlin3.jpg";
+import berlinOffice4 from "../assets/images/career/berlin/berlin4.jpg";
+import berlinOffice5 from "../assets/images/career/berlin/berlin5.jpg";
+import berlinOffice6 from "../assets/images/career/berlin/berlin6.jpg";
+import berlinOffice7 from "../assets/images/career/berlin/berlin7.jpg";
+import berlinOffice8 from "../assets/images/career/berlin/berlin8.jpg";
+import berlinOffice9 from "../assets/images/career/berlin/berlin9.jpg";
+import berlinOffice10 from "../assets/images/career/berlin/berlin10.jpg";
+import berlinOffice11 from "../assets/images/career/berlin/berlin11.jpg";
+import berlinOffice12 from "../assets/images/career/berlin/berlin12.jpg";
+import berlinOffice13 from "../assets/images/career/berlin/berlin13.jpg";
+
+import torontoOffice1 from "../assets/images/career/toronto/toronto1.jpg";
+import torontoOffice2 from "../assets/images/career/toronto/toronto2.jpg";
+import torontoOffice3 from "../assets/images/career/toronto/toronto3.jpg";
+import torontoOffice4 from "../assets/images/career/toronto/toronto4.jpg";
+import torontoOffice5 from "../assets/images/career/toronto/toronto5.jpg";
+import torontoOffice6 from "../assets/images/career/toronto/toronto6.jpg";
+import torontoOffice7 from "../assets/images/career/toronto/toronto7.jpg";
+import torontoOffice8 from "../assets/images/career/toronto/toronto8.jpg";
+import torontoOffice9 from "../assets/images/career/toronto/toronto9.jpg";
+import torontoOffice10 from "../assets/images/career/toronto/toronto10.jpg";
+
+import BartoszPhoto from "../assets/images/career/stories/Bartosz.png";
+import DavidPhoto from "../assets/images/career/stories/Dave.png";
+import ElnaraPhoto from "../assets/images/career/stories/Elnara.png";
+import KerstinPhoto from "../assets/images/career/stories/Kerstin.png";
+
 const cultureSlides = [
   {
     image: cultureImg,
@@ -40,30 +72,30 @@ const employeeStories = [
   {
     quote:
       "Working in a thriving company with a flat hierarchy, talented colleagues from all over the world and the opportunity to closely collaborate with all departments is one of the greatest benefits.",
-    employeeName: "Erin Downes",
-    employeeDepartment: "Senior Game Developer",
-    employeePhoto: employeePhoto
+    employeeName: "Elnara Nuriieva",
+    employeeDepartment: "Key Account Manager",
+    employeePhoto: ElnaraPhoto
   },
   {
     quote:
-      "Each developer loves challenges. After 8 years in one company it is usually not that easy to feel challenges – but not at SOFTGAMES. This is a reason why they keep me so long.",
+      "Each developer loves challenges. After 8 years in one company it is usually not that easy to feel challenges – but not at SOFTGAMES. This is a reason why they keep me so long",
     employeeName: "Bartósz Wrobel",
-    employeeDepartment: "VP of Engineering",
-    employeePhoto: employeePhoto
+    employeeDepartment: "Senior Engineer",
+    employeePhoto: BartoszPhoto
   },
   {
     quote:
       "When I started working at SOFTGAMES I was immediately delighted by the team spirit and the opportunity to find creative solutions for challenges. Feeling appreciated and trusted is fantastic.",
     employeeName: "David Fassbender",
     employeeDepartment: "Senior Business Development Manager",
-    employeePhoto: employeePhoto
+    employeePhoto: DavidPhoto
   },
   {
     quote:
       "At SOFTGAMES flat hierarchies are truly lived. Having a voice in my team, being able to have a real impact and make a difference for our players is one of the greatest benefits.",
     employeeName: "Kerstin Winder",
     employeeDepartment: "Junior QA Manager",
-    employeePhoto: employeePhoto
+    employeePhoto: KerstinPhoto
   }
 ];
 
@@ -73,17 +105,57 @@ const offices = [
     department: "HQ, Game Development",
     slides: [
       {
-        image: cultureImg,
+        image: berlinOffice1,
         caption: "Softgames"
       },
       {
-        image: cultureImg,
+        image: berlinOffice2,
         caption: "Softgames"
       },
       {
-        image: cultureImg,
+        image: berlinOffice3,
         caption: "Softgames"
-      }
+      },
+      {
+        image: berlinOffice4,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice5,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice6,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice7,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice8,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice9,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice10,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice11,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice12,
+        caption: "Softgames"
+      },
+      {
+        image: berlinOffice13,
+        caption: "Softgames"
+      },
     ]
   },
   {
@@ -91,17 +163,45 @@ const offices = [
     department: "Game Development",
     slides: [
       {
-        image: cultureImg,
+        image: torontoOffice1,
         caption: "Softgames"
       },
       {
-        image: cultureImg,
+        image: torontoOffice2,
         caption: "Softgames"
       },
       {
-        image: cultureImg,
+        image: torontoOffice3,
         caption: "Softgames"
-      }
+      },
+      {
+        image: torontoOffice4,
+        caption: "Softgames"
+      },
+      {
+        image: torontoOffice5,
+        caption: "Softgames"
+      },
+      {
+        image: torontoOffice6,
+        caption: "Softgames"
+      },
+      {
+        image: torontoOffice7,
+        caption: "Softgames"
+      },
+      {
+        image: torontoOffice8,
+        caption: "Softgames"
+      },
+      {
+        image: torontoOffice9,
+        caption: "Softgames"
+      },
+      {
+        image: torontoOffice10,
+        caption: "Softgames"
+      },
     ]
   }
 ];
@@ -244,7 +344,7 @@ const Career = props => {
           <div className="row">
             <div className="col-lg-6">
               <div className="aboutUsBlock-img withGrid">
-                <img src={seoImg} alt="Softgames" />
+                <img src={careerImg} alt="Softgames" />
               </div>
             </div>
             <div className="col-lg-6">
