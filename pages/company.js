@@ -5,7 +5,8 @@ import apiEndpoints from '../utils/apiEndpoints';
 
 import AboutUsBlock from "../components/AboutUsBlock";
 import SeoBlock from "../components/SeoBlock";
-import seoImg from "../assets/images/seoImg.jpg"
+import seoImg from "../assets/images/seoImg.jpg";
+import CompanyTopBanner from "../assets/images/company/companyTopBanner.jpg";
 import Breadcrumb from "../components/Breadcrumb";
 import TimelineSlider from "../components/TimelineSlider/TimelineSlider";
 import ManagerList from "../components/ManagerList/ManagerList";
@@ -18,7 +19,7 @@ import Layout from "../components/Layout";
 
 const aboutUsData = {
   heading: "About Us",
-  image: seoImg,
+  image: CompanyTopBanner,
   content: `<p>SOFTGAMES is a leading developer of the most popular Instant Games. Our flagship titles Cookie Crush, Solitaire Story and Candy Match are being played by tens of millions of users every month.</p>
   <p>Our mission is to enable everybody to instantly play great casual games with their friends across any device.</p>
   <p>Further our line of products includes over 400 hyper casual games within our innovative HTML5 games platform which allows our partners to engage and retain their user base. Founded in 2006 we are operating out of Berlin, Germany and Toronto, Canada.</p>`,

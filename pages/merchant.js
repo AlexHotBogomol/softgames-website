@@ -37,6 +37,9 @@ import rewardedVideo from "../assets/images/adFormats/rewardedVideo.png";
 import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 
+import AdvertisersImg from "../assets/images/homeSlider2/Advertisers_Slide.png";
+import JoinUsImg from "../assets/images/advertisers/advertisersJoinUs.png";
+
 const seoBlockData = {
   heading: "Seo Title",
   image: seoImg,
@@ -146,7 +149,7 @@ const Merchant = props => {
             platform.
           </p>
         }
-        image={seoImg}
+        image={AdvertisersImg}
         imageAlt="Softgames"
         btn={<button className="btn btn--primary" onClick={openModal}>get started</button>}
       />
@@ -333,7 +336,7 @@ const Merchant = props => {
             cooperation? Get in touch, we love talking to people!
           </p>
         }
-        image={seoImg}
+        image={JoinUsImg}
         imageAlt="Softgames"
         btn={<button className="btn btn--primary" onClick={openModal}>Contact Us</button>}
       />

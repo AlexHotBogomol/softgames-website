@@ -1,5 +1,5 @@
 import Download from "../../../assets/icons/Download";
-import hr from "../../../assets/images/hr.jpg";
+import hr from "../../../assets/images/company/Melanie.jpg";
 import './PressKit.scss';
 
 const PressKit = props => {

@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import ModalContext from "./ModalContext";
 import Link from "next/link";
 import Slider from "react-slick/lib";
-import slider2Img1 from "../assets/images/homeSlider2/slider2Img1.jpg";
+import AdvertisersSlide from "../assets/images/homeSlider2/Advertisers_Slide.png";
+import PublishersSlide from "../assets/images/homeSlider2/Publishers_Slide.png";
+import DevelopersSlide from "../assets/images/homeSlider2/Developers_Slide.png";
 import ReactHtmlParser from "react-html-parser";
+import Developers from "../pages/developers";
 
 const sliderSettings = {
   dots: true,
@@ -24,7 +27,7 @@ const slider2Slides = [
     description:
       "Enjoy our brand-safe traffic, high viewability, engaged users and diverse demographic audience! Select your target audience from 30+ million active users and advertise your brand on our HTML5 games platform.",
     btnText: "get started",
-    image: slider2Img1,
+    image: AdvertisersSlide,
     alt: ""
   },
   {
@@ -35,7 +38,7 @@ const slider2Slides = [
     description:
       "Join the best games Affiliate Program as a publisher and maximize your earnings! Earn the highest commissions and monetize your online and app traffic by embedding high quality, cross-platform games.",
     btnText: "browse games",
-    image: slider2Img1,
+    image: PublishersSlide,
     alt: ""
   },
   {
@@ -46,7 +49,7 @@ const slider2Slides = [
     description:
       "Publish your HTML5 Game or Messenger Game with SOFTGAMES and do what you love! We help you to distribute and monetize your HTML5 games better with our global reach and better ads.",
     btnText: "Submit Game",
-    image: slider2Img1,
+    image: DevelopersSlide,
     alt: ""
   }
 ];
