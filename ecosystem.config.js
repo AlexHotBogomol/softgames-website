@@ -1,0 +1,12 @@
+module.exports = {
+  apps : [{
+    name: "myapp",
+    script: "server.js",
+    env: {    
+     "NODE_ENV": "developer"
+    },
+    env_production: {
+     "NODE_ENV": "production" 	  
+    }
+  }],
+};

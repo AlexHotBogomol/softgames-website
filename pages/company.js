@@ -137,7 +137,7 @@ const Company = (props) => {
               </div>
               <div className="row d-lg-none">
                 <div className="col-12 text-center">
-                  <a className="btn btn--secondary" href="https://softgames.ein-des-ein.com/" target="_blank">
+                  <a className="btn btn--secondary" href="/news" target="_blank">
                     All news & events
                   </a>
                 </div>
@@ -150,7 +150,7 @@ const Company = (props) => {
           <div className="row d-none d-lg-flex">
             <div className="col-12">
               <Link href="/news/">
-                <a className="btn btn--secondary" href="https://softgames.ein-des-ein.com/" target="_blank">
+                <a className="btn btn--secondary" href="/news" target="_blank">
                   All news & events
                 </a>
               </Link>

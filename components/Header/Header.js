@@ -160,7 +160,7 @@ const Header = props => {
               </NavLink>
             </li>
             <li className="menu-item">
-              <a href="https://softgames.ein-des-ein.com" className="menu-link">
+              <a href="/news" className="menu-link">
                 News
               </a>
             </li>
