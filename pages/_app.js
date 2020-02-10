@@ -7,6 +7,8 @@ import SEO from "../next-seo.config";
 import Modal from "../components/Modal/Modal";
 import Form from "../components/Form/Form";
 import ModalContext from "../components/ModalContext";
+import { Tina, TinaCMS } from 'tinacms';
+import { GitClient } from '@tinacms/git-client'
 
 class MyApp extends App {
   constructor(props) {
@@ -15,7 +17,17 @@ class MyApp extends App {
       isOpenFormModal: false,
       isOpenThankYouModal: false
     };
+    this.cms = new TinaCMS();
+    const client = new GitClient('http://localhost:5000/___tina');
+    this.cms.registerApi('git', client)
   }
+
+  options = {
+    sidebar: {
+      hidden: process.env.NODE_ENV === "production",
+      position: "displace",
+    }
+  };
 
   openModal = name => {
     document.getElementsByTagName('html')[0].style.overflowY = "hidden";
@@ -35,7 +47,7 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     const { isOpenFormModal, isOpenThankYouModal } = this.state;
     return (
-      <Fragment>
+      <Tina cms={this.cms} {...this.options.sidebar}>
         <Head>
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
@@ -87,7 +99,7 @@ class MyApp extends App {
             </Link>
           </div>
         </Modal>
-      </Fragment>
+      </Tina>
     );
   }
 }

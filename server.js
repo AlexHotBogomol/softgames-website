@@ -1,6 +1,8 @@
 const express = require("express");
 const next = require("next");
 const bodyParser = require("body-parser");
+const cors = require('cors');
+const gitApi = require('@tinacms/api-git');
 
 const PUBLIC_KEY = "1c96085a14d938307edc82d3cb531bd8";
 const PRIVATE_KEY = "a7d242a2be3a57faccd38e03365f8305";
@@ -15,6 +17,9 @@ app.prepare().then(() => {
   const server = express();
 
   server.use(bodyParser.json());
+
+  server.use(cors());
+  server.use('/___tina', gitApi.router());
 
   server.get('/advertisers', (req, res) => {
     return app.render(req, res, '/merchant');

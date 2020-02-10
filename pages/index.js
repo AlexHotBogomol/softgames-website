@@ -19,7 +19,7 @@ import Preloader from "../components/Preloader/Preloader";
 
 import HomeSlider3 from "../components/HomeSlider3";
 
-const Index = props => {
+export default function Index({ post }){
   const [positions, setPositions] = useState([]);
   const [news, setNews] = useState([]);
   const [isPreloaderEnd, setIsPreloaderEnd] = useState(false);
@@ -209,5 +209,3 @@ const Index = props => {
     </Layout>
   );
 };
-
-export default Index;
