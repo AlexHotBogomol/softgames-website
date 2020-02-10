@@ -183,7 +183,7 @@ const Index = props => {
               </TransitionGroup>
               <div className="row d-lg-none">
                 <a
-                  href="https://softgames.ein-des-ein.com/"
+                  href="/news"
                   target="_blank"
                   className="btn btn--primary mx-auto"
                 >
@@ -197,7 +197,7 @@ const Index = props => {
           </div>
           <div className="row d-none d-lg-flex">
             <a
-              href="https://softgames.ein-des-ein.com/"
+              href="/news"
               target="_blank"
               className="btn btn--primary mx-auto"
             >

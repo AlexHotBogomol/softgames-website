@@ -277,7 +277,7 @@ const Footer = (props) => {
                     </Link>
                   </li>
                   <li className="menu-item footerMenu-item">
-                    <a href="https://softgames.ein-des-ein.com/" className="footerMenu-link">
+                    <a href="/news" className="footerMenu-link">
                       News
                     </a>
                   </li>
