@@ -5,7 +5,10 @@ import DropDownDown from "../../assets/icons/DropDownDown";
 class AccordionSection extends Component {
   onClick = (event) => {
     this.props.onClick(this.props.label);
-    event.target.scrollIntoView({block: "center", behavior: "smooth"});
+    const section = event.target;
+    setTimeout(() => {
+      section.scrollIntoView({block: "center", behavior: "smooth"});
+    }, 300);
   };
 
   render() {
