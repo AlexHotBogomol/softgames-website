@@ -29,9 +29,24 @@ import LinkSmoothScroll from "../components/LinkSmoothScroll";
 import DevelopersImg from "../assets/images/homeSlider2/Developers_Slide.png";
 
 const seoBlockData = {
-  heading: "Seo Title",
+  heading: "Are you a HTML5 game developer?",
   image: seoImg,
-  content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
+  content: `
+    <p><b>
+    Are you enjoying HTML5 games development?<br/>
+    Do you want to sell your HTML5 game to us?
+    </b></p>
+    <p>Join the leading <b>HTML5 Games Network</b> today, do what you love and <b>earn MORE!</b></p>
+    <p><b>SOFTGAMES</b> offers you different sponsorship options from instant cash to long-term revenue shares for your HTML5 games. We can help you to monetize and distribute your games by providing an access to the widest audience!</p>
+    <p>
+    Therefore, you can get all the necessary tools and services that would help your free to play or freemium games to succeed and to have a truly global reach.<br/>
+    We provide our developers with high level QA support, localization, legal support and device expertise. You would be able to track the performance of your game through a detailed reporting dashboard at any time!
+    </p>
+    <p>
+    If there are any question our dedicated Support team will assist you!
+Get paid and instant cash for your great HTML5 games. <b>Submit today!</b>
+    </p>
+  `,
   contactUsBtn: false
 };
 

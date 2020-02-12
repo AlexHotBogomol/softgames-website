@@ -41,9 +41,22 @@ import AdvertisersImg from "../assets/images/homeSlider2/Advertisers_Slide.png";
 import JoinUsImg from "../assets/images/advertisers/advertisersJoinUs.png";
 
 const seoBlockData = {
-  heading: "Seo Title",
+  heading: "Advertisers Wanted",
   image: seoImg,
-  content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
+  content: `<p>
+    We’re entertaining 30+ million people worldwide! Therefore, advertisers can select their targeted audience from millions of engaged gamers at <b>SOFTGAMES Games Advertisement Network</b>. We offer various options to advertise in branded gaming channels or within mobile games directly. Simply select your audience characteristics and interests to push your message through our advertisement network.
+  </p>
+   <p>
+   Get in touch with us and <b>we’ll make advertisement campaign a full success!</b>
+   </p>
+   <p><b>SOFTGAMES</b> ad network can promise you…</p>
+   <ul>
+      <li><b>PREMIUM QUALITY TRAFFIC</b></li>
+      <li><b>HIGH VIEWABILITY</b></li>
+      <li><b>ENGAGED USERS</b></li>
+      <li><b>DIVERSE DEMOGRAPHIC AUDIENCE</b></li>
+   </ul>
+  `,
   contactUsBtn: false
 };
 
