@@ -5,15 +5,17 @@ import "./Footer.scss";
 import Logo from "../Logo/Logo";
 import Facebook from "../SocialBlock/Socials/Facebook";
 import Twitter from "../SocialBlock/Socials/Twitter";
-// import Google from "../SocialBlock/Socials/Google";
 import Linkedin from "../SocialBlock/Socials/Linkedin";
 import HotPanel from "../HotPanel/HotPanel";
-
+import CookieConsent from "react-cookie-consent";
 
 const Footer = (props) => {
   return(
   <Fragment>
     <HotPanel/>
+    <CookieConsent>
+      This website uses cookies to enhance the user experience.
+    </CookieConsent>
     <section className="joinUs">
       <div className="container">
         <div className="row">
