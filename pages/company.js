@@ -164,7 +164,7 @@ const Company = props => {
           </div>
         </div>
       </section>
-      <section className="getInTouch withIllustration">
+      <section id="getInTouchForm" className="getInTouch withIllustration">
         <div className="container">
           <div className="row">
             <div className="col-12">

@@ -13,9 +13,17 @@ import games from "../data/games";
 import lookOutMoreGamesImg from "../assets/images/Lookout_More_Games.png";
 
 const seoBlockData = {
-  heading: "Seo Title",
+  heading: "Play Free Online Games for your entertainment.",
   image: seoImg,
-  content: `<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia laborum.</p>`,
+  content: `<p>
+Do you like to play solitaire games? Our solitaire experts created several solitaire games like Solitaire Story, 
+Solitaire Swift or Daily Solitaire and many more you know from every computer with Microsoft Windows. Or do you
+ prefer to play mahjong games? We have hundreds of free mahjong games that are hugely popular, including Candy
+  Mahjong, Mahjong Connect and the Best Classic Mahjong. Or are you a match 3 game expert? Try Candy Rain 5, 
+  Cookie Crush or Jewel Blitz! Our suite of online games includes enough match 3 games, Bubble Shooter, puzzle 
+  games and racing games to give you a serious mental workout! All of games are free and unblocked, so you can 
+  enjoy playing them all day, every day. Go play any of our free games, and have fun!
+</p>`,
   contactUsBtn: false
 };
 
