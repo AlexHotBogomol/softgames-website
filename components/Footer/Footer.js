@@ -13,8 +13,21 @@ const Footer = (props) => {
   return(
   <Fragment>
     <HotPanel/>
-    <CookieConsent>
+    <CookieConsent
+      location="bottom"
+      style={{ background: "#15495D" }}
+      buttonStyle={{
+        background: "#ffffff",
+        color: "#333333",
+        fontSize: "14px",
+        textTransform: "uppercase",
+        fontWeight: "500",
+        padding: "10px 35px",
+      }}
+    >
+     <span style={{ fontSize: "18px" }}>
       This website uses cookies to enhance the user experience.
+     </span>
     </CookieConsent>
     <section className="joinUs">
       <div className="container">
