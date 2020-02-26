@@ -90,7 +90,6 @@ const Footer = (props) => {
     {/*    }*/}
     {/*  }}*/}
     {/*/>*/}
-    <script id="CookieDeclaration" src="https://consent.cookiebot.com/9de0a85a-28ea-4c8d-b906-accb612b481a/cd.js" type="text/javascript" async/>
     <section className="joinUs">
       <div className="container">
         <div className="row">

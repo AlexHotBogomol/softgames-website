@@ -11,7 +11,7 @@ import Developers from "../pages/developers";
 const sliderSettings = {
   dots: true,
   arrows: true,
-  fade: true,
+  fade: false,
   infinite: true,
   speed: 500,
   lazyLoad: true,
@@ -27,6 +27,7 @@ const slider2Slides = [
     description:
       "Enjoy our brand-safe traffic, high viewability, engaged users and diverse demographic audience! Select your target audience from 30+ million active users and advertise your brand on our HTML5 games platform.",
     btnText: "get started",
+    btnModal: true,
     image: AdvertisersSlide,
     alt: ""
   },
@@ -38,6 +39,7 @@ const slider2Slides = [
     description:
       "Join the best games Affiliate Program as a publisher and maximize your earnings! Earn the highest commissions and monetize your online and app traffic by embedding high quality, cross-platform games.",
     btnText: "browse games",
+    btnModal: false,
     image: PublishersSlide,
     alt: ""
   },
@@ -49,6 +51,7 @@ const slider2Slides = [
     description:
       "Publish your HTML5 Game or Messenger Game with SOFTGAMES and do what you love! We help you to distribute and monetize your HTML5 games better with our global reach and better ads.",
     btnText: "Submit Game",
+    btnModal: true,
     image: DevelopersSlide,
     alt: ""
   }
@@ -73,9 +76,18 @@ const HomeSlider2 = (props) => {
                 </Link>
                 <h2 className="h2--big">{ReactHtmlParser(slide.heading)}</h2>
                 <p>{ReactHtmlParser(slide.description)}</p>
-                <button className="btn btn--primary" onClick={openModal}>
-                  {slide.btnText}
-                </button>
+                {slide.btnModal ? (
+                  <button className="btn btn--primary" onClick={openModal}>
+                    {slide.btnText}
+                  </button>
+                ) : (
+                  <Link as="/free-online-games"
+                        href="/games">
+                    <a className="btn btn--primary" >
+                      {slide.btnText}
+                    </a>
+                  </Link>
+                )}
               </div>
               <div className="slider2-right">
                 <img src={slide.image} alt={slide.alt} />

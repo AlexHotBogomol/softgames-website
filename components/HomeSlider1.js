@@ -41,9 +41,9 @@ const slider1Slides = [
     image_tablet: GardenTales_tablet,
     image_mobile: sliderMediumImg1,
     image_mobile_small: sliderSmallImg1,
-    title: "Cookie Crush",
+    title: "Garden Tales",
     btnText: "click to play",
-    btnLink: "http://bit.ly/Play_CookieCrush"
+    btnLink: "http://bit.ly/Play_GardenTales"
   },
   {
     image: Soli_2k,

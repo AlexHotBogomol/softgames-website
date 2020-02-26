@@ -182,10 +182,10 @@ const Form = ({className, categorySelect, websiteInput, closeFormModal, openThan
               <Select
                 className="form-select"
                 name="category"
-                value={value}
                 options={options}
                 onChange={onSelectChange}
                 instanceId={100}
+                placeholder="Please select option"
                 {...selectOptions}
               />
             </label>
