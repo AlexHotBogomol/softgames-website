@@ -10,7 +10,7 @@ module.exports = withImages(withSass({
   }
 }));
 sitemap({
-  baseUrl: 'https://softgames-next.zakablukov777.now.sh',
+  baseUrl: 'http://www-staging.softgames.de/',
   pagesDirectory: __dirname + "/pages",
   targetDirectory : 'public/'
 });

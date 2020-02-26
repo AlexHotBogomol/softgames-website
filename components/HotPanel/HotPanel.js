@@ -38,16 +38,12 @@ const HotPanel = props => {
   return (
     <div className="hotPanel">
       <button className="hotPanel-positions">
-        {positions.length ? (
-          <span className="hotPanel-positionsCounter">{positions.length}</span>
-        ) : null}
+        <span className="hotPanel-positionsCounter">{positions.length || 0}</span>
         open positions
         <LinkSmoothScroll href="/career/#job-openings">
           <a className="hotPanel-positionsBadge">
             <div className="hotPanel-positionsInfo">
-              {positions.length ? (
-                <h4 className="hotPanel-positionsCounter">{positions.length}</h4>
-              ) : null}
+              <h4 className="hotPanel-positionsCounter">{positions.length || 0}</h4>
               <h4>open positions</h4>
             </div>
             <OpenPositionsIcon />

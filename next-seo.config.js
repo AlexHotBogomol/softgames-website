@@ -2,10 +2,10 @@ export default {
   title: "Softgames",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-  canonical: "https://softgames-next-bvfc1hmjb.now.sh/",
+  canonical: "http://www-staging.softgames.de/",
   noindex: true,
   openGraph: {
-    url: "https://softgames-next-bvfc1hmjb.now.sh/",
+    url: "http://www-staging.softgames.de/",
     title: "Softgames",
     description: "Softgames react site",
     images: [
