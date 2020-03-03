@@ -7,89 +7,11 @@ import Facebook from "../SocialBlock/Socials/Facebook";
 import Twitter from "../SocialBlock/Socials/Twitter";
 import Linkedin from "../SocialBlock/Socials/Linkedin";
 import HotPanel from "../HotPanel/HotPanel";
-// import CookieConsent from "react-cookie-consent";
-// import { CookieBanner } from '@palmabit/react-cookie-law';
 
 const Footer = (props) => {
   return(
   <Fragment>
     <HotPanel/>
-    {/*<CookieConsent*/}
-    {/*  location="bottom"*/}
-    {/*  style={{ background: "#15495D" }}*/}
-    {/*  buttonStyle={{*/}
-    {/*    background: "#ffffff",*/}
-    {/*    color: "#333333",*/}
-    {/*    fontSize: "14px",*/}
-    {/*    textTransform: "uppercase",*/}
-    {/*    fontWeight: "500",*/}
-    {/*    padding: "10px 35px",*/}
-    {/*  }}*/}
-    {/*>*/}
-    {/* <span style={{ fontSize: "18px" }}>*/}
-    {/*  This website uses cookies to enhance the user experience.*/}
-    {/* </span>*/}
-    {/*</CookieConsent>*/}
-    {/*<CookieBanner*/}
-    {/*  message="This website uses cookies.*/}
-    {/*    We use cookies to personalise content and ads,*/}
-    {/*    to provide social media features and to analyse our traffic.*/}
-    {/*    We also share information about your use of our site with */}
-    {/*    our social media, advertising and analytics partners who may*/}
-    {/*    combine it with other information that you’ve provided to them */}
-    {/*    or that they’ve collected from your use of their services"*/}
-    {/*  policyLink="/privacy"*/}
-    {/*  styles={{*/}
-    {/*    dialog: {*/}
-    {/*      position: "fixed",*/}
-    {/*      bottom: "0",*/}
-    {/*      zIndex: "100",*/}
-    {/*      width: "100%",*/}
-    {/*      backgroundColor: "rgb(21, 73, 93)",*/}
-    {/*      padding: "20px 20px 20px 10px",*/}
-    {/*    },*/}
-    {/*    message: {*/}
-    {/*      color: "#ffffff",*/}
-    {/*      fontSize: "14px",*/}
-    {/*      lineHeight: "1.5",*/}
-    {/*      marginBottom: "10px",*/}
-    {/*    },*/}
-    {/*    optionLabel: {*/}
-    {/*      height: "auto",*/}
-    {/*      width: "auto",*/}
-    {/*      minHeight: "14px",*/}
-    {/*      fontSize: "12pt",*/}
-    {/*      color: "rgb(230, 230, 230)",*/}
-    {/*      display: "inline-block",*/}
-    {/*      padding: "1px 0px 0px 20px",*/}
-    {/*      position: "relative",*/}
-    {/*      top: "-4px",*/}
-    {/*      left: "0px",*/}
-    {/*      zIndex: "1",*/}
-    {/*      cursor: "default",*/}
-    {/*      verticalAlign: "top",*/}
-    {/*    },*/}
-    {/*    policy: {*/}
-    {/*      margin: "0",*/}
-    {/*      color: "#ffffff",*/}
-    {/*      textDecoration: "underline",*/}
-    {/*    },*/}
-    {/*    button: {*/}
-    {/*      background: "rgb(255, 255, 255)",*/}
-    {/*      border: "0px",*/}
-    {/*      borderRadius: "0px",*/}
-    {/*      boxShadow: "none",*/}
-    {/*      color: "rgb(51, 51, 51)",*/}
-    {/*      cursor: "pointer",*/}
-    {/*      flex: "0 0 auto",*/}
-    {/*      padding: "10px 35px",*/}
-    {/*      fontSize: "14px",*/}
-    {/*      textTransform: "uppercase",*/}
-    {/*      fontWeight: "500",*/}
-    {/*      margin: "0",*/}
-    {/*    }*/}
-    {/*  }}*/}
-    {/*/>*/}
     <section className="joinUs">
       <div className="container">
         <div className="row">
