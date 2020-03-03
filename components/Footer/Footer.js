@@ -7,6 +7,7 @@ import Facebook from "../SocialBlock/Socials/Facebook";
 import Twitter from "../SocialBlock/Socials/Twitter";
 import Linkedin from "../SocialBlock/Socials/Linkedin";
 import HotPanel from "../HotPanel/HotPanel";
+import {Tina} from "tinacms";
 
 const Footer = (props) => {
   return(
@@ -336,6 +337,7 @@ const Footer = (props) => {
         </div>
       </div>
     </footer>
+    <script id="CookieDeclaration" src="https://consent.cookiebot.com/9de0a85a-28ea-4c8d-b906-accb612b481a/cd.js" type="text/javascript" async/>
   </Fragment>
 )};
 
