@@ -45,18 +45,14 @@
     text-align: center;
   }
   &-dateWrapper {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     position: relative;
-    z-index: -2;
+    z-index: 1;
     h1 {
       font-weight: 900;
       font-size: 313.2px;
       line-height: 1;
       letter-spacing: -39.479px;
       color: $brand-color1;
-      background: $white-color;
       mix-blend-mode: lighten;
       text-align: center;
       pointer-events: none;
