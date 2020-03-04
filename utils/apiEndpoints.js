@@ -1,4 +1,4 @@
-const _domain = "https://softgames.ein-des-ein.com";
+const _domain = "http://www-staging.softgames.de/news";
 const _base = `${_domain}/wp-json/better-rest-endpoints/v1`;
 
 const endPoints = {
