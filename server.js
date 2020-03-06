@@ -53,12 +53,12 @@ app.prepare().then(() => {
       Messages: [
         {
           From: {
-            Email: "zakablukov777@gmail.com",
+            Email: "info@softgames.de",
             Name: `Softgames`
           },
           To: [
             {
-              Email: "zakablukov777@gmail.com",
+              Email: "info@softgames.de",
               Name: "Sasha"
             }
           ],

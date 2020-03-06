@@ -27,6 +27,8 @@ import Layout from "../components/Layout";
 import LinkSmoothScroll from "../components/LinkSmoothScroll";
 
 import DevelopersImg from "../assets/images/homeSlider2/Developers_Slide.png";
+import Link from "next/link";
+import NavLink from "../components/NavLink";
 
 const seoBlockData = {
   heading: "Are you a HTML5 game developer?",
@@ -176,9 +178,11 @@ const Developers = props => {
                           same passion as us.{" "}
                         </p>
                       </div>
-                      <button className="btn btn--primary" onClick={openModal}>
-                        Join the team
-                      </button>
+                      <Link href="/career">
+                        <a className="btn btn--primary">
+                          Join the team
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

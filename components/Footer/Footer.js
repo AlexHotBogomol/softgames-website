@@ -58,8 +58,7 @@ const Footer = (props) => {
                       </li>
                       <li className="menu-item footerMenu-subitem">
                         <LinkSmoothScroll
-                          as="/advertisers/#why-softgames"
-                          href="/merchant/#why-softgames"
+                          href="/advertisers/#why-softgames"
                         >
                           <a className="footerMenu-sublink">
                             Why SOFTGAMES?
@@ -68,8 +67,7 @@ const Footer = (props) => {
                       </li>
                       <li className="menu-item footerMenu-subitem">
                         <LinkSmoothScroll
-                          as="/advertisers/#brands"
-                          href="/merchant/#brands"
+                          href="/advertisers/#brands"
                         >
                           <a className="footerMenu-sublink">
                             Brands
@@ -78,8 +76,7 @@ const Footer = (props) => {
                       </li>
                       <li className="menu-item footerMenu-subitem">
                         <LinkSmoothScroll
-                          as="/advertisers/#join-us"
-                          href="/merchant/#join-us"
+                          href="/advertisers/#join-us"
                         >
                           <a className="footerMenu-sublink">
                             Join us to tell your story

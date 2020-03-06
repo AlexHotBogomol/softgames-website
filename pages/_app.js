@@ -74,7 +74,7 @@ class MyApp extends App {
           bgColor="#EEEEEE"
         >
           <div className="formModal-content">
-            <h3 className="formModal-heading">Sign Up to the leading HTML 5 games network!</h3>
+            <h3 className="formModal-heading">Get in touch with us</h3>
             <Form
               websiteInput
               categorySelect
